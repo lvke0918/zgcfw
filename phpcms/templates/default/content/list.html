@@ -1,0 +1,59 @@
+{template "content","header"}
+<!--main-->
+<div class="" description="" id="layout">
+<div id="middle" description="" class="">
+<div id="left" description="" class="">
+	<div class="leftMenu">
+	<div class="block">
+	<div class="block_body">
+	<h1>{$CATEGORYS[$CAT[parentid]][catname]}</h1>
+    <ul>
+      {pc:content action="category" catid="$CATEGORYS[$CAT[parentid]][catid]" order="listorder  DESC" thumb="" moreinfo=""  num="20"  return="data" }
+
+                 {loop $data $n $r}
+                  <li id="column_01" {if $r['catid'] == $catid} class="choosed" {/if}><a href="{$r['url']}">{$r['catname']}</a></li>
+                 {/loop}
+
+                 {/pc}
+            </ul>
+</div>
+</div>
+</div>
+</div>
+<div id="right" description="" class="">
+<div class="rightMain">
+<h1 id="second_main_title" class="title">{$catname}</h1>
+            <div class="rightCon">
+        	<ul>
+				{pc:content action="lists" catid="$catid" num="20" order="listorder DESC" page="$page"  return="data"}
+        
+                 {loop $data $n $r}
+                   <li><span class="updateTime">{date('Y-m-d',$r[inputtime])}</span><a title="{$r['title']}" href="{$r['url']}">{$r['title']}</a></li>   
+                 {/loop}
+			
+  
+               
+                <div class="clear"></div>
+            </ul>
+            <div class="blank"></div>
+           
+            <div class="page">
+            	<div class="page_div"> 
+                              {$pages}
+                </div>
+            </div>
+ {/pc}
+</div>
+</div></div><div id="clear01" description="" class="clear"></div></div>
+</div>
+<script type="text/javascript">
+function ChannelSlide(Name,Class){
+	$(Name+' ul.photo li').sGallery({
+		titleObj:Name+' div.title p',
+		thumbObj:Name+' .thumb li',
+		thumbNowClass:Class
+	});
+}
+new ChannelSlide(".channel-slide","on",311,260);
+</script>
+{template "content","footer"}

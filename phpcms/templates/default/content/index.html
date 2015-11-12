@@ -1,0 +1,250 @@
+{template "content","header"}
+<div class="" description="" id="layout">
+
+<div class="" description="" id="middle">
+<div class="" description="" id="left">
+<div class="picShow">
+
+<div id="banner">	
+
+<div id="KinSlideshow" style="visibility:hidden;border:solid 1px #848484; ">
+    {pc:content  action="position" posid="1"  order="listorder DESC" thumb="1" num="8"}
+    {loop $data $r}
+    <a href="{$r['url']}" target="_blank"><img src="{$r['thumb']}" alt="{$r['title']}" width="250" height="190" /></a>
+    {/loop}
+    {/pc}
+</div>
+     
+</div>
+</div>
+
+<div class="leftMenu01">
+<h1><span class="left_more"><a href="{$CATEGORYS['12']['url']}" title="{$CATEGORYS['12']['catname']}">更多</a></span>{$CATEGORYS['12']['catname']}</h1>
+                <ul>
+               {pc:content action="position" posid="10" catid="12" thumb="" order="id DESC"  num="6" }
+               {loop $data $n $r}
+               <li><a href="{$r['url']}" title="{$r['title']}"><span style="font-weight:bold">&nbsp;·&nbsp;</span>{str_cut($r[title],56,'...')}</a></li>
+               {/loop}
+               {/pc}
+                </ul>
+</div>
+
+<div class="leftMenu02">
+<h1><span class="left_more"><a href="{$CATEGORYS['13']['url']}" title="{$CATEGORYS['13']['catname']}">更多</a></span>{$CATEGORYS['13']['catname']}</h1>
+                <ul>
+               {pc:content action="position" posid="10" catid="13" thumb="" order="id DESC"  num="6" }
+               {loop $data $n $r}
+               <li><a href="{$r['url']}" title="{$r['title']}"><span style="font-weight:bold">&nbsp;·&nbsp;</span>{str_cut($r[title],55,'...')}</a></li>
+               {/loop}
+               {/pc}
+                </ul>
+</div>
+
+<div class="leftMenu03">
+<h1><span class="left_more"><a href="{$CATEGORYS['14']['url']}" title="{$CATEGORYS['14']['catname']}">更多</a></span>{$CATEGORYS['14']['catname']}</h1>
+                <ul>
+                 
+               {pc:content action="position" posid="10" catid="14" thumb="" order="listorder  DESC"  num="6" }
+
+               {loop $data $n $r}
+               <li><a href="{$r['url']}" title="{$r['title']}"><span style="font-weight:bold">&nbsp;·&nbsp;</span>{str_cut($r[title],55,'...')}</a></li>
+               {/loop}
+               {/pc}
+                </ul>
+</div>
+</div>
+<div class="" description="" id="right"><div class="" description="" id="right_top"><div class="hot">
+<h1><span class="more"><a href="{$CATEGORYS['6']['url']}">更多</a></span>{$CATEGORYS['6']['catname']} <span class="title">HOT</span></h1>
+                    <ul>
+
+     
+               {pc:content action="position" posid="10" catid="6" thumb="" order="id DESC"  num="12" }
+               {loop $data $n $r}
+
+<li><span class="updateTime">{date('Y-m-d',$r[inputtime])}</span><a href="{$r['url']}" title="{$r['title']} "><span style="font-weight:bold">&nbsp;·&nbsp;</span>{str_cut($r[title],75,'...')}
+                  </a> </li>
+
+               {/loop}
+               {/pc}
+    
+                    </ul>
+</div><div class="softRegister">
+<h1><span class="more"><a href="{$CATEGORYS['44']['url']}">更多</a></span>{$CATEGORYS['44']['catname']}<span class="title"> SERVICE</span></h1>
+                    <ul>
+
+ {pc:content action="position" posid="10" catid="44" thumb="" order="listorder  DESC"  num="12" }
+               {loop $data $n $r}
+<li><a href="{$r['url']}" title="{$r['title']}"><span style="font-weight:bold">&nbsp;·&nbsp;</span>{str_cut($r[title],65,'...')}
+                  </a></li>
+               {/loop}
+               {/pc}
+
+           
+                    </ul>
+</div><div class="clear" description="" id="clear03"></div></div><div class="center" description="" id="center"><div class="">
+
+
+<div class="info">
+<span class="fuwu_title">{$CATEGORYS['9']['catname']}</span>
+<span class="infoTitle">资讯：</span>
+<span class="fuwu_more"><a href="{$CATEGORYS['9']['url']}">更多</a></span>
+<div class="Marquee" id="Marquee">
+
+    {pc:content  action="position" posid="9" order="id" num="10" cache="3600"}	
+                 {loop $data $k $v}
+                          <p style="height:24px;">
+                         <a href="{$v[url]}" title="{$v[title]} ">{$v[title]} </a>
+                           </p>
+          
+                      {/loop}
+         
+     {/pc}
+
+</div>
+</div>
+
+</div><div class=""><div class="block"><div class="block_body"><script type="text/javascript">function up(x){
+var Mar = document.getElementById(x); 
+var child_div=Mar.getElementsByTagName("p") ;
+var picH = 24;
+var scrollstep=3; 
+var scrolltime=20;
+var stoptime=3000;
+var tmpH = 0; 
+Mar.innerHTML += Mar.innerHTML; 
+function start(){ 
+if(tmpH < picH){ 
+tmpH += scrollstep; 
+if(tmpH > picH )tmpH = picH ; 
+Mar.scrollTop = tmpH; 
+setTimeout(start,scrolltime); 
+}else{ 
+tmpH = 0; 
+Mar.appendChild(child_div[0]); 
+Mar.scrollTop = 0; 
+setTimeout(start,stoptime); 
+} 
+} 
+setTimeout(start,stoptime); 
+}
+up("Marquee")</script></div></div></div>
+
+<div class="infoCon" description="" id="infoCon"><div class="">
+                
+                <div class="leftInfo">
+                <ul>
+
+                   {pc:content action="position" posid="10" catid="21" thumb="" order="id DESC"  num="10"  i=1}
+                   {loop $data  $n $r}
+                  <li><a href="{$r['url']}" title="{$r['title']}"><span style="font-weight:bold">&nbsp;·&nbsp;</span>{str_cut($r[title],80,'...')}</a></li>
+                  {/loop}
+                    {/pc}
+               </ul>
+                 </div>
+               </div>
+              <div class="">
+                <div class="rightInfo">
+                <ul> 
+               {pc:content action="position" posid="10" catid="22" thumb="" order="id DESC"  num="10"  i=1}
+               {loop $data  $n $r}
+               <li><a href="{$r['url']}" title="{$r['title']}"><span style="font-weight:bold">&nbsp;·&nbsp;</span>{str_cut($r[title],80,'...')}</a></li>
+               {/loop}
+               {/pc}
+         
+                </ul>
+                </div>
+                <div class="clear"></div>
+
+</div></div></div>
+<div class="" description="" id="right_bottom">
+<div class="rightBot01">
+
+<h1><span class="center_more"><a href="{$CATEGORYS['10']['url']}">更多</a></span>{$CATEGORYS['10']['catname']}</h1>
+                    <ul>
+                        {pc:content action="position" posid="10" catid="10" thumb="" order="id DESC"  num="5" }
+                        {loop $data $n $r}
+                        <li><a href="{$r['url']}" title="{$r['title']}"><span style="font-weight:bold">&nbsp;·&nbsp;</span>{str_cut($r[title],80,'...')}</a></li>
+                        {/loop}
+                        {/pc}
+                    </ul>
+</div>
+<div class="rightBot02">
+<h1><span class="center_more"><a href="{$CATEGORYS['120']['url']}">更多</a></span>{$CATEGORYS['120']['catname']}</h1>
+                    <ul>
+                      {pc:content action="position" posid="10" catid="120" thumb="" order="id DESC"  num="5" }
+                        {loop $data $n $r}
+                        <li><a href="{$r['url']}" title="{$r['title']}"><span style="font-weight:bold">&nbsp;·&nbsp;</span>{str_cut($r[title],80,'...')}</a></li>
+                        {/loop}
+                        {/pc}
+                    </ul>
+</div>
+
+<div class="clear" description="" id="clear04"></div></div></div><div class="clear" description="" id="clear02"></div></div><div class="" description="" id="south">
+<script language="JavaScript" type="text/JavaScript">
+        <!--
+        function ok(select){//友情链接代码开始
+            if(select.options[select.selectedIndex].value!='$') {
+                window.open(select.options[select.selectedIndex].value,'_blank');
+            }
+        }//友情链接结束
+        //-->
+</script>
+<div class="friendLink">
+<h1>相关链接</h1>
+ <ul>
+            <li style="white-space:nowrap;"><select name="choose" id="choose" onchange="ok(this)">
+                <option value="" selected="selected">国家部委</option>
+                {pc:link action="type_list" siteid="1" linktype="" typeid="55" order="listorder DESC"  num="40" }
+                {loop $data $n $r}
+                <option value="{$r['url']}">{$r['name']}</option>
+                {/loop}
+                {/pc}
+            </select>
+            </li>
+            <li style="white-space:nowrap;"><select name="choose" id="choose" onchange="ok(this)">
+                <option value="" selected="selected">地方委办局</option>
+                {pc:link action="type_list" siteid="1" linktype="" typeid="56" order="listorder DESC"  num="40" }
+                {loop $data $n $r}
+                <option value="{$r['url']}">{$r['name']}</option>
+                {/loop}
+                {/pc}
+            </select>
+            </li>
+            <li style="white-space:nowrap;"><select name="choose" id="choose" onchange="ok(this)">
+                <option value="" selected="selected">国内高新园区</option>
+                {pc:link action="type_list" siteid="1" linktype="" typeid="54" order="listorder DESC"  num="40" }
+                {loop $data $n $r}
+                <option value="{$r['url']}">{$r['name']}</option>
+                {/loop}
+                {/pc}
+            </select>
+            </li>
+            <li style="white-space:nowrap;"><select name="choose" id="choose"onchange="ok(this)">
+                <option value="" selected="selected">项目申报</option>
+                {pc:link action="type_list" siteid="1" linktype="" typeid="58" order="listorder DESC"  num="40" }
+                {loop $data $n $r}
+                <option value="{$r['url']}">{$r['name']}</option>
+                {/loop}
+                {/pc}
+            </select>
+            </li>
+            <li style="white-space:nowrap;"><select name="choose" id="choose"onchange="ok(this)">
+                <option value="" selected="selected">友情链接</option>
+                {pc:link action="type_list" siteid="1" linktype="" typeid="57" order="listorder DESC"  num="40" }
+                {loop $data $n $r}
+                <option value="{$r['url']}">{$r['name']}</option>
+                {/loop}
+                {/pc}
+            </select>
+            </li>
+            <div class="clear"></div>
+        </ul>
+</div>
+
+<script type="text/javascript"> 
+$(function(){
+	new slide("#main-slide","cur",310,260,1);//焦点图
+	new SwapTab(".SwapTab","span",".tab-content","ul","fb");//排行TAB
+})
+</script>
+{template "content","footer"}

@@ -1,0 +1,75 @@
+﻿.banner{width:1019px; height:95px;}
+/*left*/
+#left{width:250px; margin-left:8px; float:left; margin-right:10px; display:inline;}
+.picShow{width:250px;height:190px;}
+.leftMenu01,.leftMenu02,.leftMenu03{margin-top:10px;}
+.leftMenu01 h1,.leftMenu02 h1,.leftMenu03 h1{background:url(../images/leftMenu_bg.png) no-repeat; width:220px; height:30px; line-height:30px; padding:5px 0 0 30px; color:#22579d; font-weight:bold;}
+.leftMenu01 ul,.leftMenu02 ul,.leftMenu03 ul{border-left:1px solid #CCC;border-right:1px solid #CCC;border-bottom:1px solid #CCC; padding:7px 0;}
+.leftMenu01 ul li a,.leftMenu02 ul li a,.leftMenu03 ul li a{ height:20px; line-height:20px;}
+.leftMenu01 ul li:hover,.leftMenu02 ul li:hover,.leftMenu03 ul li:hover{background:#e7f4fd;}
+.leftMenu01 ul li a,.leftMenu02 ul li a,.leftMenu03 ul li a{color:#333;}
+span.left_more a{float:right;color:#fff;padding-right:10px;font-weight:normal;}
+/*right*/
+#right{width:743px; padding-right:8px; float:right;}
+/*热点动态*/
+.hot{width:410px; float:left;}
+.hot h1{background:url(../images/rightMenu_bg.png) no-repeat; height:36px; line-height:36px; font-size:14px; padding:4px 10px 0 10px; font-weight:bold; color:#004c97;}
+.hot ul,.softRegister ul{border-left:1px solid #e4e0e1;border-right:1px solid #e4e0e1;border-bottom:1px solid #e4e0e1; padding:10px;}
+.hot ul li,.softRegister ul li{height:20px; line-height:20px;}
+.hot ul li a,.softRegister ul li a{color:#333;}
+span.updateTime{float:right;color:#5F5F5F;}
+span.title{color:#666; margin-left:10px; font-family:Arial, Helvetica, sans-serif;}
+span.more{float:right; }
+span.more a{color:#0661b0; font-weight:normal;}
+/*软著登记*/
+.softRegister{width:325px; float:right;}
+.softRegister h1{background:url(../images/rightMenu_bg02.png) no-repeat; height:36px; line-height:36px; font-size:14px; padding:4px 10px 0 10px; font-weight:bold; color:#004c97;}
+.softRegister ul li{ }
+/*热点服务*/
+.center{width:743px;}
+.center,#right_bottom{margin-top:10px;}
+.fuwu_title{ height:35px; line-height:35px; font-size:14px; float:left; margin-left:-260px; font-weight:bold; color:#6B4900;}
+span.fuwu_more{float:right;padding-right:10px}
+span.fuwu_more a{font-weight:normal;}
+.info{background:url(../images/rightMenu_bg03.png) no-repeat; height:35px; line-height:35px; padding-left:280px;}
+.info a{color:#666;}
+.infoTitle{color:#df6f00;float:left;}
+.Marquee {
+    float: left;
+    height: 18px;
+    line-height: 18px;
+    margin-top: 7px;
+    overflow: hidden;
+    padding-right: 15px;
+    width: 250px;
+}
+.center h1{background:url(../images/rightMenu_bg04.png) no-repeat; width:651px; height:35px; line-height:35px; padding-left:10px;}
+.center ul{ padding:10px 0;}
+.center ul li{height:20px; line-height:20px; padding-left:10px;}
+.center ul li a{color:#333;}
+.infoCon{border-left:1px solid #e8d111;border-right:1px solid #e8d111;border-bottom:1px solid #e8d111;}
+.leftInfo{float:left; width:371px; background:url(../images/border_right.png) right center no-repeat;}
+.rightInfo{float:right; width:365px;}
+/*高新认证  财务顾问*/
+.rightBot01{width:371px; float:left;}
+.rightBot01 h1{background:url(../images/rightMenu_bg05.png) no-repeat; height:35px; line-height:35px; padding-left:20px; color:#6b4900; font-size:14px; font-weight:bold;}
+.rightBot01 ul,.rightBot02 ul{border-left:1px solid #dcdcdc;border-right:1px solid #dcdcdc;border-bottom:1px solid #dcdcdc; padding:10px 0;}
+.rightBot02 ul{padding:11px 0;}
+.rightBot01 ul li{height:20px; line-height:20px; padding-left:10px;}
+.rightBot02 ul li{height:18px; line-height:18px; padding-left:10px;}
+.rightBot01 ul li a,.rightBot02 ul li a{color:#333;}
+.rightBot02{width:363px; float:right;}
+.rightBot02 h1{background:url(../images/rightMenu_bg06.png) no-repeat; height:43px; line-height:43px; padding-left:15px; color:#fff;  font-size:14px; font-weight:bold;}
+span.center_more a{float:right;color:#666;padding-right:10px;font-weight:normal;}
+/*商务合作 友情链接*/
+#south{}
+.businessCor,.friendLink{width:1025px;margin-top:10px;}
+.businessCor h1,.friendLink h1{background:url(../images/businessCor_bg.png) no-repeat; width:1005px; padding-left:20px; height:33px; line-height:33px; font-size:14px; font-weight:bold; color:#fff;}
+.businessCor ul,.friendLink ul{border-left:1px solid #dcdada;border-right:1px solid #dcdada;border-bottom:1px solid #dcdada; margin:0; padding:0; padding:0 10px 10px 10px; min-height:35px; height:expression_r(document.body.clientHeight &lt;35? "35px": "auto" );}
+.businessCor ul li,.friendLink ul li{float:left; padding:5px;}
+.friendLink ul li a{color:#333;}
+/*访问记录*/
+.visitor{text-align:center;}
+.visitor_count{color:#F00;}
+
+

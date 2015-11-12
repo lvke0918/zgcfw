@@ -1,0 +1,58 @@
+*{font-size:12px; font-family:"瀹嬩綋";}
+body,h1,h2,h3,h4,h5,h6,p,ul,li,dd,dt,dl,p,form,select,input,button,div,table,td{margin:0; padding:0;}
+#layout{width:1020px; margin:0px auto;}
+ul,li{list-style:none;}
+a{text-decoration:none;}
+a img{border:none;}
+.clear{width:0; height:0; margin:0; padding:0; font-size:0; line-height:0; clear:both;}
+.blank{height:10px; overflow:hidden;}
+.block_body{ position:relative}
+.top{background:url(../images/logo1111.jpg) no-repeat; height:120px; }
+a.logo{display:block; position:relative; width:580px; height:120px; top:0px; cursor:pointer;}
+.top span{position: absolute; display:block; float:right; bottom:10px;right:10px;}
+.top span a{color:#333; text-decoration:none; padding-right:10px; border-right:1px solid #333;}
+.top span a.last{border:none;}
+.menu{background:url(../images/menu_bg.png) no-repeat; height:36px; line-height:36px; width:1020px; margin:0px auto;}
+.menu ul li{float:left;width:102px; text-align:center;}
+.menu ul li:hover,.menu ul li.onClick{background:url(../images/border_bg.png) repeat-x left bottom;}
+.menu ul li:hover a,.menu ul li.onClick a{color:#ffff04;}
+.menu ul li a{color:#fff; font-size:14px; font-weight:bold;}
+.banner{width:1019px; height:95px; margin:0px auto; margin-bottom:10px;}
+.contact{ position: absolute;right: 40px; bottom: 10px;}
+.contact li{ font-size: 18px; font-weight: bold; color: #666;font-family:"华文楷体"}
+.contact a{ color: #666; font-size: 18px;font-family:"华文楷体"}
+.contact a:hover{ color: #666; text-decoration: underline;font-family:"华文楷体"}
+.contact img{ vertical-align: middle;}
+/*鎼滅储*/
+.searchBlock{float:left; width:420px;}
+.input{background:url(../images/input_bg.png) no-repeat; width:275px;float:left;height:34px; line-height:34px; border:none; padding-left:39px;margin:0; color:#999;}
+.searchBtn{background:url(../images/searchBtn.png) no-repeat;float:left; width:98px; height:34px;border:none; color:#fff; cursor:pointer; position:relative; left:-6px; top:1px;}
+.username,.password{background:url(../images/text_bg.png) no-repeat; width:161px; padding-left:5px; height:25px; line-height:25px; border:none;}
+.loginText{float:right; height:34px; line-height:34px;}
+.loginText span{margin-left:5px;}
+a.register{color:#666; margin-right:5px;}
+a.forgetPas{color:#F00; margin-left:5px;}
+.loginBtn{background:url(../images/loginBtn.png) no-repeat; width:54px; height:29px; border:none; color:#fff; margin-left:10px;}
+.regInfo a{color:#666;}
+/*鐗堟潈*/
+.copyright{height:36px; line-height:36px; text-align:center;}
+/*鍦ㄧ嚎鍜ㄨ*/
+#index_ad{background:url(../images/contact_bg.png) no-repeat; width:222px; height:192px; padding-top:20px; position:relative;}
+.tdstx{padding-top:15px;}
+.p_phone1,.p_phone2{line-height:26px;}
+.p_phone2{text-indent:3em; }
+.ad_title h1{color:#fff; font-weight:bold; font-size:16px; float:left; padding-left:20px;}
+.ad_title a{ position:relative; float:right; padding-right:35px; }
+.ad_title a img{position:absolute; top:-3px; z-index:999;}
+.tdstx{display:block; text-align:left; padding-left:15px; clear:both;}
+.qqOnline img{margin-top:10px;}
+.email{line-height:26px;}
+#index_ad_ico{background:url(../images/contact_online.png) no-repeat; width:12px; height:49px; vertical-align:middle; text-align:center; color:#fff; padding:14px 10px;} 
+#index_ad_ico a{color:#fff;}
+
+/*--鏂板骞垮憡閫氭爮--*/
+.bigBanner{ width:1020px;margin:10px auto;overflow:hidden;}
+.bigBanner img {display:block; margin:0 auto;}
+
+
+

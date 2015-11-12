@@ -1,0 +1,40 @@
+{template "content","header_page"}
+<!--main-->
+<div class="" description="" id="layout">
+<div id="middle" description="" class="">
+<div id="left" description="" class="">
+	<div class="leftMenu">
+	<div class="block">
+	<div class="block_body">
+	<h1>{$CATEGORYS[$CAT[parentid]][catname]} </h1>
+    <ul>
+
+{loop $arrchild_arr $cid}
+                <li{if $catid==$cid} class="choosed"{/if}><a href="{$CATEGORYS[$cid][url]}">{$CATEGORYS[$cid][catname]}</a></li>
+			{/loop}
+            </ul>
+</div>
+</div>
+</div>
+</div>
+<div id="right" description="" class="">
+<div class="rightMain">
+<h1 id="second_main_title" class="title">{$catname}</h1>
+            <div class="rightCon">
+{if   $catid==60 } aaaaaaaaaaaa {/if}
+
+        	{$content}
+</div>
+</div></div><div id="clear01" description="" class="clear"></div></div>
+</div>
+<script type="text/javascript">
+function ChannelSlide(Name,Class){
+	$(Name+' ul.photo li').sGallery({
+		titleObj:Name+' div.title p',
+		thumbObj:Name+' .thumb li',
+		thumbNowClass:Class
+	});
+}
+new ChannelSlide(".channel-slide","on",311,260);
+</script>
+{template "content","footer"}

@@ -1,0 +1,12 @@
+<div id="footer">
+{pc:content action="category" catid="1" num="15" siteid="$siteid" order="listorder ASC"}
+{loop $data $r}
+<a href="{$r[url]}" target="_blank">{$r[catname]}</a> |  
+{/loop}
+{/pc}
+
+<p>2011-{date('Y', SYS_TIME)} &copy;版权所有  <a style="color:#000" href="/index.php?m=content&c=index&a=lists&catid=50">免责声明</a> 京ICP备11043041-2号</p>
+</p>
+</div>
+</body>
+</html>

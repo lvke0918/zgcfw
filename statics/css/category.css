@@ -1,0 +1,58 @@
+#middle{margin-top:10px;}
+#left{width:238px; float:left; margin-left:10px; display:inline;}
+#left h1{background:url(../images/leftMenu_bg02.png) no-repeat; height:51px; line-height:51px; text-align:center; font-size:15px; font-weight:bold; color:#fff;}
+#left ul{background:url(../images/left_bg.png) repeat-y; border-left:1px solid #d8d4d5;border-right:1px solid #d8d4d5;border-bottom:1px solid #d8d4d5; padding:10px 0; }
+#left ul li{border-bottom:1px dashed #666;}
+#left ul li.nb{border:none;}
+#left ul li.choosed a{color:#F00;}
+#left ul li a{color:#414141;height:36px; line-height:36px; background:url(../images/img02.png) no-repeat 10px center; padding-left:25px;}
+#right{width:752px; float:right; margin-right:10px; display:inline;}
+#right h1{background:url(../images/rightTitle_bg.png) no-repeat; height:56px; line-height:56px; text-align:center; font-size:15px; font-weight:bold; }
+.rightCon{padding:30px 20px; border-left:1px solid #dadada;border-right:1px solid #dadada;border-bottom:1px solid #dadada;}
+.rightCon ul li{height:30px; line-height:30px; border-bottom:1px dashed #dadada;}
+.rightCon ul li a{color:#6d6d6d;}
+span.updateTime{float:right; color:#6d6d6d; }
+/*分页*/
+.page{text-align:right; padding:20px 20px 20px 0;}
+#firstPage a,#nextPage a,#lastPage a,.page_div{color:#6d6d6d;}
+.pageN a{color:#F00;}
+/*注册*/
+.regContent h1{color:#03C; font-size:16px; font-weight:bold; text-align:center; background:#dadada; height:36px; line-height:36px; }
+span.note{height:30px; line-height:30px; display:block; color:#999; text-align:center;}
+.registerTable td,.form td{padding:5px;}
+span.registerTitle{font-size:16px; font-weight:bold; padding:5px 0 10px 0; display:block; color:#03C; background:url(../images/right_line.gif) no-repeat left bottom; height:32px; line-height:32px;}
+.title03{font-weight:bold; font-size:14px; color:#333;}
+.red,.required{color:#F00;}
+.regInput,.textbox{background:url(../images/regInput.png) no-repeat; padding-left:5px; width:272px; height:23px; line-height:23px; border:none;}
+.regNote{color:#999;}
+.regSubmit,.regReset,.form_submit button,.form_submit .button{ width:120px; height:42px; line-height:42px; text-align:center; color:#fff; font-weight:bold; font-size:15px; border:none;}
+.regSubmit,.form_submit button,.form_submit .button{background:url(../images/regSubmit.png) no-repeat; margin-right:10px;}
+.regReset{background:url(../images/regReset.png) no-repeat; }
+span.error{color:#F00; background:url(../images/error.png) no-repeat left center; padding-left:20px; height:20px; line-height:20px; display:block;}
+span.passed{background:url(../images/right.png) no-repeat left center; padding-left:20px; height:20px; line-height:20px; display:block;}
+span.help{background:url(../images/help.png) no-repeat left center; padding-left:20px; height:20px; line-height:20px; display:block;}
+
+/*修改注册信息*/
+.form_display_required,.form_display{font-size:14px; font-weight:bold; color:#333;}
+/*修改密码*/
+.form{margin:0px auto;}
+.form_submit button,.form_submit .button{margin-right:10px;}
+/*上传高新认证评估表*/
+.uploadForm td{padding:7px;}
+.downloadBtn{background:url(../images/downloadBtn.jpg) no-repeat; width:100px; height:29px; line-height:29px; text-align:center; color:#fff; border:none;}
+#rightCon,.detail_rightCon{padding:30px 20px; border-left:1px solid #dadada;border-right:1px solid #dadada;border-bottom:1px solid #dadada; line-height:26px;}
+.detail_rightCon a{color:#0275c5;}
+.detail_rightCon a:hover{ text-decoration:underline}
+input.file{height:28px; line-height:28px;}
+/*服务信息详细页*/
+.sub_detail{text-align:center; color:#333; padding:10px 0; border-bottom:1px solid #ccc;}
+.newsCon p{line-height:30px;}
+#info_download a{height:30px; line-height:30px; color:#4d90fe;}
+/*我的高新评估*/
+table.myApply{border-top:1px solid #ccc; border-left:1px solid #ccc;}
+table.myApply th,table.myApply td{padding:10px; border-right:1px solid #ccc; border-bottom:1px solid #ccc; text-align:center;}
+table.myApply td a{color:#4d90fe;}
+/*关于我们 联系我们*/
+.aboutUs p{line-height:28px; text-indent:2em;}
+.contactUs td{padding:7px;}
+.contactUs img{margin-top:10px;}
