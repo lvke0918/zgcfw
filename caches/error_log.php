@@ -4256,3 +4256,24 @@
 <?php exit;?>06-11 11:04:42 | 8192 | preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead | phpcms/libs/classes/template_cache.class.php | 94
 <?php exit;?>06-11 11:04:42 | 2 | chmod(): Operation not permitted | phpcms/modules/content/classes/html.class.php | 364
 <?php exit;?>06-11 11:04:42 | 8192 | mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead | phpcms/libs/classes/mysql.class.php | 56
+<?php exit;?>11-13 10:48:14 | 2 | mysql_connect() [<a href='function.mysql-connect'>function.mysql-connect</a>]: Access denied for user 'root'@'localhost' (using password: NO) | phpcms/libs/classes/mysql.class.php | 56
+<?php exit;?>11-13 10:48:14 | 2 | mysql_error() expects parameter 1 to be resource, boolean given | phpcms/libs/classes/mysql.class.php | 388
+<?php exit;?>11-13 10:48:14 | 2 | mysql_errno() expects parameter 1 to be resource, boolean given | phpcms/libs/classes/mysql.class.php | 392
+<?php exit;?>11-13 10:48:14 | 2 | mysql_errno() expects parameter 1 to be resource, boolean given | phpcms/libs/classes/mysql.class.php | 392
+<?php exit;?>11-13 10:48:14 | 2 | mysql_error() expects parameter 1 to be resource, boolean given | phpcms/libs/classes/mysql.class.php | 388
+<?php exit;?>11-13 10:48:37 | 2 | mysql_connect() [<a href='function.mysql-connect'>function.mysql-connect</a>]: Access denied for user 'root'@'localhost' (using password: NO) | phpcms/libs/classes/mysql.class.php | 56
+<?php exit;?>11-13 10:48:37 | 2 | mysql_error() expects parameter 1 to be resource, boolean given | phpcms/libs/classes/mysql.class.php | 388
+<?php exit;?>11-13 10:48:37 | 2 | mysql_errno() expects parameter 1 to be resource, boolean given | phpcms/libs/classes/mysql.class.php | 392
+<?php exit;?>11-13 10:48:37 | 2 | mysql_errno() expects parameter 1 to be resource, boolean given | phpcms/libs/classes/mysql.class.php | 392
+<?php exit;?>11-13 10:48:37 | 2 | mysql_error() expects parameter 1 to be resource, boolean given | phpcms/libs/classes/mysql.class.php | 388
+<?php exit;?>11-17 14:42:18 | 2 | mysql_connect() [<a href='function.mysql-connect'>function.mysql-connect</a>]: Access denied for user 'root'@'localhost' (using password: NO) | phpcms/libs/classes/mysql.class.php | 56
+<?php exit;?>11-17 14:42:18 | 2 | mysql_error() expects parameter 1 to be resource, boolean given | phpcms/libs/classes/mysql.class.php | 388
+<?php exit;?>11-17 14:42:18 | 2 | mysql_errno() expects parameter 1 to be resource, boolean given | phpcms/libs/classes/mysql.class.php | 392
+<?php exit;?>11-17 14:42:18 | 2 | mysql_errno() expects parameter 1 to be resource, boolean given | phpcms/libs/classes/mysql.class.php | 392
+<?php exit;?>11-17 14:42:18 | 2 | mysql_error() expects parameter 1 to be resource, boolean given | phpcms/libs/classes/mysql.class.php | 388
+<?php exit;?>11-17 14:53:49 | 2 | file_get_contents(http://www.phpcms.cn/upgrademd5/20150812_utf-8.php) [<a href='function.file-get-contents'>function.file-get-contents</a>]: failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ | phpcms/modules/upgrade/index.php | 187
+<?php exit;?>11-17 14:53:49 | 2 | array_diff() [<a href='function.array-diff'>function.array-diff</a>]: Argument #1 is not an array | phpcms/modules/upgrade/index.php | 190
+<?php exit;?>11-17 14:53:49 | 2 | Invalid argument supplied for foreach() | phpcms/modules/upgrade/index.php | 194
+<?php exit;?>11-17 14:53:49 | 2 | array_keys() expects parameter 1 to be array, null given | phpcms/modules/upgrade/index.php | 202
+<?php exit;?>11-17 14:53:49 | 2 | array_diff() [<a href='function.array-diff'>function.array-diff</a>]: Argument #2 is not an array | phpcms/modules/upgrade/index.php | 202

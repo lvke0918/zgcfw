@@ -30,7 +30,7 @@ class form {
 			}
 			$toolbar .= "'-','Templates'],
 		    ['Cut','Copy','Paste','PasteText','PasteFromWord','-','Print'],
-		    ['Undo','Redo','-','Find','Replace','-','SelectAll','RemoveFormat'],['ShowBlocks'],['Image','Capture','Flash','MyVideo'],['Maximize'],
+		    ['Undo','Redo','-','Find','Replace','-','SelectAll','RemoveFormat'],['ShowBlocks'],['Image','Capture','Flash','flashplayer','MyVideo'],['Maximize'],
 		    '/',
 		    ['Bold','Italic','Underline','Strike','-'],
 		    ['Subscript','Superscript','-'],
@@ -57,7 +57,7 @@ class form {
 			$authkey = upload_key("$allowuploadnum,$alowuploadexts,$allowbrowser");
 			$str .="flashupload:true,alowuploadexts:'".$alowuploadexts."',allowbrowser:'".$allowbrowser."',allowuploadnum:'".$allowuploadnum."',authkey:'".$authkey."',\r\n";
 		}
-        if($allowupload) $str .= "filebrowserUploadUrl : '".APP_PATH."index.php?m=attachment&c=attachments&a=upload&module=".$module."&catid=".$catid."&dosubmit=1',\r\n";
+        if($allowupload) $str .= "filebrowserUploadUrl : 'index.php?m=attachment&c=attachments&a=upload&module=".$module."&catid=".$catid."&dosubmit=1',\r\n";
 		if($color) {
 			$str .= "extraPlugins : 'uicolor',uiColor: '$color',";
 		}

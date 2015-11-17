@@ -65,7 +65,7 @@ class content_model extends model {
 		} else {
 			$systeminfo['updatetime'] = $data['updatetime'];
 		}
-		$systeminfo['username'] = $data['username'] ? $data['username'] : param::get_cookie('admin_username');
+		$inputinfo['system']['username'] = $systeminfo['username'] = $data['username'] ? $data['username'] : param::get_cookie('admin_username');
 		$systeminfo['sysadd'] = defined('IN_ADMIN') ? 1 : 0;
 		
 		//自动提取摘要
@@ -442,7 +442,7 @@ class content_model extends model {
 	public function set_catid($catid) {
 		$catid = intval($catid);
 		if(!$catid) return false;
-		if(empty($this->category)) {
+		if(empty($this->category) || empty($this->category[$catid])) {
 			$siteids = getcache('category_content','commons');
 			$siteid = $siteids[$catid];
 			$this->category = getcache('category_content_'.$siteid,'commons');

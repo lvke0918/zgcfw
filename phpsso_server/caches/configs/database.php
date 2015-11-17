@@ -5,7 +5,7 @@ return array (
 		'hostname' => 'localhost',
 		'database' => 'zgcfw',
 		'username' => 'root',
-		'password' => '',
+		'password' => 'root',
 		'tablepre' => 'v9_sso_',
 		'charset' => 'utf8',
 		'type' => 'mysql',

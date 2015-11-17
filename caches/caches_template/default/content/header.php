@@ -52,6 +52,11 @@ h3.title{ font-size:16px; font-family:"微软雅黑",Verdana;}
 	}
 //-->
 </script>
+
+<?php
+        $userid= param::get_cookie('_userid');
+
+?>
 <body class="yui-skin-sam">
 <div class="" description="" id="layout"><div class="" description="" id="north"><div class=""><div class="" description="" id="header"><div class="top"><div class="block"><div class="block_body">
 <a class="logo" href="<?php echo siteurl($siteid);?>"></a>
@@ -69,7 +74,7 @@ h3.title{ font-size:16px; font-family:"微软雅黑",Verdana;}
      
 </div></div></div><div class="menu"><div class="block"><div class="block_body">
 <map>
-    	<?php if(defined('IN_ADMIN')  && !defined('HTML')) {echo "<div class=\"admin_piao\" pc_action=\"content\" data=\"op=content&tag_md5=b43f1459ac702900c8d44c91a5e796dd&action=category&catid=0&num=25&siteid=%24siteid&order=listorder+ASC\"><a href=\"javascript:void(0)\" class=\"admin_piao_edit\">修改</a>";}$content_tag = pc_base::load_app_class("content_tag", "content");if (method_exists($content_tag, 'category')) {$data = $content_tag->category(array('catid'=>'0','siteid'=>$siteid,'order'=>'listorder ASC','limit'=>'25',));}?>
+    	<?php if(defined('IN_ADMIN')  && !defined('HTML')) {echo "<div class=\"admin_piao\" pc_action=\"content\" data=\"op=content&tag_md5=b43f1459ac702900c8d44c91a5e796dd&action=category&catid=0&num=25&siteid=%24siteid&order=listorder+ASC\"><a href=\"javascript:void(0)\" class=\"admin_piao_edit\">编辑</a>";}$content_tag = pc_base::load_app_class("content_tag", "content");if (method_exists($content_tag, 'category')) {$data = $content_tag->category(array('catid'=>'0','siteid'=>$siteid,'order'=>'listorder ASC','limit'=>'25',));}?>
         	<ul >
 			<li  <?php if(!$top_parentid ) { ?>  class="onClick"  <?php } ?> id="main_menu_1"><a href="<?php echo siteurl($siteid);?>">首页</a></li>
 			<?php $n=1;if(is_array($data)) foreach($data AS $r) { ?>
@@ -111,16 +116,27 @@ h3.title{ font-size:16px; font-family:"微软雅黑",Verdana;}
 </div>
 <div class="loginText"><div class="xpe_ui" id="xpe_">
 <div class="login">
+
+
 <form method="post" action="index.php?m=member&c=index&a=login" id="myform" name="myform">
+    <?php if($userid ) { ?>
+
+    <span>你好：<a href="index.php?m=member&c=index" class="register"><?php echo param::get_cookie('_username')?></a>|<a href="index.php?m=member&c=index&a=logout" class="forgetPas">注销</a></span>
+
+    <?php } else { ?>
+
             用户名：<input  id="username" name="username" class="username" type="text">
             密码：<input type="password" id="password" name="password" class="password">
 			<input class="loginBtn" value="登陆" name="dosubmit" id="dosubmit" type="submit"><span><a href="index.php?m=member&c=index&a=register&siteid=1" class="register">注册</a>|<a href="index.php?m=member&c=index&a=public_forget_password&siteid=1" class="forgetPas">忘记密码</a></span>
 			</form>
+    <?php } ?>
 			<form id="login" method="POST" action="/xpe/secu/login">
                               <input value="/xpe/portal/2da378f0-138b-1000-8387-49737a611cd0" name="onSuccess" type="hidden">
                               <input name="username" value="" type="hidden">
-                              <input name="password" value="" type="hidden">
+
+                <input name="password" value="" type="hidden">
                       </form>
+
 </div>
 <div class="clear"></div>
 <div class="blank"></div>

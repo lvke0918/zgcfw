@@ -36,7 +36,7 @@ return array(
 'uc_ip'=>'',//Ucenter api IP
 'uc_dbhost'=>'localhost',//Ucenter 数据库主机名
 'uc_dbuser'=>'root',//Ucenter 数据库用户名
-'uc_dbpw'=>'',//Ucenter 数据库密码
+'uc_dbpw'=>'root',//Ucenter 数据库密码
 'uc_dbname'=>'zgcfw',//Ucenter 数据库名
 'uc_dbtablepre'=>'\'zgcfw\'.uc_',//Ucenter 数据库表前缀
 'uc_dbcharset'=>'utf8',//Ucenter 数据库字符集

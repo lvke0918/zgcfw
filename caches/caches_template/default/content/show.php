@@ -102,7 +102,7 @@
 	  </div>
       <div class="bk10"></div>
       <?php if($allow_comment && module_exists('comment')) { ?>
-      <iframe src="<?php echo APP_PATH;?>index.php?m=comment&c=index&a=init&commentid=<?php echo id_encode("content_$catid",$id,$siteid);?>&iframe=1" width="100%" height="100%" id="comment_iframe" frameborder="0" scrolling="no"></iframe>
+      <iframe src="<?php echo APP_PATH;?>index.php?m=comment&c=index&a=init&commentid=<?php echo id_encode("content_$catid",$id,$siteid);?>&iframe=1" width="100%" height="265" id="comment_iframe" frameborder="0" scrolling="no"></iframe>
       <div class="box">
         		<h5>评论排行</h5>
 				 <?php if(defined('IN_ADMIN')  && !defined('HTML')) {echo "<div class=\"admin_piao\" pc_action=\"comment\" data=\"op=comment&tag_md5=9eeaba0a57bcf88c1b4779f4dc232d7a&action=bang&siteid=%24siteid&cache=3600\"><a href=\"javascript:void(0)\" class=\"admin_piao_edit\">编辑</a>";}$tag_cache_name = md5(implode('&',array('siteid'=>$siteid,)).'9eeaba0a57bcf88c1b4779f4dc232d7a');if(!$data = tpl_cache($tag_cache_name,3600)){$comment_tag = pc_base::load_app_class("comment_tag", "comment");if (method_exists($comment_tag, 'bang')) {$data = $comment_tag->bang(array('siteid'=>$siteid,'limit'=>'20',));}if(!empty($data)){setcache($tag_cache_name, $data, 'tpl_data');}}?>
@@ -124,17 +124,23 @@
 
             <div class="blank"></div>
            
-</div></div>  
-	
-            
-
-   </div>
-
-
-
+</div></div>
+</div>
 </div></div><div id="clear01" description="" class="clear"></div></div>
 </div>
-
+<script language="JavaScript">
+    <!--
+    function add_favorite(title) {
+        $.getJSON('<?php echo APP_PATH;?>api.php?op=add_favorite&title='+encodeURIComponent(title)+'&url='+encodeURIComponent(location.href)+'&'+Math.random()+'&callback=?', function(data){
+            if(data.status==1)	{
+                $("#favorite").html('收藏成功');
+            } else {
+                alert('请登录');
+            }
+        });
+    }
+    //-->
+</script>
 <script type="text/javascript">
 function ChannelSlide(Name,Class){
 	$(Name+' ul.photo li').sGallery({
@@ -145,6 +151,8 @@ function ChannelSlide(Name,Class){
 }
 new ChannelSlide(".channel-slide","on",311,260);
 </script>
+
+
 
 <script language="JavaScript" src="<?php echo APP_PATH;?>api.php?op=count&id=<?php echo $id;?>&modelid=<?php echo $modelid;?>"></script>
 

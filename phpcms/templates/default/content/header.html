@@ -52,6 +52,11 @@ h3.title{ font-size:16px; font-family:"微软雅黑",Verdana;}
 	}
 //-->
 </script>
+
+<?php
+        $userid= param::get_cookie('_userid');
+
+?>
 <body class="yui-skin-sam">
 <div class="" description="" id="layout"><div class="" description="" id="north"><div class=""><div class="" description="" id="header"><div class="top"><div class="block"><div class="block_body">
 <a class="logo" href="{siteurl($siteid)}"></a>
@@ -111,16 +116,27 @@ h3.title{ font-size:16px; font-family:"微软雅黑",Verdana;}
 </div>
 <div class="loginText"><div class="xpe_ui" id="xpe_">
 <div class="login">
+
+
 <form method="post" action="index.php?m=member&c=index&a=login" id="myform" name="myform">
+    {if $userid }
+
+    <span>你好：<a href="index.php?m=member&c=index" class="register"><?php echo param::get_cookie('_username')?></a>|<a href="index.php?m=member&c=index&a=logout" class="forgetPas">注销</a></span>
+
+    {else}
+
             用户名：<input  id="username" name="username" class="username" type="text">
             密码：<input type="password" id="password" name="password" class="password">
 			<input class="loginBtn" value="登陆" name="dosubmit" id="dosubmit" type="submit"><span><a href="index.php?m=member&c=index&a=register&siteid=1" class="register">注册</a>|<a href="index.php?m=member&c=index&a=public_forget_password&siteid=1" class="forgetPas">忘记密码</a></span>
 			</form>
+    {/if}
 			<form id="login" method="POST" action="/xpe/secu/login">
                               <input value="/xpe/portal/2da378f0-138b-1000-8387-49737a611cd0" name="onSuccess" type="hidden">
                               <input name="username" value="" type="hidden">
-                              <input name="password" value="" type="hidden">
+
+                <input name="password" value="" type="hidden">
                       </form>
+
 </div>
 <div class="clear"></div>
 <div class="blank"></div>
