@@ -1,25 +1,82 @@
 {template "wap","header"}
-<h2><a href="#" class="cat">焦点推荐</a>&nbsp;<span style="color:#999; font-size:12px; font-weight:100;">{date('Y-m-d',SYS_TIME)}</span></h2>
-<div>
-{pc:wap  action="position" posid="12" order="listorder DESC" num="6"}
- {loop $data $r}
-	<a href="{$r[url]}">{str_cut($r['title'],26,'')}</a><br/>
-   {/loop}  
- {/pc} 
-</div>
-<div class="ad1"><a href="#"><img src="{IMG_PATH}wap/ad220x26.gif" alt="phpcms手机网建站利器" width="220" height="26" /></a></div>
+
+
+
+
+
+<!--<h2><a href="#" class="cat">焦点推荐</a>&nbsp;<span style="color:#999; font-size:12px; font-weight:100;">{date('Y-m-d',SYS_TIME)}</span></h2>-->
+<!--<div>-->
+<!--{pc:wap  action="position" posid="12" order="listorder DESC" num="6"}-->
+ <!--{loop $data $r}-->
+	<!--<a href="{$r[url]}">{str_cut($r['title'],26,'')}</a><br/>-->
+   <!--{/loop}  -->
+ <!--{/pc} -->
+<!--</div>-->
+
 {loop subtype(0) $s}
-	{php $typeid=$s[typeid]}
-	{pc:wap action="lists" typeid="$typeid" num="10" order="id DESC" return="info"}
-		<h2><a href="{list_url($typeid)}" class="cat">{$s['typename']}</a>
-		 {loop subtype($typeid) $_s}<a href="{list_url($_s[typeid])}">{$_s[typename]}</a>{/loop}
-		</h2>
-		<div>
-		{loop $info $i}
-			<a href="{show_url($i[catid],$i[id])}">{str_cut($i['title'],50,'')}</a><br/>
-		{/loop}
-		</div>
-	{/pc}
+{php $typeid=$s[typeid]}
+{pc:wap action="lists" typeid="$typeid" num="10" order="id DESC" return="info"}
+<section class="content-block" id="askBlock{$typeid}">
+    <div class="block-title">
+        <h2>{$s['typename']}</h2>
+        <a href="{list_url($typeid)}" data-gaevent="home_more_questions:home" class="icon-more">更多</a>
+    </div>
+    <nav>
+        <ul class="tab">
+            <?php $i=0;?>
+            {loop subtype($typeid) $n $_s}
+            <?php  $i++;
+            if($i>2){
+            break;
+            }
+            ?>
+            <li >
+                <h3>{$_s[typename]}</h3>
+            </li>
+
+            {/loop}
+        </ul>
+    </nav>
+    <section class="titles-list">
+        {loop subtype($typeid) $n $_s}
+
+        {if $typeid==7||$typeid==3}
+        <ul class="titles">
+        {pc:wap action="lists" typeid="$_s[typeid]" num="10" order="id DESC" return="info1"}
+            {loop $info1 $i}
+            <li>
+                <a href="{show_url($i[catid],$i[id])}">
+                    <h4>{$i['title']}</h4>
+
+                </a>
+            </li>
+            {/loop}
+        {/pc}
+        </ul>
+        {else}
+
+        <ul class="titles">
+            {pc:wap action="lists" typeid="$typeid" num="10" order="id DESC" return="info1"}
+            {loop $info1 $i}
+            <li>
+                <a href="{show_url($i[catid],$i[id])}">
+                    <h4>{$i['title']}</h4>
+
+                </a>
+            </li>
+            {/loop}
+            {/pc}
+        </ul>
+
+        {/if}
+        {/loop}
+
+    </section>
+
+</section>
+{/pc}
 {/loop}
+
+
 
 {template "wap","footer"}
