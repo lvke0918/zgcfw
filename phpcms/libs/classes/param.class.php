@@ -19,6 +19,7 @@ class param {
 			$_COOKIE = new_addslashes($_COOKIE);
 		}
 
+
 		$this->route_config = pc_base::load_config('route', SITE_URL) ? pc_base::load_config('route', SITE_URL) : pc_base::load_config('route', 'default');
 
 		if(isset($this->route_config['data']['POST']) && is_array($this->route_config['data']['POST'])) {

@@ -22,5 +22,5 @@
  */
 return array(
 	'default'=>array('m'=>'content', 'c'=>'index', 'a'=>'init'),
-	'3g.zgcfw.org.cn'=>array('m'=>'wap', 'c'=>'index', 'a'=>'init','data'=>array('GET'=>array('siteid'=>1))),
+	'm.zgcfw.org.cn'=>array('m'=>'wap', 'c'=>'index', 'a'=>'init','data'=>array('GET'=>array('siteid'=>1))),
 );

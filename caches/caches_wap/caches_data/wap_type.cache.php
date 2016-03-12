@@ -9,6 +9,15 @@ return array (
     'siteid' => '1',
     'listorder' => '0',
   ),
+  44 => 
+  array (
+    'typeid' => '44',
+    'cat' => '117',
+    'parentid' => '13',
+    'typename' => '电信业务经营许可',
+    'siteid' => '1',
+    'listorder' => '0',
+  ),
   43 => 
   array (
     'typeid' => '43',
@@ -96,24 +105,6 @@ return array (
     'cat' => '26',
     'parentid' => '2',
     'typename' => '中国商标注册',
-    'siteid' => '1',
-    'listorder' => '0',
-  ),
-  33 => 
-  array (
-    'typeid' => '33',
-    'cat' => '74',
-    'parentid' => '2',
-    'typename' => '专利转让交易',
-    'siteid' => '1',
-    'listorder' => '0',
-  ),
-  44 => 
-  array (
-    'typeid' => '44',
-    'cat' => '117',
-    'parentid' => '13',
-    'typename' => '电信业务经营许可',
     'siteid' => '1',
     'listorder' => '0',
   ),
@@ -231,6 +222,15 @@ return array (
     'cat' => '84',
     'parentid' => '13',
     'typename' => '质量体系认证',
+    'siteid' => '1',
+    'listorder' => '0',
+  ),
+  33 => 
+  array (
+    'typeid' => '33',
+    'cat' => '74',
+    'parentid' => '2',
+    'typename' => '专利转让交易',
     'siteid' => '1',
     'listorder' => '0',
   ),
@@ -396,6 +396,15 @@ return array (
     'siteid' => '1',
     'listorder' => '0',
   ),
+  24 => 
+  array (
+    'typeid' => '24',
+    'cat' => '65',
+    'parentid' => '2',
+    'typename' => '香港商标注册',
+    'siteid' => '1',
+    'listorder' => '0',
+  ),
   25 => 
   array (
     'typeid' => '25',
@@ -411,15 +420,6 @@ return array (
     'cat' => '64',
     'parentid' => '2',
     'typename' => '国际商标注册',
-    'siteid' => '1',
-    'listorder' => '0',
-  ),
-  24 => 
-  array (
-    'typeid' => '24',
-    'cat' => '65',
-    'parentid' => '2',
-    'typename' => '香港商标注册',
     'siteid' => '1',
     'listorder' => '0',
   ),
@@ -485,15 +485,6 @@ return array (
     'typename' => '会员中心',
     'siteid' => '1',
     'listorder' => '7',
-  ),
-  16 => 
-  array (
-    'typeid' => '16',
-    'cat' => '43',
-    'parentid' => '0',
-    'typename' => '热点动态',
-    'siteid' => '1',
-    'listorder' => '8',
   ),
 );
 ?>

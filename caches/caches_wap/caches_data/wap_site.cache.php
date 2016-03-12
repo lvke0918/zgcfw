@@ -5,7 +5,7 @@ return array (
     'siteid' => '1',
     'sitename' => '中关村企业服务网',
     'logo' => '/statics/images/wap/wlogo.gif',
-    'domain' => 'http://3g.zgcfw.org.cn/',
+    'domain' => 'http://m.zgcfw.org.cn/',
     'setting' => 'array (
   \'listnum\' => \'20\',
   \'thumb_w\' => \'500\',
