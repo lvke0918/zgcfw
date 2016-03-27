@@ -1,0 +1,59 @@
+﻿
+	#center {
+  width: 1200px;
+  min-width: 1200px;
+  margin: 0 auto;
+}
+.tittle_text {
+  height: 170px;
+  border-bottom: 1px solid #ededed;
+}
+
+.txte_l {
+  width: 900px;
+  float: left;
+  margin-top: 50px;
+}
+.txte_l p {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.l_zd {
+  font-size: 15px;
+  color: #998;
+  margin-top: 10px;
+}
+.l_zd span{
+	margin-left:20px;	
+	}
+.tittle_text button {
+  float: right;
+  font-size: 20px;
+  color: #f74c00;
+  background-color: #fff;
+  border: 1px solid #f74c00;
+  border-radius: 3px;
+  font-family: 微软雅黑;
+  padding: 8px 27px;
+  margin-top: 60px;
+  margin-right: 50px;
+  cursor: pointer;
+}
+
+.tittle_text button:hover{
+	 background-color:#f74c00;
+	 color: #fff;	
+	}
+
+.zw_tx {
+  padding: 10px 0 100px;
+}
+
+.zw_tx p {
+  font-size: 14px;
+  color: #555;
+  line-height: 30px;
+  margin: 40px 0;
+}
+

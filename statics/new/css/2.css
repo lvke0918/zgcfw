@@ -1,0 +1,90 @@
+﻿
+	
+
+#center{
+	 
+	}
+	
+
+.class {
+    
+	border-bottom:1px solid #eaeaea;
+}	
+.list {
+  margin: 0 auto;
+  width: 950px;
+  height: 160px;
+}
+.item {
+  float: left;
+  position: relative;
+  text-align: center;
+  width: 190px;
+  padding: 37px 0;
+  color: #555;
+  font-size: 16px;
+}
+li.item .icon {
+  padding-bottom: 10px;
+}
+.on{
+	color:#000000;
+	
+	}
+
+.info {
+    margin: 0 auto;
+    width: 1000px;
+	padding-bottom: 100px;
+}
+
+.content{
+	border-bottom:1px dashed #dcdcdc;
+	height: 50px;
+    line-height: 50px;
+	color:#333;
+	}
+
+.news {
+    float: left;
+}
+
+.date {
+    float: right;
+}
+
+.box{
+	height:75px;
+	
+	}
+.txt {
+    border: 1px solid #f74c00;
+    border-radius: 5px;
+	margin: 30px auto 0;
+    width: 220px;
+	height: 40px;
+	line-height: 40px;
+}
+
+.bgcolor{	
+	background: #f74c00;
+	
+	}
+
+.word {
+    
+    color: #f74c00;
+    float: left;
+	width:110px;
+    text-align: center;
+}
+
+
+.p1{
+	color:#fff;
+}
+
+
+
+
+

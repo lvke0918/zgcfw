@@ -1,0 +1,97 @@
+{template "content","header_zsk"}
+
+<div id="center">
+    <div class="class">
+        <ul class="list">
+            {pc:content action="category" catid="129" order="listorder DESC" thumb="" moreinfo=""  num="20"  return="data" }
+            {loop $data $r}
+            {if $catid==$r['catid']}
+            <li class="item01 on">
+                <div class="icon">
+                    <a href="{$r['url']}">  <img src="/statics/new/images/ny_ic_{$r['catdir']}_on.png"/></a>
+                </div>
+                <span>{$r['catname']}</span>
+            </li>
+            {else}
+            <li class="item01">
+                <div class="icon">
+                    <a href="{$r['url']}"> <img src="/statics/new/images/ny_ic_{$r['catdir']}.png"/></a>
+                </div>
+                <span>{$r['catname']}</span>
+            </li>
+            {/if}
+            {/loop}
+            {/pc}
+        </ul>
+    </div>
+
+
+    <!--知识库start-->
+    <div class="part">
+        <ul class="txt">
+            {if $catid==133}
+            <li class="word bgcolor">
+              <span class="p1"> <a href="/index.php?m=content&c=index&a=lists&catid=133" >专利</a></span>
+            </li>
+            <li class="word ">
+                <a href="/index.php?m=content&c=index&a=lists&catid=134"><span>商标</span></a>
+            </li>
+            {else}
+            <li class="word ">
+                <a href="/index.php?m=content&c=index&a=lists&catid=133" ><span>专利</span></a>
+            </li>
+            <li class="word bgcolor">
+                <a href="/index.php?m=content&c=index&a=lists&catid=134" ><span class="p1">商标</span></a>
+            </li>
+            {/if}
+        </ul>
+
+        <div class="box">
+            <ul class="nav">
+                <?php if($catid==133||$catid==130||$catid==129){
+                        $nowcatid=133;
+                        }else{
+                        $nowcatid=134;
+                        }
+
+                ?>
+                {pc:content action="category" catid="$nowcatid" order="listorder DESC" thumb="" moreinfo=""  num="20"  return="data" }
+                {loop $data $r}
+
+                <a href="{$r['url']}"><li  {if $catid==$r['catid']} class="sort current" {else}class="sort"{/if}>{$r['catname']}</li></a>
+                {/loop}
+                {/pc}
+            </ul>
+        </div>
+        <div class="info">
+
+            {pc:content action="lists" catid="$catid" order="updatetime DESC" thumb="" moreinfo=""  num="20"  return="data"  page="$page"  }
+            {loop $data $n $r}
+            <div class="content">
+                <div class="news"><a title="{$r['title']}" href="{$r['url']}">{$r['title']}</a></div>
+                <div class="date">{date('Y-m-d',$r[inputtime])}</div>
+            </div>
+            {/loop}
+            {/pc}
+
+            <div class="xy_ic">
+
+
+                <div class="xy_ic_r">
+                    {$pages}
+                </div>
+
+                <div class="clear"></div>
+            </div>
+
+
+        </div>
+    </div>
+    <!--知识库end-->
+
+</div>
+<!--center-->
+<div class="clear"></div>
+
+
+{template "content","footer_zsk"}

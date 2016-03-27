@@ -1,0 +1,24 @@
+{template "content","header_zcyj"}
+
+<div id="center">
+    <div class="tittle_text">
+        <div class="txte_l">
+            <p>{$title}</p>
+            <div class="l_zd">
+                <a>作者：{$copyfrom}</a><span>发表日期：{$inputtime}</span>
+            </div>
+        </div>
+
+        <a href="/index.php?m=content&c=index&a=show&catid={$catid}">返回</a>
+
+        <div class="clear"></div>
+    </div>
+
+    <div class="zw_tx">
+        {$content}
+    </div>
+
+</div>
+
+
+{template "content","footer_zsk"}

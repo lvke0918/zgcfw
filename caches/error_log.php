@@ -4316,3 +4316,5 @@
 <?php exit;?>11-25 14:39:39 | 2 | Invalid argument supplied for foreach() | phpcms/modules/wap/functions/global.func.php | 28
 <?php exit;?>11-25 14:39:39 | 2 | Invalid argument supplied for foreach() | phpcms/modules/wap/functions/global.func.php | 28
 <?php exit;?>11-25 14:39:39 | 2 | Invalid argument supplied for foreach() | phpcms/modules/wap/functions/global.func.php | 63
+<?php exit;?>03-27 11:28:26 | 2 | fsockopen() [<a href='function.fsockopen'>function.fsockopen</a>]: php_network_getaddresses: getaddrinfo failed: nodename nor servname provided, or not known | phpcms/modules/sms/classes/smsapi.class.php | 212
+<?php exit;?>03-27 11:28:26 | 2 | fsockopen() [<a href='function.fsockopen'>function.fsockopen</a>]: unable to connect to sms.phpip.com:80 (php_network_getaddresses: getaddrinfo failed: nodename nor servname provided, or not known) | phpcms/modules/sms/classes/smsapi.class.php | 212

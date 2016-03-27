@@ -412,13 +412,25 @@ function my_error_handler($errno, $errstr, $errfile, $errline) {
  * @param mixed(string/array) $url_forward 跳转地址
  * @param int $ms 跳转等待时间
  */
-function showmessage($msg, $url_forward = 'goback', $ms = 1250, $dialog = '') {
-	if(defined('IN_ADMIN')) {
-		include(admin::admin_tpl('showmessage', 'admin'));
-	} else {
-		include(template('content', 'message'));
-	}
-	exit;
+function showmessage($msg, $url_forward = 'goback', $ms = 1250,$errno=0,$dialog = '') {
+
+
+    if(isset($_SERVER['HTTP_X_AJAX']) && $_SERVER['HTTP_X_AJAX'] == true){
+        if($url_forward == 'referer'){
+            $url = $_SERVER['HTTP_REFERER'];
+        }
+        echo json_encode(array('errno' => $errno,'msg'=> htmlspecialchars($msg), 'url'=> $url, 'timeint' => $ms * 1000));
+        exit;
+
+    }else{
+        if(defined('IN_ADMIN')) {
+            include(admin::admin_tpl('showmessage', 'admin'));
+        } else {
+            include(template('content', 'message'));
+        }
+        exit;
+
+    }
 }
 
 /**
