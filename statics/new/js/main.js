@@ -93,15 +93,19 @@ $(function() {
                 username : username,
                 password : password
             },
-            datatype : "html",
-            async:'false',
+            async: false,
+            dataType:"JSON",
+            beforeSend: function(xhr){
+                xhr.setRequestHeader('X-AJAX', 'true');
+            },
             success: function(data){
                 if(data.errno==1){
-                    alert(data.errno)
-                   $('#errMsg').html(data.msg);
+                    $('#errMsg').html(data.msg);
+                    setTimeout(function(){$('#errMsg').html('')}, 2000);
+
                 }else{
                     $('.alertDiv').hide();
-                    $('#loginDiv').html('<span>你好：'+data.data.name+'</span> |  <a href="index.php?m=member&c=index&a=logout" >注销</a>')
+                    $('#loginDiv').html(' <div class="log_off"><p>你好：'+data.data.name+'</p> |  <a href="index.php?m=member&c=index&a=logout" >注销</a></div>')
                 }
             }
         });
@@ -213,11 +217,11 @@ $(function() {
             success: function(data){
 
                 if(data.errno==1){
-
                     $('#errMsgReg').html(data.msg);
+                    setTimeout(function(){$('#errMsgReg').html('')}, 2000);
                 }else{
                     $('.alertDiv_2').hide();
-                    $('#loginDiv').html('<span>你好：'+data.data.name+'</span> |  <a href="index.php?m=member&c=index&a=logout" >注销</a>')
+                    $('#loginDiv').html(' <div class="log_off"><p>你好：'+data.data.name+'</p> |  <a href="index.php?m=member&c=index&a=logout" >注销</a></div>')
                 }
             }
         });

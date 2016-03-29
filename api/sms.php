@@ -41,7 +41,7 @@ $num = $sms_report_db->count($where);
 if($num >= $allow_max_ip) {
 	exit('-3');//当日单IP 发送短信数量超过 $allow_max_ip
 }
-if(intval($sms_setting[$siteid]['sms_enable']) == 0) exit('-99'); //短信功能关闭
+//if(intval($sms_setting[$siteid]['sms_enable']) == 0) exit('-99'); //短信功能关闭
 
 
 $sms_uid = $sms_setting[$siteid]['userid'];//短信接口用户ID

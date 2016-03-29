@@ -1,11 +1,11 @@
 {template "content","header_zcyj"}
 
-<div id="center">
+<div id="center2-1">
     <div class="tittle_text">
         <div class="txte_l">
             <p>{$title}</p>
             <div class="l_zd">
-                <a>作者：{$copyfrom}</a><span>发表日期：{$inputtime}</span>
+                <a>来源：{$copyfrom}</a><span>发表日期：{$inputtime}</span>
             </div>
         </div>
 
@@ -15,7 +15,16 @@
     </div>
 
     <div class="zw_tx">
-        {$content}
+        <div class="content">
+            {if $allow_visitor==1}
+            {$content}
+            <!--内容关联投票-->
+            {if $voteid}<script language="javascript" src="{APP_PATH}index.php?m=vote&c=index&a=show&action=js&subjectid={$voteid}&type=2"></script>{/if}
+
+            {else}
+            <CENTER><a href="{APP_PATH}index.php?m=content&c=readpoint&allow_visitor={$allow_visitor}"><font color="red">阅读此信息需要您支付 <B><I>{$readpoint} {if $paytype}元{else}点{/if}</I></B>，点击这里支付</font></a></CENTER>
+            {/if}
+        </div>
     </div>
 
 </div>
