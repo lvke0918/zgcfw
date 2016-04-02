@@ -1,10 +1,11 @@
 {template "content","header_zcyj"}
+
 <div id="center2">
     <div class="class">
         <ul class="list">
-            {pc:content action="category" catid="$CATEGORYS[$CAT[parentid]][catid]" order="listorder DESC" thumb="" moreinfo=""  num="20"  return="data" }
+            {pc:content action="category" catid="135" order="listorder DESC" thumb="" moreinfo=""  num="20"  return="data" }
             {loop $data $r}
-            {if $catid==$r['catid']}
+            {if 137==$r['catid']}
             <li class="item on">
                 <div class="icon">
                     <a href="{$r['url']}">  <img src="/statics/new/images/ny_ic_{$r['catdir']}_on.png"/></a>
@@ -27,6 +28,16 @@
 <!--最新政策start-->
 <div class="part">
     <div class="info">
+        <div class="content_box">
+            {if $catid==156}
+            <a class="box_left_2 onclick" href="/index.php?m=content&c=index&a=lists&catid=156">项目申报信息</a>
+            <a class="box_right_2" href="/index.php?m=content&c=index&a=lists&catid=157">项目立项信息</a>
+            {else}
+            <a class="box_left_2" href="/index.php?m=content&c=index&a=lists&catid=156">项目申报信息</a>
+            <a class="box_right_2 onclick" href="/index.php?m=content&c=index&a=lists&catid=157">项目立项信息</a>
+            {/if}
+            <div class="clear"></div>
+        </div>
         <ul>
         {pc:content action="lists" catid="$catid" order="updatetime DESC" thumb="" moreinfo=""  num="20"  return="data"  page="$page"  }
         {loop $data $n $r}

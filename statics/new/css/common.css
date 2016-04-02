@@ -12,6 +12,7 @@ body{background-color:#fff; zoom:1; font-size:14px;font-family:"微软雅黑"; h
 /*north*/
 
 #north1 {
+	  width: 100%;
 	background: url(../images/banner_bg.jpg) no-repeat;
 	background-position: center top;
 	height: 66px;
@@ -25,6 +26,7 @@ body{background-color:#fff; zoom:1; font-size:14px;font-family:"微软雅黑"; h
 	height: 523px;
 	border-bottom: 1px solid #999;
 	min-width: 1200px;
+	  width: 100%;
 }
 
 .menu_bar {
@@ -167,10 +169,17 @@ li.on_click {
 	
 	
 	
-/*south*/	
+/*south*/
+div#south {
+  width: 100%;
+  min-width:1200px;
+}
+	
 .footer {
 	background-color: #f9f9f9;
 	border-top: 1px solid #999;
+	  width: 100%;
+	  margin: 0 auto;
 }
 
 .xq_k {
@@ -195,7 +204,7 @@ li.on_click {
 .phone_num {
 	width: 155px;
 	float: left;
-	margin-left: 8px;
+	margin-left:8px;
 }
 
 .phone_num p {
@@ -272,6 +281,7 @@ p.tim_cl {
 	font-size: 12px;
 	display: block;
 	padding: 10px 0;
+	width: 100%;
 }
 
 
@@ -406,7 +416,7 @@ h1 {
   background: #fff;
   height: 590px;
   width: 560px;
-  margin: 50px auto;
+  margin: 100px auto;
   box-shadow: 0 0 10px rgba(0,0,0,0.2);
   z-index: 99;
   border-radius: 5px;
@@ -615,6 +625,8 @@ a.fy_a {
 	background-color: #242424;
 	margin-top: 170px;
 	height: 120px;
+	  width:100%;
+	min-width:1200px;
 }
 
 .all_k {
@@ -801,28 +813,31 @@ li.wm_text p {
 
 	
 
-#center2{
-	 
-	}
+#center2 {
+  width: 100%;
+  margin: 0 auto;
+  min-width: 1200px;
+}
 	
 
 .class {
-    
-	border-bottom:1px solid #eaeaea;
+  border-bottom: 1px solid #eaeaea;
+  height: 180px;
 }	
 #center2 .list {
   margin: 0 auto;
-  width: 950px;
-  height: 160px;
+  width: 850px;
+  height: 180px;
 }
 #center2 .item {
   float: left;
   position: relative;
   text-align: center;
-  width: 190px;
-  padding: 37px 0;
+  width: 140px;
+  padding: 49px 0;
   color: #555;
   font-size: 16px;
+    cursor: pointer;
 }
 #center2 li.item .icon {
   padding-bottom: 10px;
@@ -833,78 +848,96 @@ li.wm_text p {
 	}
 
 #center2 .info {
-    margin: 0 auto;
+      margin: 0 auto 0;
     width: 1000px;
 	padding-bottom: 100px;
 }
 
-#center2 .content{
-	border-bottom:1px dashed #dcdcdc;
-	height: 50px;
-    line-height: 50px;
-	color:#333;
+
+#center2 .info li a {
+  font-size: 15px;
+  float: left;
+  color:#333;
+  cursor:pointer;
+}
+#center2 .info li span {
+  font-size: 15px;
+  float: right;
+  color:#333;
+}
+#center2 .info li {
+  height: 70px;
+  line-height: 70px;
+  border-bottom: 1px dashed #c6c6c6;
+}
+
+.content_box {
+  height: 52px;
+  font-size: 20px;
+  color: #f74c00;
+  padding: 45px 328px;
+  width: 345px;
+}
+
+.content_box .onclick {
+  background-color: #f74c00;
+  color: #fff;
+}
+ .box_left {
+  line-height: 50px;
+  border-radius: 5px 0 0 5px;
+  border: 1px solid #f74c00;
+  color: #f74c00;
+  padding: 0 25px;
+  float: left;
+  cursor:pointer;
+}
+
+
+ .box_right {
+  line-height: 50px;
+  border-radius: 0 5px 5px 0;
+  border: 1px solid #f74c00;
+  color: #f74c00;
+  padding: 0 25px;
+  float: left;
+    cursor:pointer;
+}
+
+li.top_y{
+	 border-top:1px dashed #c6c6c6
 	}
-#center2 .content a{
-	color:#333;	
-	}
-
-#center2 .news {
-    float: left;
-}
-
-#center2 .date {
-    float: right;
-}
-
-#center2 .box{
-	height:75px;
-	
-	}
-#center2 .txt {
-    border: 1px solid #f74c00;
-    border-radius: 5px;
-	margin: 30px auto 0;
-    width: 220px;
-	height: 40px;
-	line-height: 40px;
-}
-
- #center2 .bgcolor{	
-	background: #f74c00;
-	
-	}
-
-#center2 .word {
-    
-    color: #f74c00;
-    float: left;
-	width:110px;
-    text-align: center;
-}
 
 
-#center2 .p1{
-	color:#fff;
-}
 
 
 
 /************page2-1*********************/
 
-	#center2-1 {
-  width: 1200px;
+#center2-1 {
+  width: 100%;
   min-width: 1200px;
   margin: 0 auto;
 }
 .tittle_text {
   height: 170px;
   border-bottom: 1px solid #ededed;
+  width: 100%;
+  margin: 0 auto;
+  min-width: 1200px;
 }
 
+
+.tittle_text_n {
+  width: 1200px;
+  margin: 0 auto;
+  min-width: 1200px;
+}
 .txte_l {
   width: 900px;
   float: left;
   margin-top: 50px;
+  margin-left: 20px;
 }
 .txte_l p {
   font-size: 25px;
@@ -940,8 +973,14 @@ li.wm_text p {
 
 .zw_tx {
   padding: 10px 0 100px;
+  margin: 0 20px;
 }
 
+.zw_tx_all {
+  width: 1200px;
+  margin: 0 auto;
+  min-width: 1200px;
+}
 .zw_tx p {
   font-size: 14px;
   color: #555;
@@ -1063,22 +1102,106 @@ p.fst1_x {
 
 /*************page4**************************/
 
-	
+#center4 {
+  width: 100%;
+  margin: 0 auto;
+  min-width: 1200px;
+}
+.class_n {
+  width: 1200px;
+  margin: 0 auto;
+  min-width: 1200px;
+}
 
-#center4{
-	 
-	}
-	
+#center4 .item {
+  float: left;
+  position: relative;
+  text-align: center;
+  width: 140px;
+  padding: 49px 0;
+  color: #555;
+  font-size: 16px;
+  cursor: pointer;
+}	
+
+#center4 li.item .icon {
+  padding-bottom: 10px;
+}
 
 #center4 .class {
     
 	border-bottom:1px solid #eaeaea;
-}	
+}
+
+
+
+
+.content_box_2 {
+  height: 52px;
+  font-size: 20px;
+  color: #f74c00;
+  width: 185px;
+  margin: 0 auto;
+  min-width: 1200px;
+  padding: 45px 0;
+}
+
+.content_box_2_2 {
+  padding: 0 508px;
+}
+
+.content_box_2 .onclick {
+  background-color: #f74c00;
+  color: #fff;
+}
+ .box_left_2 {
+  line-height: 50px;
+  border-radius: 5px 0 0 5px;
+  border: 1px solid #f74c00;
+  color: #f74c00;
+  padding: 0 25px;
+  float: left;
+  cursor:pointer;
+}
+
+
+ .box_right_2 {
+  line-height: 50px;
+  border-radius: 0 5px 5px 0;
+  border: 1px solid #f74c00;
+  color: #f74c00;
+  padding: 0 25px;
+  float: left;
+    cursor:pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
 #center4 .list {
   margin: 0 auto;
   width: 570px;
   height: 160px;
 }
+
+
 #center4 li.item01 .icon {
   padding-bottom: 10px;
 }	
@@ -1124,11 +1247,12 @@ p.fst1_x {
 }
 
 
-#center4 .box{
-	border-top:1px solid #dcdcdc;
-	border-bottom:1px solid #dcdcdc;
-	
-	}
+#center4 .box {
+  border-top: 1px solid #dcdcdc;
+  border-bottom: 1px solid #dcdcdc;
+  width: 100%;
+  margin: 0 auto;
+}
 #center4 .nav {
 	height: 75px;
     line-height: 75px;
@@ -1147,37 +1271,29 @@ p.fst1_x {
 	font-weight:bold;
 	
 	}
-
-#center4 .content a{
-	color:#333;	
-	}
-
-
 #center4 .info {
-    margin: 0 auto;
-    width: 1000px;
-	padding:40px 0 100px;
+  margin: 0 auto 0;
+  width: 1000px;
+  padding-bottom: 100px;
+}
+#center4 .info li {
+  height: 70px;
+  line-height: 70px;
+  border-bottom: 1px dashed #c6c6c6;
 }
 
-#center4 .content{
-	border-bottom:1px dashed #dcdcdc;
-	height: 50px;
-    line-height: 50px;
-	color:#333;
-	}
-
-#center4 .news {
-    float: left;
+#center4 .info li a {
+  font-size: 15px;
+  float: left;
+  color: #333;
+  cursor: pointer;
 }
 
-#center4 .date {
-    float: right;
+#center4 .info li span {
+  font-size: 15px;
+  float: right;
+  color: #333;
 }
-
-
-
-
-
 
 
 

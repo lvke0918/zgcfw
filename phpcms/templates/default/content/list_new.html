@@ -1,18 +1,18 @@
 {template "content","header_zsk_list"}
 <div id="center4">
     <div class="class">
-        <ul class="list">
+        <ul class="list knowledge-tab" >
             {pc:content action="category" catid="$CATEGORYS[$CAT[parentid]][catid]" order="listorder DESC" thumb="" moreinfo=""  num="20"  return="data" }
             {loop $data $r}
             {if $catid==$r['catid']}
-            <li class="item01 on">
+            <li class="item on">
                 <div class="icon">
                     <a href="{$r['url']}">  <img src="/statics/new/images/ny_ic_{$r['catdir']}_on.png"/></a>
                 </div>
                 <span>{$r['catname']}</span>
             </li>
             {else}
-            <li class="item01">
+            <li class="item">
                 <div class="icon">
                     <a href="{$r['url']}"> <img src="/statics/new/images/ny_ic_{$r['catdir']}.png"/></a>
                 </div>
@@ -24,30 +24,29 @@
         </ul>
     </div>
 
-<!--最新政策start-->
-<div class="part">
-    <div class="info">
-        {pc:content action="lists" catid="$catid" order="updatetime DESC" thumb="" moreinfo=""  num="20"  return="data"  page="$page"  }
-        {loop $data $n $r}
-        <div class="content">
-            <div class="news"><a title="{$r['title']}" href="{$r['url']}">{$r['title']}</a></div>
-            <div class="date">{date('Y-m-d',$r[inputtime])}</div>
-        </div>
-        {/loop}
-        {/pc}
-        <div class="xy_ic">
-
-
-            <div class="xy_ic_r">
-                {$pages}
+    <!--最新政策start-->
+    <div class="part">
+        <div class="info">
+            <ul>
+                {pc:content action="lists" catid="$catid" order="updatetime DESC" thumb="" moreinfo=""  num="20"  return="data"  page="$page"  }
+                {loop $data $n $r}
+                <li>
+                    <a title="{$r['title']}" href="{$r['url']}">{$r['title']}</a>
+                    <span>{date('Y-m-d',$r[inputtime])}</span>
+                    <div class="clear"></div>
+                </li>
+                {/loop}
+                {/pc}
+            </ul>
+            <div class="xy_ic">
+                <div class="xy_ic_r">
+                    {$pages}
+                </div>
+                <div class="clear"></div>
             </div>
-
-            <div class="clear"></div>
         </div>
-
     </div>
-</div>
-<!--最新政策end-->
+    <!--最新政策end-->
 
 
 
