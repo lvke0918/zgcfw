@@ -181,6 +181,33 @@ div#south {
 	  width: 100%;
 	  margin: 0 auto;
 }
+.yq_link span {
+  float: left;
+  margin-left: 160px;
+  font-size: 20px;
+  font-weight: bold;
+
+}
+.yq_link ul li {
+  width: 160px;
+  float: left;
+  margin-right: 10px;
+}
+
+.yq_link li select {
+  width: 160px;
+  height: 30px;
+  font-family: 微软雅黑;
+  font-size: 15px;
+  color: #333;
+  border: 1px solid #666;
+}
+.yq_link {
+  min-width: 1200px;
+  width: 1200px;
+  margin: 40px auto 0;
+}
+
 
 .xq_k {
 	min-width: 1200px;
@@ -818,16 +845,22 @@ li.wm_text p {
   margin: 0 auto;
   min-width: 1200px;
 }
-	
+
 
 .class {
-  border-bottom: 1px solid #eaeaea;
-  height: 180px;
+    border-bottom: 1px solid #eaeaea;
+	width:100%;
 }	
+
+.tab-list {
+  margin: 0 auto;
+  width: 850px;
+}
 #center2 .list {
   margin: 0 auto;
   width: 850px;
   height: 180px;
+  overflow:hidden;
 }
 #center2 .item {
   float: left;
@@ -1129,7 +1162,7 @@ p.fst1_x {
 }
 
 #center4 .class {
-    
+    width: 100%;
 	border-bottom:1px solid #eaeaea;
 }
 
@@ -1196,6 +1229,7 @@ p.fst1_x {
 
 	
 #center4 .list {
+	  overflow: hidden;
   margin: 0 auto;
   width: 570px;
   height: 160px;

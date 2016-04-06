@@ -1,5 +1,63 @@
 <div id="south" xmlns="http://www.w3.org/1999/html">
     <div class="footer">
+
+        <div class="yq_link">
+            <span>友情链接：</span>
+            <ul>
+                <li>
+                    <select name="choose" id="choose" onchange="ok(this)">
+                        <option value="" selected="selected">国家部委</option>
+                        {pc:link action="type_list" siteid="1" linktype="" typeid="55" order="listorder DESC"  num="40" }
+                        {loop $data $n $r}
+                        <option value="{$r['url']}">{$r['name']}</option>
+                        {/loop}
+                        {/pc}
+                    </select>
+                </li>
+                <li style="white-space:nowrap;"><select name="choose" id="choose" onchange="ok(this)">
+                    <option value="" selected="selected">地方委办局</option>
+                    {pc:link action="type_list" siteid="1" linktype="" typeid="56" order="listorder DESC"  num="40" }
+                    {loop $data $n $r}
+                    <option value="{$r['url']}">{$r['name']}</option>
+                    {/loop}
+                    {/pc}
+
+                </select>
+                </li>
+                <li style="white-space:nowrap;"><select name="choose" id="choose" onchange="ok(this)">
+                    <option value="" selected="selected">国内高新园区</option>
+                    {pc:link action="type_list" siteid="1" linktype="" typeid="54" order="listorder DESC"  num="40" }
+                    {loop $data $n $r}
+                    <option value="{$r['url']}">{$r['name']}</option>
+                    {/loop}
+                    {/pc}
+                </select>
+                </li>
+                <li style="white-space:nowrap;"><select name="choose" id="choose" onchange="ok(this)">
+                    <option value="" selected="selected">项目申报</option>
+                    {pc:link action="type_list" siteid="1" linktype="" typeid="58" order="listorder DESC"  num="40" }
+                    {loop $data $n $r}
+                    <option value="{$r['url']}">{$r['name']}</option>
+                    {/loop}
+                    {/pc}
+                </select>
+                </li>
+                <li style="white-space:nowrap;"><select name="choose" id="choose" onchange="ok(this)">
+                    <option value="" selected="selected">友情链接</option>
+                    {pc:link action="type_list" siteid="1" linktype="" typeid="57" order="listorder DESC"  num="40" }
+                    {loop $data $n $r}
+                    <option value="{$r['url']}">{$r['name']}</option>
+                    {/loop}
+                    {/pc}
+
+                </select>
+                </li>
+
+                <div class="clear"></div>
+            </ul>
+            <div class="clear"></div>
+        </div>
+
         <div class="xq_k">
             <ul>
                 <li>
@@ -13,7 +71,7 @@
 
                 <li class="contect_ic">
                     <div class="tencent_ic"></div>
-                    <em>2464038517</em>
+                    <em><a href="http://wpa.qq.com/msgrd?v=3&uin=2727932550&site=qq&menu=yes" target="_blank">2727932550</a></em>
                     <div class="clear"></div>
                 </li>
 
@@ -27,7 +85,7 @@
 
                 <li class="contect_ic">
                     <div class="email_ic"></div>
-                    <em>hihi2547@qq.com</em>
+                    <em><a href="mailto:zgcqyfw@126.com">zgcqyfw@126.com</a></em>
                     <div class="clear"></div>
                 </li>
                 <div class="clear"></div>
@@ -36,7 +94,7 @@
         </div>
     </div>
 
-    <p class="bottom_text">2011©版权所有 北京中海天行投资管理中心　京ICP备11043041号</p>
+    <p class="bottom_text">2011©版权所有 北京中海天行投资管理中心　京ICP备11043041-5号</p>
 
 </div>
 
@@ -129,14 +187,23 @@
         </div>
     </div>
 
-
-
+</div>
+<div style="width:300px;margin:0 auto; padding:20px 0;">
+    <a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11010802020219" style="display:inline-block;text-decoration:none;height:20px;line-height:20px;"><img src="/statics/new/images/11111.png" style="float:left;"/><p style="float:left;height:20px;line-height:20px;margin: 0px 0px 0px 5px; color:#939393;">京公网安备 11010802020219号</p></a>
 </div>
 <!--脚本加载-->
 <script type="text/javascript" src="/statics/new/js/jquery-1.js"></script>
 <script type="text/javascript" src="/statics/new/js/jquery.js"></script>
 <script type="text/javascript" src="/statics/new/js/main.js"></script>
-
+<script language="JavaScript" type="text/JavaScript">
+    <!--
+    function ok(select){//友情链接代码开始
+        if(select.options[select.selectedIndex].value!='$') {
+            window.open(select.options[select.selectedIndex].value,'_blank');
+        }
+    }//友情链接结束
+    //-->
+</script>
 </body>
 
 </html>
