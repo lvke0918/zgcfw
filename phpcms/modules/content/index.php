@@ -77,7 +77,7 @@ class index {
 			$_groupid = intval($_groupid);
 			if(!$_groupid) {
 				$forward = urlencode(get_url());
-				showmessage(L('login_website'),APP_PATH.'index.php?m=member&c=index&a=login&forward='.$forward);
+				showmessage(L('login_website'),APP_PATH.'index.php?m=content&c=index&a=lists&catid='.$catid);
 			}
 			if(!in_array($_groupid,$groupids_view)) showmessage(L('no_priv'));
 		} else {
@@ -85,7 +85,7 @@ class index {
 			$_priv_data = $this->_category_priv($catid);
 			if($_priv_data=='-1') {
 				$forward = urlencode(get_url());
-				showmessage(L('login_website'),APP_PATH.'index.php?m=member&c=index&a=login&forward='.$forward);
+				showmessage(L('login_website'),APP_PATH.'index.php?m=content&c=index&a=lists&catid='.$catid);
 			} elseif($_priv_data=='-2') {
 				showmessage(L('no_priv'));
 			}

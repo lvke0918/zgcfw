@@ -19,7 +19,7 @@ if(isset($_GET['mobile']) && !empty($_GET['mobile'])) {
 $_SESSION['code'] = '';
 if(!isset($_SESSION['csms'])) {
 	$_SESSION['csms'] = 0;
-} elseif($_SESSION['csms'] > 100) {
+} elseif($_SESSION['csms'] > 10) {
 	exit('-1');
 }
 $_SESSION['csms'] += 1;
