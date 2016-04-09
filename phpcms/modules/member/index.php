@@ -131,18 +131,18 @@ class index extends foreground {
                     param::set_cookie('_regusername', $userinfo['username'], $cookietime);
                     param::set_cookie('_reguserid', $userid, $cookietime);
                     param::set_cookie('_reguseruid', $userinfo['phpssouid'], $cookietime);
-                    showmessage(L('operation_success'), 'index.php?m=member&c=index&a=register&t=2');
+                    showmessage(L('operation_success'), '','','','',0,array('name'=>$userinfo['username']));
                 } else {
                     //如果不需要邮箱认证、直接登录其他应用
                     $synloginstr = $this->client->ps_member_synlogin($userinfo['phpssouid']);
-                    showmessage(L('operation_success').$synloginstr, 'index.php?m=member&c=index&a=init');
+                    showmessage(L('operation_success').$synloginstr, '','','','',0,array('name'=>$userinfo['username']));
                 }
 
             }
         } else {
-            showmessage(L('enable_register').L('enable_phpsso'), 'index.php?m=member&c=index&a=login');
+            showmessage(L('enable_register').L('enable_phpsso'), '/index.php');
         }
-        showmessage(L('operation_failure'), HTTP_REFERER,'','','',0,array('name'=>$userinfo['username']));
+        showmessage(L('operation_failure'), HTTP_REFERER,'','','',1,array('name'=>$userinfo['username']));
     }
 
 	
@@ -796,7 +796,7 @@ class index extends foreground {
         param::set_cookie('_nickname', $nickname, $cookietime);
         //param::set_cookie('cookietime', $_cookietime, $cookietime);
         $forward = isset($_POST['forward']) && !empty($_POST['forward']) ? urldecode($_POST['forward']) : 'index.php?m=member&c=index';
-        showmessage(L('login_success').$synloginstr, $forward,'','','',0,array('name'=>$nickname));
+        showmessage(L('login_success').$synloginstr, $forward,'','','',0,array('name'=>$username));
 
     }
 	

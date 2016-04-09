@@ -176,7 +176,8 @@ $(function() {
         $.get('/api.php?op=sms_idcheck&action=id_code', {
             clientid : 'mobile_verify',
             mobile : mobile,
-            mobile_verify: mobile_verify
+            mobile_verify: mobile_verify,
+            jscheck:1
         }, function(data) {
             if( data == "1" ) {
                 f=true
