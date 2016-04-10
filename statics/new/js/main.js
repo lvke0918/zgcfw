@@ -51,7 +51,7 @@ $(".alertDiv .p3").click(function(){
 	
 
 //注册
-$(".register_button").click(function(){
+$(".register_button,#diagnosis").click(function(){
 	$(".alertDiv_2").show();	
 	});
 $(".cancel").click(function(){
