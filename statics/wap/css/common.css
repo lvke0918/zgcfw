@@ -1,0 +1,235 @@
+/*统一样式*/
+html {
+    -webkit-tap-highlight-color:rgba(0, 0, 0, 0);
+    -webkit-tap-highlight:rgba(0, 0, 0, 0);
+    -webkit-text-size-adjust:none;
+}
+
+body {
+    font-size:0.75em;
+    font-family:Helvetica, STHeiti STXihei, Microsoft JhengHei, Microsoft YaHei, Arial;
+}
+
+body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, dl, dt, dd, ul, ol, li, pre, form, fieldset, legend, button, input, textarea, th, td {
+    margin: 0;
+    padding: 0;
+    vertical-align: baseline;
+}
+
+label {
+    cursor:pointer
+}
+
+input, button, select, textarea {
+    outline:none
+}
+
+textarea {
+    resize:none;
+}
+
+a, abbr, acronym, address, applet, article, aside, audio, b, blockquote, big, body, center, canvas, caption, cite, code, command, datalist, dd, del, details, dfn, dl, div, dt, em, embed, fieldset, figcaption, figure, font, footer, form, h1, h2, h3, h4, h5, h6, header, hgroup, html, i, iframe, img, ins, kbd, keygen, label, legend, li, meter, nav, menu, object, ol, output, p, pre, progress, q, s, samp, section, small, span, source, strike, strong, sub, sup, table, tbody, tfoot, thead, th, tr, tdvideo, tt, u, ul, var {
+    margin:0;
+    padding:0
+}
+
+a {
+    text-decoration:none;
+    tap-highlight-color: transparent;
+    -webkit-tap-highlight-color: transparent;
+    -ms-tap-highlight-color: transparent;
+}
+
+article, aside, footer, header, hgroup, nav, section, figure, figcaption {
+    display: block
+}
+/*html5设置*/
+ h1, h2, h3, h4, h5, h6, th, td, table, input, button, select, textarea, sub {
+    font-size:1em
+}
+
+em, cite, address, optgroup {
+    font-style:normal
+}
+
+kbd, samp, code {
+    font-family:monospace
+}
+
+img, input, button, select, textarea {
+    vertical-align:middle
+}
+
+ul, ol, li {
+    list-style:none
+}
+
+img, fieldset {
+    border:0
+}
+
+abbr, acronym {
+    cursor:help;
+    border-bottom:1px dotted black
+}
+
+table {
+    width:100%;
+    border-spacing:0;
+    border:0
+}
+
+table th, table td {
+    border:0
+}
+
+legend, hr {
+    overflow:hidden;
+    position:absolute;
+    top:0;
+    left:0
+}
+
+legend, hr, caption {
+    visibility:hidden;
+    font-size:0;
+    width:0;
+    height:0;
+    line-height:0
+}
+
+strong {
+    font-weight:normal;
+}
+
+input[type="button"], input[type="submit"], input[type="reset"], input[type="text"], input[type="search"], input[type="password"], input[type="tel"], input[type="number"] {
+    -webkit-appearance: none;
+}
+
+ html {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    margin:0 auto;
+    width:100%;
+    background:#Fff;
+    min-width: 320px;
+}
+/*------------------------------------------------------------------------------------*/
+
+
+#layout {
+    width: 100%;
+    margin: 0 auto;
+    min-width: 320px;
+    max-width:640px;
+}
+
+.hide {
+    display:none;
+}
+
+.noItem, .noitems {
+    color: #666;
+    font-size: 15px;
+    margin-top: 25%;
+    text-align: center;
+}
+
+
+/*loading1*/
+.loading {
+    background:url(/statics/wap/images/loading.gif) no-repeat center;
+    background-size:100%;
+    width:17px;
+    height:17px;
+    margin:30px auto 0;
+}
+
+.loading3 {
+    background:url(/statics/wap/images/loading3.gif) no-repeat center;
+    background-size:16px 16px;
+    width:100%;
+    height:100%;
+    position:fixed;
+    top:0;
+    left:0;
+}
+
+/*loading2*/
+ #preloading {
+    width:100%;
+    height:100%;
+    position:fixed;
+    background:rgba(0, 0, 0, 0.8);
+    top:0;
+    left:0;
+    z-index:999;
+}
+
+.spinner {
+    margin: 0 auto;
+    width: 40px;
+    height: 30px;
+    text-align: center;
+    font-size: 10px;
+    position:absolute;
+    left:50%;
+    margin-left:-20px;
+    top:50%;
+    margin-top:-15px;
+}
+
+.spinner > div {
+    background-color: #fff;
+    height: 100%;
+    width: 6px;
+    margin: 0 2px;
+    display: inline-block;
+    -webkit-animation: stretchdelay 1.2s infinite ease-in-out;
+    animation: stretchdelay 1.2s infinite ease-in-out;
+}
+
+.spinner .rect2 {
+    -webkit-animation-delay: -1.1s;
+    animation-delay: -1.1s;
+}
+
+.spinner .rect3 {
+    -webkit-animation-delay: -1.0s;
+    animation-delay: -1.0s;
+}
+
+.spinner .rect4 {
+    -webkit-animation-delay: -0.9s;
+    animation-delay: -0.9s;
+}
+
+.spinner .rect5 {
+    -webkit-animation-delay: -0.8s;
+    animation-delay: -0.8s;
+}
+
+@-webkit-keyframes stretchdelay {
+    0%, 40%, 100% {
+        -webkit-transform: scaleY(0.6)
+    }
+    
+20% {
+        -webkit-transform: scaleY(1.0)
+    }
+}
+
+@keyframes stretchdelay {
+    0%, 40%, 100% {
+        transform: scaleY(0.6);
+        -webkit-transform: scaleY(0.6);
+    }
+    
+20% {
+        transform: scaleY(1.0);
+        -webkit-transform: scaleY(1.0);
+    }
+}

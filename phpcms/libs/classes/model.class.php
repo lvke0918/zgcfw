@@ -45,6 +45,10 @@ class model {
 		return $this->db->select($data, $this->table_name, $where, $limit, $order, $group, $key);
 	}
 
+	public function lastsql() {
+		return $this->db->lastsql();
+	}
+
 	/**
 	 * 查询多条数据并分页
 	 * @param $where

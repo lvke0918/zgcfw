@@ -23,27 +23,96 @@ class index {
 		$template = $WAP_SETTING['index_template'] ? $WAP_SETTING['index_template'] : 'index';
 		include template('wap', $template);
 	}
+
+	//展示首页
+	public function policy() {
+		$WAP = $this->wap;
+		$TYPE = $this->types;
+		$WAP_SETTING = string2array($WAP['setting']);
+		$GLOBALS['siteid'] = $siteid = max($this->siteid,1);
+		include template('wap', 'policy');
+	}
+
+	//展示列表页
+	public function jsonlists() {
+		$json = isset($_GET['json']) && $_GET['json'] ? $_GET['json'] : false;
+		$parentids = array();
+		$WAP = $this->wap;
+		$TYPE = $this->types;
+		$WAP_SETTING = string2array($WAP['setting']);
+		$GLOBALS['siteid'] = $siteid = max($this->siteid,1);
+		$typeid = intval($_GET['typeid']);
+		if(!$typeid) exit(L('parameter_error'));
+		$subtype=subtype($typeid);
+		$catids=array();
+		$catnames=array();
+		foreach($subtype as $k=>$v){
+			$catnames[$v['cat']]=$v['typename'];
+			$catids[]=$v['cat'];
+		}
+
+		$catid = $this->types[$typeid]['cat'];
+		$siteids = getcache('category_content','commons');
+		$siteid = $siteids[$catid];
+		$CATEGORYS = getcache('category_content_'.$siteid,'commons');
+		if(!isset($CATEGORYS[$catid])) exit(L('parameter_error'));
+		$CAT = $CATEGORYS[$catid];
+		$siteid = $GLOBALS['siteid'] = $CAT['siteid'];
+		extract($CAT);
+		foreach($TYPE as $_t) $parentids[] = $_t['parentid'];
+		$template = ($TYPE[$typeid]['parentid']==0 && in_array($typeid,array_unique($parentids))) ? $WAP_SETTING['category_template'] : $WAP_SETTING['list_template'];
+		$MODEL = getcache('model','commons');
+		$modelid = $CAT['modelid'];
+
+		$tablename = $this->db->table_name = $this->db->db_tablepre.$MODEL[$modelid]['tablename'];
+		$total = $this->db->count('status=99 and catid in ('.implode(',',$catids).')');
+		$page = isset($_GET['page']) && intval($_GET['page']) ? intval($_GET['page']) : 1;
+		$pagesize = $WAP_SETTING['listnum'] ? intval($WAP_SETTING['listnum']) : 20 ;
+		$offset = ($page - 1) * $pagesize;
+		$list = $this->db->select('status=99 and catid in ('.implode(',',$catids).')', '*', $offset.','.$pagesize,'inputtime DESC');
+		//echo $this->db->lastsql();
+	//print_r($list);
+		if($json){
+			$data=array();
+			$class=array('21'=>1,'22'=>2);
+			foreach($list as $k=>$v){
+				$data[$k]['id']=$v['id'];
+				$data[$k]['title']=$v['title'];
+				$data[$k]['status']=$v['id'];
+				$data[$k]['created']=$v['inputtime'].'000';
+				$data[$k]['url']=show_url($v['catid'],$v['id']);
+				$data[$k]['category']=array('title'=>$catnames[$v['catid']],'num'=>$class[$v['catid']]);
+			}
+			$data['data']=$data;
+			$data['meta']['total']=$total;
+			$data['meta']['start']=$page;
+			$data['meta']['size']=$pagesize;
+			echo json_encode($data);exit;
+		}
+	}
 	
     //展示列表页
 	public function lists() {
+		$json = isset($_GET['json']) && $_GET['json'] ? $_GET['json'] : false;
 	    $parentids = array();
 		$WAP = $this->wap;
 		$TYPE = $this->types;
 		$WAP_SETTING = string2array($WAP['setting']);
 		$GLOBALS['siteid'] = $siteid = max($this->siteid,1);
-		$typeid = intval($_GET['typeid']);		
-		if(!$typeid) exit(L('parameter_error'));					
+		$typeid = intval($_GET['typeid']);
+
+		$a=subtype($typeid);
+
+		if(!$typeid) exit(L('parameter_error'));
 		$catid = $this->types[$typeid]['cat'];	
 		$siteids = getcache('category_content','commons');
 		$siteid = $siteids[$catid];
 		$CATEGORYS = getcache('category_content_'.$siteid,'commons');
-
 		if(!isset($CATEGORYS[$catid])) exit(L('parameter_error'));
 		$CAT = $CATEGORYS[$catid];
 		$siteid = $GLOBALS['siteid'] = $CAT['siteid'];
 		extract($CAT);	
 		foreach($TYPE as $_t) $parentids[] = $_t['parentid'];
-		
 		$template = ($TYPE[$typeid]['parentid']==0 && in_array($typeid,array_unique($parentids))) ? $WAP_SETTING['category_template'] : $WAP_SETTING['list_template'];	
 		$MODEL = getcache('model','commons');
 		$modelid = $CAT['modelid'];
@@ -53,19 +122,36 @@ class index {
 		$pagesize = $WAP_SETTING['listnum'] ? intval($WAP_SETTING['listnum']) : 20 ;
 		$offset = ($page - 1) * $pagesize;
 
-		$list = $this->db->select(array('status'=>'99','catid'=>$catid), '*', $offset.','.$pagesize,'inputtime DESC');
+		$list = $this->db->select('status=99 and catid in (17,18)', '*', $offset.','.$pagesize,'inputtime DESC');
+		echo $this->db->lastsql();
+		if($json){
+			$data=array();
+			foreach($list as $k=>$v){
+				$data[$k]['id']=$v['id'];
+				$data[$k]['title']=$v['title'];
+				$data[$k]['status']=$v['id'];
+				$data[$k]['created']=$v['inputtime'].'000';
+				$data[$k]['url']=$v['url'];
+			}
+			$data['data']=$data;
+			$data['meta']['total']=$total;
+			$data['meta']['start']=$page;
+			$data['meta']['size']=$pagesize;
+		    echo json_encode($data);exit;
+		}
 		
 		//构造wap url规则
 		define('URLRULE', 'index.php?m=wap&c=index&a=lists&typeid={$typeid}~index.php?m=wap&c=index&a=lists&typeid={$typeid}&page={$page}');
 		$GLOBALS['URL_ARRAY'] = array('typeid'=>$typeid);
 		
 		$pages = wpa_pages($total, $page, $pagesize);
-
 		include template('wap', $template);
 	}	
 	
     //展示内容页
 	public function show() {
+
+		$_GET['remains']='true';
 		$WAP = $this->wap;
 		$WAP_SETTING = string2array($WAP['setting']);
 		$TYPE = $this->types;
@@ -202,9 +288,9 @@ class index {
 	    	}			
 		}
 				
-		$content = content_strip(wml_strip($content));	
+		$content = content_strip(wml_strip($content));
 		$template = $WAP_SETTING['show_template'] ? $WAP_SETTING['show_template'] : 'show';
-		include template('wap', $template);
+		include template('wap','detail');
 	}
 	
 	//提交评论

@@ -6,6 +6,7 @@
 <div class="content">
 {if $pictureurl}{$pictureurl}<br>{$pages}{/if}
 {$content}
+ {$data}
 </div>
 {if !$pictureurl}<div class="pages">{$pages}</div>{/if}
 {php $commentid=id_encode('content_'.$catid,$id,$siteid)}

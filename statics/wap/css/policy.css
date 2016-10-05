@@ -1,0 +1,87 @@
+.top {
+    box-shadow:none;
+}
+
+.pic {
+    padding: 0 0 10px;
+    background: #fff;
+    box-shadow: 2px 2px 5px #ddd;
+}
+
+.bg {
+    width: 95%;
+    margin-left: 2.5%;
+    border-radius: 5px;
+}
+
+#list li {
+    width:95%;
+    margin-left:2.5%;
+    margin-top: 10px;
+}
+
+#list li a {
+    color:#333;
+}
+
+.caption {
+    display:inline-block;
+    padding:0 5px;
+    height: 25px;
+    line-height: 25px;
+    font-size: 14px;
+    text-align:center;
+    color: #fff;
+    background: #088e9a;
+}
+
+.title {
+    background: #fff;
+    border:1px solid #088e9a;
+}
+
+.title p {
+    font-size: 15px;
+    padding: 10px 20px;
+    color:#333;
+}
+
+.c1 .caption {
+    background: #088e9a;
+}
+
+.c1 .title {
+    border:1px solid #088e9a;
+}
+
+.c2 .caption {
+    background: #e14d4d;
+}
+
+.c2 .title {
+    border:1px solid #e14d4d;
+}
+
+.c3 .caption {
+    background: #8f72c0;
+}
+
+.c3 .title {
+    border:1px solid #8f72c0;
+}
+
+.c4 .caption {
+    background: #f9a731;
+}
+
+.c4 .title {
+    border:1px solid #f9a731;
+}
+
+.c5 .caption {
+    background: #12b5a8;
+}
+
+.c5 .title {
+    border:1px solid #12b5a8;
+}

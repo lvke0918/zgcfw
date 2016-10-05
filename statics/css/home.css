@@ -66,7 +66,10 @@ span.center_more a{float:right;color:#666;padding-right:10px;font-weight:normal;
 .businessCor,.friendLink{width:1025px;margin-top:10px;}
 .businessCor h1,.friendLink h1{background:url(../images/businessCor_bg.png) no-repeat; width:1005px; padding-left:20px; height:33px; line-height:33px; font-size:14px; font-weight:bold; color:#fff;}
 .businessCor ul,.friendLink ul{border-left:1px solid #dcdada;border-right:1px solid #dcdada;border-bottom:1px solid #dcdada; margin:0; padding:0; padding:0 10px 10px 10px; min-height:35px; height:expression_r(document.body.clientHeight &lt;35? "35px": "auto" );}
-.businessCor ul li,.friendLink ul li{float:left; padding:5px;}
+.businessCor ul li,.friendLink ul li{float:left; padding:5px;width:19%}
+.businessCor ul li, .friendLink ul li select {
+    width: 100%;
+}
 .friendLink ul li a{color:#333;}
 /*访问记录*/
 .visitor{text-align:center;}

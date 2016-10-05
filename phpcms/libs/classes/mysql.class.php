@@ -28,6 +28,16 @@ final class mysql {
 	 *  统计数据库查询次数
 	 */
 	public $querycount = 0;
+
+	/**
+	 * 最近一次查询语句
+	 */
+	private $lastquerysql = '';
+
+	public function lastsql() {
+		return $this->lastquerysql;
+	}
+
 	
 	public function __construct() {
 
@@ -82,7 +92,7 @@ final class mysql {
 		if(!is_resource($this->link)) {
 			$this->connect();
 		}
-		
+		$this->lastquerysql = $sql;
 		$this->lastqueryid = mysql_query($sql, $this->link) or $this->halt(mysql_error(), $sql);
 
 		$this->querycount++;

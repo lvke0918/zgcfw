@@ -1,0 +1,60 @@
+/*详情*/
+.detail {
+    width: 95%;
+    margin-left: 2.5%;
+}
+
+.detail .title {
+    font-size: 20px;
+    font-weight: bold;
+    padding: 10px 0;
+    line-height: 25px;
+    color:#000;
+}
+
+.content {
+    padding: 10px 5px;
+    line-height:24px;
+    color:#333;
+    font-size:16px;
+}
+
+.content img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.content p {
+    margin-bottom:5px;
+} 
+
+.category {
+    padding:2px 5px;
+    margin-left:10px;
+    font-size: 13px;
+    text-align:center;
+    color: #fff;
+    background: #088e9a;
+    word-break: break-all;
+}
+
+
+.c1 {
+    background: #088e9a;
+}
+
+.c2 {
+    background: #e14d4d;
+}
+
+.c3 {
+    background: #8f72c0;
+}
+
+.c4 {
+    background: #f9a731;
+}
+
+.c5 {
+    background: #12b5a8;
+} 

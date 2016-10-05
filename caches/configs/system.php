@@ -4,7 +4,7 @@ return array(
 'web_path' => '/',
 //Session配置
 'session_storage' => 'mysql',
-'session_ttl' => 1800,
+'session_ttl' => 108000,
 'session_savepath' => CACHE_PATH.'sessions/',
 'session_n' => 0,
 //Cookie配置

@@ -1,28 +1,10 @@
-{template "wap","header"}
-<div class="adds">{wap_pos($typeid)}</div>
-    <section class="content-block" >
-        <div class="block-title">
-
-             <h2>{wap_pos($typeid)}</h2>
-        </div>
-        <section class="titles-list">
-            <ul class="titles">
-
-                {loop $list $v}
-                <li>
-                    <a href="{show_url($v[catid],$v[id],$typeid)}" title="{$v['title']}">
-                        <h4>{$v['title']}</h4>
-
-                    </a>
-                </li>
-                {/loop}
-            </ul>
-        </section>
-        <div class="block-title">
-
-        </div>
-
-    </section>
-
+{template "wap","min_header"}
+<div class="wrap" id="hd">
+ <div class="adds">{wap_pos($typeid)}</div>
+<div>
+{loop $list $v}
+	<a href="{show_url($v[catid],$v[id],$typeid)}" title="{$v['title']}">{str_cut($v['title'],26,'')}</a><br/>
+{/loop}
+</div>
  <div class="pages">{$pages}</div>
-{template "wap","footer"}
+{template "wap","min_footer"}

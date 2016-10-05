@@ -1,0 +1,97 @@
+body {
+    background:#f4f4f4;
+}
+
+#layout {
+    padding-bottom:60px;
+}
+
+#north .top {
+    background: #fff;
+    padding: 10px 0;
+    height: 35px;
+    box-shadow: 2px 2px 3px #dedede;
+}
+
+#north .top .up {
+    width: 95%;
+    margin-left:2.5%;
+    display: inline-block;
+}
+
+#north .logo {
+    width:148px;
+    height: 30px;
+    float: left;
+    padding-top: 2px;
+}
+
+#north .user {
+    float: right;
+    width:65px;
+}
+
+#north .user a {
+    display: block;
+    text-align: center;
+    width: 100%;
+    border-left: 1px solid #d2d2d2;
+    padding-left: 5px;
+}
+
+#north .user p {
+    width: 100%;
+    color: #333;
+    margin-top: 2px;
+}
+
+#north .line {
+    border-left: 1px solid #d2d2d2;
+    height: 34px;
+    display: inline-block;
+    float: left;
+    margin-right: 10px;
+}
+
+#north .uicon {
+    width:17px;
+    height: 17px;
+    border-radius: 25px;
+}
+
+.menu {
+    position:fixed;
+    bottom:0;
+    width:100%;
+    max-width:640px;
+    background: #fff;
+    border-top:1px solid #c2c2c2;
+    border-bottom:3px solid #e4e4e4;
+}
+
+.menu li {
+    width: 33.3%;
+    float: left;
+    border-right: 1px solid #dcdcdc;
+    font-size: 14px;
+    text-align: center;
+    box-sizing: border-box;
+    margin: 10px 0;
+    height: 24px;
+}
+
+.menu li a {
+    color:#555;
+    height: 24px;
+    line-height: 24px;
+    padding: 15px 1px;
+}
+
+.menu li a.on {
+    color:#000;
+    border-bottom: 3px solid #e73f03;
+}
+
+.menu li:last-child {
+    border-right: none;
+}

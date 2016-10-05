@@ -1,257 +1,571 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <link rel="stylesheet" type="text/css" href="/statics/new/css/common.css" />
-    <link rel="stylesheet" type="text/css" href="/statics/new/css/index.css" />
-    <title>{if isset($SEO['title']) && !empty($SEO['title'])}{$SEO['title']}{/if}{$SEO['site_title']}</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=7" />
+<title>中关村企业服务网</title>
+<meta name="keywords" content="中关村企业服务网，企业诊断，政府资金项目申报，涉密资质，政府基金，税收优惠策划，知识产权规划，双软、重点软件企业、高新认定，计算机系统集成资质、涉密资质、安防资质">
+<meta name="description" content="中关村企业服务网帮助企业有效地利用各项政策资源实现企业最大利益      为企业提供全方位、多层次、专业化的“行政管家”式的服务，      为企业进行专业诊断、制订融资方案、知识产权战略、财税规划和资质认证等。">
+<link href="http://www.zgcfw.org.cn/statics/css/common.css" rel="stylesheet" type="text/css" />
+<link href="http://www.zgcfw.org.cn/statics/css/container.css" type="text/css" rel="stylesheet">
+
+<link href="http://www.zgcfw.org.cn/statics/css/home.css" type="text/css" rel="stylesheet">
+<script type="text/javascript" src="http://www.zgcfw.org.cn/statics/js/jquery.min.js"></script>
+<script type="text/javascript" src="http://www.zgcfw.org.cn/statics/js/jquery.sgallery.js"></script>
+<script type="text/javascript" src="http://www.zgcfw.org.cn/statics/js/search_common.js"></script>
+<script type="text/javascript" src="http://www.zgcfw.org.cn/statics/js/jquery.KinSlideshow-1.1.js"></script>
+
+<style type="text/css">
+.code{ height:auto; padding:20px; border:1px solid #9EC9FE; background:#ECF3FD;}
+.code pre{ font-family:"Courier New";font-size:14px;}
+.info{ font-size:12px; color:#666666; font-family:Verdana; }
+.info p{ margin:0; padding:0; line-height:22px; text-indent:40px;}
+h2.title{ margin:0; padding:0; margin-top:50px; font-size:18px; font-family:"微软雅黑",Verdana;}
+h3.title{ font-size:16px; font-family:"微软雅黑",Verdana;}
+.importInfo{ font-family:Verdana; font-size:14px;}
+</style>
 </head>
-<body>
-<div id="north">
-    <div class="menu_bar">
-        <div class="logo_ic"></div>
-        <div class="menu_all">
-            <ul>
-                <li class="on_click" ><a href="index.html">首页</a></li>
-                <li><a href="/index.php?m=content&c=index&a=lists&catid=135">政策研究</a></li>
-                <li><a href="/index.php?m=content&c=index&a=lists&catid=149">企业服务</a></li>
-                <li><a href="/index.php?m=content&c=index&a=lists&catid=129">知识库</a></li>
+<script language="JavaScript">
+<!--
+
+	$(function(){
+		$('#username').focus();
+	})
+
+
+	
+	function show_login(site) {
+		if(site == 'sina') {
+			art.dialog({lock:false,title:'用新浪账号登录',id:'protocoliframe', iframe:'index.php?m=member&c=index&a=public_sina_login',width:'500',height:'310',yesText:'关闭'}, function(){
+			});
+		} else if(site == 'snda') {
+			art.dialog({lock:false,title:'用盛大连接登录',id:'protocoliframe', iframe:'index.php?m=member&c=index&a=public_snda_login',width:'500',height:'310',yesText:'关闭'}, function(){
+			});
+		} else if(site == 'qq') {
+			art.dialog({lock:false,title:'用腾讯微博帐号登录',id:'protocoliframe', iframe:'index.php?m=member&c=index&a=public_qq_login',width:'500',height:'310',yesText:'关闭'}, function(){
+			});
+		}
+	}
+//-->
+</script>
+<body class="yui-skin-sam">
+<div class="" description="" id="layout"><div class="" description="" id="north"><div class=""><div class="" description="" id="header"><div class="top"><div class="block"><div class="block_body">
+<a class="logo" href="http://www.zgcfw.org.cn"></a>
+
+<div class="contact">
+            <img width="80" height="80" src="/statics/images/qrcode_for_gh_b82ef7a479ca_258.jpg" style="float:left;margin-right:20px;">
+            <ul style="float:left;">
+              <li><a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=2727932550&site=qq&menu=yes">
+                   <img border="0" src="http://wpa.qq.com/pa?p=2:2727932550:41" alt="在线服务" title="在线服务">
+                   </a></li>
+<li><img src="/statics/images/icon/find_phone.png" style="height:20px;">：010-82626510 &nbsp;&nbsp; </li>
+              <li><img src="/statics/images/icon/email.png" style="height:20px;">：<a href="mailto:zgcqyfw@126.com">zgcqyfw@126.com</a></li>
             </ul>
+          </div>
+     
+</div></div></div><div class="menu"><div class="block"><div class="block_body">
+<map>
+    	        	<ul >
+			<li    class="onClick"   id="main_menu_1"><a href="http://www.zgcfw.org.cn">首页</a></li>
+						<li ><a href="http://www.zgcfw.org.cn/index.php?m=content&c=index&a=lists&catid=6">新闻动态</a></li>
+						<li ><a href="http://www.zgcfw.org.cn/index.php?m=content&c=index&a=lists&catid=100">服务内容</a></li>
+						<li ><a href="http://www.zgcfw.org.cn/index.php?m=content&c=index&a=lists&catid=9">政府资金</a></li>
+						<li ><a href="http://www.zgcfw.org.cn/index.php?m=content&c=index&a=lists&catid=10">知识产权</a></li>
+						<li ><a href="http://www.zgcfw.org.cn/index.php?m=content&c=index&a=lists&catid=120">财税顾问</a></li>
+						<li ><a href="http://www.zgcfw.org.cn/index.php?m=content&c=index&a=lists&catid=12">资质认证</a></li>
+						<li ><a href="http://www.zgcfw.org.cn/index.php?m=content&c=index&a=lists&catid=13">交流培训</a></li>
+						<li ><a href="http://www.zgcfw.org.cn/index.php?m=content&c=index&a=lists&catid=14">会员中心</a></li>
+						<li ><a href="http://www.zgcfw.org.cn/index.php?m=content&c=index&a=lists&catid=51">关于我们</a></li>
+			            </ul>
+        		        </map>
+           
+<div class="clear"></div>
+</div>
+</div>
+</div>
+<div class="banner1"></div>
 
-        </div>
-        <div class="login_k" id="loginDiv">
-            <span class="login_button">登陆</span>
-            <span class="register_button">注册</span>
-        </div>
+<div class="xlet">
+</div>
+<div class="xlet">
+<div class="block"><div class="block_body">
+</div>
+</div>
+</div>
+<div class="" description="" id="search">
+<div class="searchBlock">
+<div class="xpe_ui" id="xpe_">
+<form id="sform2" name="sform2"   action="http://www.zgcfw.org.cn/index.php" method="get" target="_blank"  >
+ <input  name="q" id="q"  onblur='if(this.value==""){this.value="请输入关键字"}' onfocus="if(this.value=='请输入关键字')this.value=''" value="请输入关键字"  class="input" type="text"> 
+				<input type="hidden" name="m" value="search"/>
+				<input type="hidden" name="c" value="index"/>
+				<input type="hidden" name="time" value="all"/>
+				<input type="hidden" name="a" value="init"/>
+				<input type="hidden" name="typeid" value="53" id="typeid"/>
+				<input type="hidden" name="siteid" value="1" id="siteid"/>
+<input class="searchBtn" value="搜索" type="submit">
+</form>
+</div>
+<div style="display:none" id="xpe_ui"></div>
+</div>
+<div class="loginText"><div class="xpe_ui" id="xpe_">
+<div class="login">
+<form method="post" action="index.php?m=member&c=index&a=login" id="myform" name="myform">
+            用户名：<input  id="username" name="username" class="username" type="text">
+            密码：<input type="password" id="password" name="password" class="password">
+			<input class="loginBtn" value="登陆" name="dosubmit" id="dosubmit" type="submit"><span><a href="index.php?m=member&c=index&a=register&siteid=1" class="register">注册</a>|<a href="index.php?m=member&c=index&a=public_forget_password&siteid=1" class="forgetPas">忘记密码</a></span>
+			</form>
+			<form id="login" method="POST" action="/xpe/secu/login">
+                              <input value="/xpe/portal/2da378f0-138b-1000-8387-49737a611cd0" name="onSuccess" type="hidden">
+                              <input name="username" value="" type="hidden">
+                              <input name="password" value="" type="hidden">
+                      </form>
+</div>
+<div class="clear"></div>
+<div class="blank"></div>
+<div style="visibility: hidden;" id="simpleDialog_d38902072e22_c" class="yui-panel-container yui-dialog yui-overlay-hidden yui-simple-dialog"><div class="yui-module yui-overlay yui-panel" id="simpleDialog_d38902072e22" style="display: none; visibility: inherit;"><div class="hd" id="hd_simpleDialog_d38902072e22">提示</div><div class="bd" id="bd_simpleDialog_d38902072e22"></div></div></div></div>
+<div style="display:none" id="xpe_ui"></div>
+</div>
+<div class="clear" description="" id="clear02"></div>
+<script type="text/javascript">
+$(function(){
+	$("#KinSlideshow").KinSlideshow();
+     
+})
+</script>
 
-    </div>
-    <div class="banner_all">
-        <P class="ys_2">为企业提供</P>
-        <p>一站式政策事务服务</p>
-        <span>包括 专业诊断、融资方案、知识产权、财税规划和行政许可</span>
-        <a>立即开始诊断</a>
-    </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="" description="" id="layout">
+
+<div class="" description="" id="middle">
+<div class="" description="" id="left">
+<div class="picShow">
+
+<div id="banner">	
+
+<div id="KinSlideshow" style="visibility:hidden;border:solid 1px #848484; ">
+            <a href="http://www.zgcfw.org.cn/index.php?m=content&c=index&a=show&catid=16&id=1571" target="_blank"><img src="http://www.zgcfw.org.cn/uploadfile/2015/0612/20150612100242950.jpg" alt="关于开展涉密信息系统集成资质审查工作的通知" width="250" height="190" /></a>
+        <a href="http://www.zgcfw.org.cn/index.php?m=content&c=index&a=show&catid=16&id=1056" target="_blank"><img src="http://www.zgcfw.org.cn/uploadfile/2015/0611/20150611105418220.jpg" alt="关于补充认定及复审高新技术企业的通知" width="250" height="190" /></a>
+        <a href="http://www.zgcfw.org.cn/index.php?m=content&c=index&a=show&catid=44&id=1021" target="_blank"><img src="http://www.zgcfw.org.cn/uploadfile/2014/1215/20141215121024404.jpg" alt="关于过渡期内计算机系统集成资质新申报和换证申报工作" width="250" height="190" /></a>
+        <a href="http://www.zgcfw.org.cn/index.php?m=content&c=index&a=show&catid=44&id=211" target="_blank"><img src="http://www.zgcfw.org.cn/uploadfile/2014/0301/20140301115007984.jpg" alt="涉及国家秘密计算机信息系统集成资质" width="250" height="190" /></a>
+        </div>
+     
+</div>
 </div>
 
-<div id="center">
-    <div class="tgfw_bar">
-        <p>【 我们为您提供以下服务 】</p>
-        <div class="tg_bar_icon">
-            <ul>
-                <li>
-                    <div class="tg_icon">
-                        <div class="tg_icon_1_bg"></div>
-                    </div>
-                    <span>专业诊断</span>
-                </li>
+<div class="leftMenu01">
+<h1><span class="left_more"><a href="http://www.zgcfw.org.cn/index.php?m=content&c=index&a=lists&catid=12" title="资质认证">更多</a></span>资质认证</h1>
+                <ul>
+                                             <li><a href="http://www.zgcfw.org.cn/index.php?m=content&c=index&a=show&catid=83&id=2552" title="涉密信息系统集成资质申请单位提交材料清单"><span style="font-weight:bold">&nbsp;·&nbsp;</span>涉密信息系统集成资质申请单位提交材...</a></li>
+                              <li><a href="http://www.zgcfw.org.cn/index.php?m=content&c=index&a=show&catid=24&id=2517" title="关于软件和集成电路产业企业所得税优惠政策有关问题通知"><span style="font-weight:bold">&nbsp;·&nbsp;</span>关于软件和集成电路产业企业所得税优...</a></li>
+                              <li><a href="http://www.zgcfw.org.cn/index.php?m=content&c=index&a=show&catid=24&id=2251" title="《高新技术企业认定管理办法》的通知"><span style="font-weight:bold">&nbsp;·&nbsp;</span>《高新技术企业认定管理办法》的通知</a></li>
+                              <li><a href="http://www.zgcfw.org.cn/index.php?m=content&c=index&a=show&catid=24&id=2250" title="国家重点支持的高新技术领域"><span style="font-weight:bold">&nbsp;·&nbsp;</span>国家重点支持的高新技术领域</a></li>
+                              <li><a href="http://www.zgcfw.org.cn/index.php?m=content&c=index&a=show&catid=83&id=2110" title="《涉密信息系统集成资质管理补充规定》"><span style="font-weight:bold">&nbsp;·&nbsp;</span>《涉密信息系统集成资质管理补充规定》</a></li>
+                              <li><a href="http://www.zgcfw.org.cn/index.php?m=content&c=index&a=show&catid=57&id=2064" title="2016年信息系统集成及服务资质工作通知"><span style="font-weight:bold">&nbsp;·&nbsp;</span>2016年信息系统集成及服务资质工作通知</a></li>
+                                              </ul>
+</div>
 
-                <li>
-                    <div class="tg_icon">
-                        <div class="tg_icon_2_bg"></div>
-                    </div>
-                    <span>融资方案</span>
-                </li>
-                <li>
-                    <div class="tg_icon">
-                        <div class="tg_icon_3_bg"></div>
-                    </div>
-                    <span>融资方案</span>
-                </li>
+<div class="leftMenu02">
+<h1><span class="left_more"><a href="http://www.zgcfw.org.cn/index.php?m=content&c=index&a=lists&catid=13" title="交流培训">更多</a></span>交流培训</h1>
+                <ul>
+                                             <li><a href="http://www.zgcfw.org.cn/index.php?m=content&c=index&a=show&catid=31&id=2667" title="“中关村示范区专项资金政策及产业发展政策宣讲会”的通"><span style="font-weight:bold">&nbsp;·&nbsp;</span>&ldquo;中关村示范区专项资金政策及产业...</a></li>
+                              <li><a href="http://www.zgcfw.org.cn/index.php?m=content&c=index&a=show&catid=31&id=2622" title="“政策通”系列培训之-2016政策梳理及预期专题培训的通知"><span style="font-weight:bold">&nbsp;·&nbsp;</span>&ldquo;政策通&rdquo;系列培训之-2016政策梳理...</a></li>
+                              <li><a href="http://www.zgcfw.org.cn/index.php?m=content&c=index&a=show&catid=31&id=2592" title="关于举办涉密、信息安全、系统集成资质申报专题培训通知"><span style="font-weight:bold">&nbsp;·&nbsp;</span>关于举办涉密、信息安全、系统集成...</a></li>
+                              <li><a href="http://www.zgcfw.org.cn/index.php?m=content&c=index&a=show&catid=31&id=2496" title="政策通”系列培训海淀项目政策及重要资质专题培训通知"><span style="font-weight:bold">&nbsp;·&nbsp;</span>政策通&rdquo;系列培训海淀项目政策及重...</a></li>
+                              <li><a href="http://www.zgcfw.org.cn/index.php?m=content&c=index&a=show&catid=31&id=2492" title="关于召开2016年外经贸发展专项资金培训会的通知"><span style="font-weight:bold">&nbsp;·&nbsp;</span>关于召开2016年外经贸发展专项资金...</a></li>
+                              <li><a href="http://www.zgcfw.org.cn/index.php?m=content&c=index&a=show&catid=31&id=2381" title="中关村国家自主创新示范区国际化发展专项资金管理办法"><span style="font-weight:bold">&nbsp;·&nbsp;</span>中关村国家自主创新示范区国际化发...</a></li>
+                                              </ul>
+</div>
 
-                <li>
-                    <div class="tg_icon">
-                        <div class="tg_icon_4_bg"></div>
-                    </div>
-                    <span>财税规划</span>
-                </li>
+<div class="leftMenu03">
+<h1><span class="left_more"><a href="http://www.zgcfw.org.cn/index.php?m=content&c=index&a=lists&catid=14" title="会员中心">更多</a></span>会员中心</h1>
+                <ul>
+                 
+               
+                              <li><a href="http://www.zgcfw.org.cn/index.php?m=content&c=index&a=show&catid=126&id=2606" title="甲级涉密信息系统集成资质单位名录"><span style="font-weight:bold">&nbsp;·&nbsp;</span>甲级涉密信息系统集成资质单位名录</a></li>
+                              <li><a href="http://www.zgcfw.org.cn/index.php?m=content&c=index&a=show&catid=34&id=2348" title="国务院关于积极推进“互联网+”行动的指导意见"><span style="font-weight:bold">&nbsp;·&nbsp;</span>国务院关于积极推进&ldquo;互联网+&rdquo;行动...</a></li>
+                              <li><a href="http://www.zgcfw.org.cn/index.php?m=content&c=index&a=show&catid=34&id=2347" title="国务院关于印发《中国制造2025》的通知"><span style="font-weight:bold">&nbsp;·&nbsp;</span>国务院关于印发《中国制造2025》的通知</a></li>
+                              <li><a href="http://www.zgcfw.org.cn/index.php?m=content&c=index&a=show&catid=34&id=2346" title="工业强基2016 专项行动实施方案"><span style="font-weight:bold">&nbsp;·&nbsp;</span>工业强基2016 专项行动实施方案</a></li>
+                              <li><a href="http://www.zgcfw.org.cn/index.php?m=content&c=index&a=show&catid=34&id=2345" title="智能制造试点示范2016专项行动实施方案"><span style="font-weight:bold">&nbsp;·&nbsp;</span>智能制造试点示范2016专项行动实施方案</a></li>
+                              <li><a href="http://www.zgcfw.org.cn/index.php?m=content&c=index&a=show&catid=34&id=2117" title="企业政策研究培训课件（2015）"><span style="font-weight:bold">&nbsp;·&nbsp;</span>企业政策研究培训课件（2015）</a></li>
+                                              </ul>
+</div>
+</div>
+<div class="" description="" id="right"><div class="" description="" id="right_top"><div class="hot">
+<h1><span class="more"><a href="http://www.zgcfw.org.cn/index.php?m=content&c=index&a=lists&catid=6">更多</a></span>新闻动态 <span class="title">HOT</span></h1>
+                    <ul>
 
-                <li>
-                    <div class="tg_icon">
-                        <div class="tg_icon_5_bg"></div>
-                    </div>
-                    <span>行政许可和非行政许可</span>
-                </li>
+     
+                              
+<li><span class="updateTime">2016-09-23</span><a href="http://www.zgcfw.org.cn/index.php?m=content&c=index&a=show&catid=16&id=2763" title="于做好2016年全国大众创业万众创新活动周相关工作通知 "><span style="font-weight:bold">&nbsp;·&nbsp;</span>于做好2016年全国大众创业万众创新活动周相关工作通知                  </a> </li>
 
+               
+<li><span class="updateTime">2016-09-22</span><a href="http://www.zgcfw.org.cn/index.php?m=content&c=index&a=show&catid=16&id=2761" title="《智能硬件产业创新发展专项行动（2016-2018年）》通知 "><span style="font-weight:bold">&nbsp;·&nbsp;</span>《智能硬件产业创新发展专项行动（2016-2018年）》通知                  </a> </li>
+
+               
+<li><span class="updateTime">2016-09-08</span><a href="http://www.zgcfw.org.cn/index.php?m=content&c=index&a=show&catid=16&id=2738" title="北京市经济和信息化委员会关于权力清单动态调整的公告 "><span style="font-weight:bold">&nbsp;·&nbsp;</span>北京市经济和信息化委员会关于权力清单动态调整的公告                  </a> </li>
+
+               
+<li><span class="updateTime">2016-09-06</span><a href="http://www.zgcfw.org.cn/index.php?m=content&c=index&a=show&catid=16&id=2736" title="北京市小微企业信用担保代偿补偿资金管理实施细则 "><span style="font-weight:bold">&nbsp;·&nbsp;</span>北京市小微企业信用担保代偿补偿资金管理实施细则                  </a> </li>
+
+               
+<li><span class="updateTime">2016-08-30</span><a href="http://www.zgcfw.org.cn/index.php?m=content&c=index&a=show&catid=16&id=2727" title="关于发布《北京市产业创新中心实施方案》的通知 "><span style="font-weight:bold">&nbsp;·&nbsp;</span>关于发布《北京市产业创新中心实施方案》的通知                  </a> </li>
+
+               
+<li><span class="updateTime">2016-08-18</span><a href="http://www.zgcfw.org.cn/index.php?m=content&c=index&a=show&catid=16&id=2694" title="关于征求《北京市企业技术中心建设评价规范》意见通知 "><span style="font-weight:bold">&nbsp;·&nbsp;</span>关于征求《北京市企业技术中心建设评价规范》意见通知                  </a> </li>
+
+               
+<li><span class="updateTime">2016-08-17</span><a href="http://www.zgcfw.org.cn/index.php?m=content&c=index&a=show&catid=16&id=2691" title="科技部关于加强高等学校科技成果转移转化工作若干意见 "><span style="font-weight:bold">&nbsp;·&nbsp;</span>科技部关于加强高等学校科技成果转移转化工作若干意见                  </a> </li>
+
+               
+<li><span class="updateTime">2016-08-15</span><a href="http://www.zgcfw.org.cn/index.php?m=content&c=index&a=show&catid=16&id=2682" title="北京市科学技术委员会2016年度绩效任务 "><span style="font-weight:bold">&nbsp;·&nbsp;</span>北京市科学技术委员会2016年度绩效任务                  </a> </li>
+
+               
+<li><span class="updateTime">2016-08-11</span><a href="http://www.zgcfw.org.cn/index.php?m=content&c=index&a=show&catid=16&id=2670" title="国务院关于印发“十三五”国家科技创新规划的通知 "><span style="font-weight:bold">&nbsp;·&nbsp;</span>国务院关于印发“十三五”国家科技创新规划的通知                  </a> </li>
+
+               
+<li><span class="updateTime">2016-08-09</span><a href="http://www.zgcfw.org.cn/index.php?m=content&c=index&a=show&catid=16&id=2662" title="第17号令《科技部关于对部分规章和文件予以废止的决定》 "><span style="font-weight:bold">&nbsp;·&nbsp;</span>第17号令《科技部关于对部分规章和文件予以废止的...                  </a> </li>
+
+               
+<li><span class="updateTime">2016-08-03</span><a href="http://www.zgcfw.org.cn/index.php?m=content&c=index&a=show&catid=16&id=2655" title="关于进一步完善中央财政科研项目资金管理等政策若干意见 "><span style="font-weight:bold">&nbsp;·&nbsp;</span>关于进一步完善中央财政科研项目资金管理等政策若...                  </a> </li>
+
+               
+<li><span class="updateTime">2016-08-02</span><a href="http://www.zgcfw.org.cn/index.php?m=content&c=index&a=show&catid=16&id=2653" title="中央办公厅 国务院办公厅印发《国家信息化发展战略纲要》 "><span style="font-weight:bold">&nbsp;·&nbsp;</span>中央办公厅 国务院办公厅印发《国家信息化发展战...                  </a> </li>
+
+                                  
+                    </ul>
+</div><div class="softRegister">
+<h1><span class="more"><a href="http://www.zgcfw.org.cn/index.php?m=content&c=index&a=lists&catid=44">更多</a></span>热点服务<span class="title"> SERVICE</span></h1>
+                    <ul>
+
+                <li><a href="http://www.zgcfw.org.cn/index.php?m=content&c=index&a=show&catid=44&id=2715" title="2016年海淀区企业研发投入补贴专项申报指南"><span style="font-weight:bold">&nbsp;·&nbsp;</span>2016年海淀区企业研发投入补贴专项申报指南                  </a></li>
+               <li><a href="http://www.zgcfw.org.cn/index.php?m=content&c=index&a=show&catid=44&id=2714" title="2016年海淀区配套上级科技项目专项申报指南"><span style="font-weight:bold">&nbsp;·&nbsp;</span>2016年海淀区配套上级科技项目专项申报指南                  </a></li>
+               <li><a href="http://www.zgcfw.org.cn/index.php?m=content&c=index&a=show&catid=44&id=2713" title="2015年人才专项申报指南"><span style="font-weight:bold">&nbsp;·&nbsp;</span>2015年人才专项申报指南                  </a></li>
+               <li><a href="http://www.zgcfw.org.cn/index.php?m=content&c=index&a=show&catid=44&id=2712" title="2016年人才专项“海英人才”项目申报指南"><span style="font-weight:bold">&nbsp;·&nbsp;</span>2016年人才专项“海英人才”项目申报指南                  </a></li>
+               <li><a href="http://www.zgcfw.org.cn/index.php?m=content&c=index&a=show&catid=44&id=2711" title="2016年海淀区创新创业交流活动专项申报指南"><span style="font-weight:bold">&nbsp;·&nbsp;</span>2016年海淀区创新创业交流活动专项申报指南                  </a></li>
+               <li><a href="http://www.zgcfw.org.cn/index.php?m=content&c=index&a=show&catid=44&id=2710" title="2016年海淀区创新驿站奖励专项申报指南"><span style="font-weight:bold">&nbsp;·&nbsp;</span>2016年海淀区创新驿站奖励专项申报指南                  </a></li>
+               <li><a href="http://www.zgcfw.org.cn/index.php?m=content&c=index&a=show&catid=44&id=2709" title="2016年创新创业服务载体专项申报指南"><span style="font-weight:bold">&nbsp;·&nbsp;</span>2016年创新创业服务载体专项申报指南                  </a></li>
+               <li><a href="http://www.zgcfw.org.cn/index.php?m=content&c=index&a=show&catid=44&id=2708" title="2016海淀区产业联盟和行业协会创新服务奖励申报指南"><span style="font-weight:bold">&nbsp;·&nbsp;</span>2016海淀区产业联盟和行业协会创新服务奖励...                  </a></li>
+               <li><a href="http://www.zgcfw.org.cn/index.php?m=content&c=index&a=show&catid=44&id=2707" title="2016年海淀区重大科技成果产业化项目预征集工作的通知"><span style="font-weight:bold">&nbsp;·&nbsp;</span>2016年海淀区重大科技成果产业化项目预征集...                  </a></li>
+               <li><a href="http://www.zgcfw.org.cn/index.php?m=content&c=index&a=show&catid=44&id=2111" title="关于印发《涉密信息系统集成资质管理补充规定》的通知"><span style="font-weight:bold">&nbsp;·&nbsp;</span>关于印发《涉密信息系统集成资质管理补充规...                  </a></li>
+               <li><a href="http://www.zgcfw.org.cn/index.php?m=content&c=index&a=show&catid=44&id=2068" title="2016年信息系统集成及服务资质新申报、换证申报工作通知"><span style="font-weight:bold">&nbsp;·&nbsp;</span>2016年信息系统集成及服务资质新申报、换证...                  </a></li>
+               <li><a href="http://www.zgcfw.org.cn/index.php?m=content&c=index&a=show&catid=44&id=1876" title="2015国际合作研发项目申报指南"><span style="font-weight:bold">&nbsp;·&nbsp;</span>2015国际合作研发项目申报指南                  </a></li>
+                              
+           
+                    </ul>
+</div><div class="clear" description="" id="clear03"></div></div><div class="center" description="" id="center"><div class="">
+
+
+<div class="info">
+<span class="fuwu_title">政府资金</span>
+<span class="infoTitle">资讯：</span>
+<span class="fuwu_more"><a href="http://www.zgcfw.org.cn/index.php?m=content&c=index&a=lists&catid=9">更多</a></span>
+<div class="Marquee" id="Marquee">
+
+    	
+                                           <p style="height:24px;">
+                         <a href="http://www.zgcfw.org.cn/index.php?m=content&c=index&a=show&catid=44&id=211" title="涉及国家秘密计算机信息系统集成资质 ">涉及国家秘密计算机信息系统集成资质 </a>
+                           </p>
+          
+                                                <p style="height:24px;">
+                         <a href="http://www.zgcfw.org.cn/index.php?m=content&c=index&a=show&catid=21&id=352" title="2014年科技型中小企业技术创新基金 ">2014年科技型中小企业技术创新基金 </a>
+                           </p>
+          
+                                                <p style="height:24px;">
+                         <a href="http://zgcfw.zhtx.org.cn/index.php?m=content&c=index&a=show&catid=87&id=304" title="北京市2014年度双软工作安排 ">北京市2014年度双软工作安排 </a>
+                           </p>
+          
+                                                <p style="height:24px;">
+                         <a href="http://www.zgcfw.org.cn/index.php?m=content&c=index&a=show&catid=24&id=413" title="2014年高新技术企业复审及认定通知 ">2014年高新技术企业复审及认定通知 </a>
+                           </p>
+          
+                                                <p style="height:24px;">
+                         <a href="http://www.zgcfw.org.cn/index.php?m=content&c=index&a=show&catid=16&id=924" title="京津冀公交等公共服务领域新能源汽车推广工作方案通知 ">京津冀公交等公共服务领域新能源汽车推广工作方案通知 </a>
+                           </p>
+          
+                                                <p style="height:24px;">
+                         <a href="http://www.zgcfw.org.cn/index.php?m=content&c=index&a=show&catid=22&id=932" title="2014年度中关村海归创业支持专项资金支持企业名单公示 ">2014年度中关村海归创业支持专项资金支持企业名单公示 </a>
+                           </p>
+          
+                                                <p style="height:24px;">
+                         <a href="http://www.zgcfw.org.cn/index.php?m=content&c=index&a=show&catid=16&id=933" title="中关村成立国内首家智能硬件产业联盟 ">中关村成立国内首家智能硬件产业联盟 </a>
+                           </p>
+          
+                                                <p style="height:24px;">
+                         <a href="http://www.zgcfw.org.cn/index.php?m=content&c=index&a=show&catid=21&id=939" title="2015年度北京市高新技术成果转化项目认定工作的通知 ">2015年度北京市高新技术成果转化项目认定工作的通知 </a>
+                           </p>
+          
+                                                <p style="height:24px;">
+                         <a href="http://www.zgcfw.org.cn/index.php?m=content&c=index&a=show&catid=16&id=941" title="国务院输送管道安全隐患整改通知 ">国务院输送管道安全隐患整改通知 </a>
+                           </p>
+          
+                                                <p style="height:24px;">
+                         <a href="http://www.zgcfw.org.cn/index.php?m=content&c=index&a=show&catid=16&id=942" title="科技部组织开展创新型企业共享服务平台加盟工作 ">科技部组织开展创新型企业共享服务平台加盟工作 </a>
+                           </p>
+          
+                               
+     
+</div>
+</div>
+
+</div><div class=""><div class="block"><div class="block_body"><script type="text/javascript">function up(x){
+var Mar = document.getElementById(x); 
+var child_div=Mar.getElementsByTagName("p") ;
+var picH = 24;
+var scrollstep=3; 
+var scrolltime=20;
+var stoptime=3000;
+var tmpH = 0; 
+Mar.innerHTML += Mar.innerHTML; 
+function start(){ 
+if(tmpH < picH){ 
+tmpH += scrollstep; 
+if(tmpH > picH )tmpH = picH ; 
+Mar.scrollTop = tmpH; 
+setTimeout(start,scrolltime); 
+}else{ 
+tmpH = 0; 
+Mar.appendChild(child_div[0]); 
+Mar.scrollTop = 0; 
+setTimeout(start,stoptime); 
+} 
+} 
+setTimeout(start,stoptime); 
+}
+up("Marquee")</script></div></div></div>
+
+<div class="infoCon" description="" id="infoCon"><div class="">
+                
+                <div class="leftInfo">
+                <ul>
+
+                                                        <li><a href="http://www.zgcfw.org.cn/index.php?m=content&c=index&a=show&catid=21&id=2775" title="第二批亦麒麟暨新创工程领军人才资格认定申请等事项通知 "><span style="font-weight:bold">&nbsp;·&nbsp;</span>第二批亦麒麟暨新创工程领军人才资格认定申请等事项通知 </a></li>
+                                    <li><a href="http://www.zgcfw.org.cn/index.php?m=content&c=index&a=show&catid=21&id=2773" title="关于征集2017年度国家科学技术学术著作出版基金项目通知"><span style="font-weight:bold">&nbsp;·&nbsp;</span>关于征集2017年度国家科学技术学术著作出版基金项目通知</a></li>
+                                    <li><a href="http://www.zgcfw.org.cn/index.php?m=content&c=index&a=show&catid=21&id=2768" title="《2016年度新区环境保护资金项目申报指南》的通知"><span style="font-weight:bold">&nbsp;·&nbsp;</span>《2016年度新区环境保护资金项目申报指南》的通知</a></li>
+                                    <li><a href="http://www.zgcfw.org.cn/index.php?m=content&c=index&a=show&catid=21&id=2767" title="申报2016国家自主创新首台重大技术装备试验示范项目通知"><span style="font-weight:bold">&nbsp;·&nbsp;</span>申报2016国家自主创新首台重大技术装备试验示范项目通知</a></li>
+                                    <li><a href="http://www.zgcfw.org.cn/index.php?m=content&c=index&a=show&catid=21&id=2764" title="《北京市能效领跑者试点实施方案（2016-2020年）》的通知"><span style="font-weight:bold">&nbsp;·&nbsp;</span>《北京市能效领跑者试点实施方案（2016-2020年）》的通知</a></li>
+                                    <li><a href="http://www.zgcfw.org.cn/index.php?m=content&c=index&a=show&catid=21&id=2759" title="2016中关村自主创新示范区新兴产业促进平台项目储备通知"><span style="font-weight:bold">&nbsp;·&nbsp;</span>2016中关村自主创新示范区新兴产业促进平台项目储备通知</a></li>
+                                    <li><a href="http://www.zgcfw.org.cn/index.php?m=content&c=index&a=show&catid=21&id=2758" title="2017年“首都临床特色应用研究”项目征集通知"><span style="font-weight:bold">&nbsp;·&nbsp;</span>2017年“首都临床特色应用研究”项目征集通知</a></li>
+                                    <li><a href="http://www.zgcfw.org.cn/index.php?m=content&c=index&a=show&catid=21&id=2757" title="2017年“北京石墨烯科技创新专项”项目征集通知"><span style="font-weight:bold">&nbsp;·&nbsp;</span>2017年“北京石墨烯科技创新专项”项目征集通知</a></li>
+                                    <li><a href="http://www.zgcfw.org.cn/index.php?m=content&c=index&a=show&catid=21&id=2756" title="关于开展2016年能效领跑者试点的通知"><span style="font-weight:bold">&nbsp;·&nbsp;</span>关于开展2016年能效领跑者试点的通知</a></li>
+                                    <li><a href="http://www.zgcfw.org.cn/index.php?m=content&c=index&a=show&catid=21&id=2754" title="关于征集2017年十病十药研发课题的通知"><span style="font-weight:bold">&nbsp;·&nbsp;</span>关于征集2017年十病十药研发课题的通知</a></li>
+                                                     </ul>
+                 </div>
+               </div>
+              <div class="">
+                <div class="rightInfo">
+                <ul> 
+                                             <li><a href="http://www.zgcfw.org.cn/index.php?m=content&c=index&a=show&catid=22&id=2774" title="第二批国家小型微型企业创业创新示范基地名单的公示"><span style="font-weight:bold">&nbsp;·&nbsp;</span>第二批国家小型微型企业创业创新示范基地名单的公示</a></li>
+                              <li><a href="http://www.zgcfw.org.cn/index.php?m=content&c=index&a=show&catid=22&id=2772" title="《节能机（第七批）》和《“能效之星”产品目录2016》公示"><span style="font-weight:bold">&nbsp;·&nbsp;</span>《节能机（第七批）》和《“能效之星”产品目录2016》公示</a></li>
+                              <li><a href="http://www.zgcfw.org.cn/index.php?m=content&c=index&a=show&catid=22&id=2771" title="关于推荐参评2015-2016年度发展改革系统全国青年文明号公示"><span style="font-weight:bold">&nbsp;·&nbsp;</span>关于推荐参评2015-2016年度发展改革系统全国青年文明号公示</a></li>
+                              <li><a href="http://www.zgcfw.org.cn/index.php?m=content&c=index&a=show&catid=22&id=2770" title="工业产品质量控制和技术评价实验室第一批通过复核名单"><span style="font-weight:bold">&nbsp;·&nbsp;</span>工业产品质量控制和技术评价实验室第一批通过复核名单</a></li>
+                              <li><a href="http://www.zgcfw.org.cn/index.php?m=content&c=index&a=show&catid=22&id=2769" title=" 工业产品质量控制和技术评价实验室（第四批）名单公示"><span style="font-weight:bold">&nbsp;·&nbsp;</span> 工业产品质量控制和技术评价实验室（第四批）名单公示</a></li>
+                              <li><a href="http://www.zgcfw.org.cn/index.php?m=content&c=index&a=show&catid=22&id=2766" title="北京市中小企业创业投资引导基金拟合作托管银行公示通知"><span style="font-weight:bold">&nbsp;·&nbsp;</span>北京市中小企业创业投资引导基金拟合作托管银行公示通知</a></li>
+                              <li><a href="http://www.zgcfw.org.cn/index.php?m=content&c=index&a=show&catid=22&id=2765" title="科学院关于新时期加快促进科技成果转移转化指导意见通知"><span style="font-weight:bold">&nbsp;·&nbsp;</span>科学院关于新时期加快促进科技成果转移转化指导意见通知</a></li>
+                              <li><a href="http://www.zgcfw.org.cn/index.php?m=content&c=index&a=show&catid=22&id=2760" title="《智能硬件产业创新发展专项行动（2016-2018年）》通知"><span style="font-weight:bold">&nbsp;·&nbsp;</span>《智能硬件产业创新发展专项行动（2016-2018年）》通知</a></li>
+                              <li><a href="http://www.zgcfw.org.cn/index.php?m=content&c=index&a=show&catid=22&id=2755" title="2016年度中关村智能硬件企业资金支持名单公示"><span style="font-weight:bold">&nbsp;·&nbsp;</span>2016年度中关村智能硬件企业资金支持名单公示</a></li>
+                              <li><a href="http://www.zgcfw.org.cn/index.php?m=content&c=index&a=show&catid=22&id=2752" title="“2016首都蓝天行动科技示范工程后补助项目”招标结果公告"><span style="font-weight:bold">&nbsp;·&nbsp;</span>“2016首都蓝天行动科技示范工程后补助项目”招标结果公告</a></li>
+                                       
+                </ul>
+                </div>
                 <div class="clear"></div>
-            </ul>
-        </div>
-    </div>
 
-    <div class="xl_all">
-        <div class="all_k">
-            <ul>
-                <li>
-                    <span class="xl_ic_1">简单</span>
-                    <P>在线提交企业资料, 足不出户即可获得专业诊断和最新资讯</P>
-                </li>
+</div></div></div>
+<div class="" description="" id="right_bottom">
+<div class="rightBot01">
 
-                <li>
-                    <span class="xl_ic_2">快速</span>
-                    <P>用互联网管理所有信息，打通线下复杂环节，比传统代理更快、更高效</P>
-                </li>
+<h1><span class="center_more"><a href="http://www.zgcfw.org.cn/index.php?m=content&c=index&a=lists&catid=10">更多</a></span>知识产权</h1>
+                    <ul>
+                                                                        <li><a href="http://www.zgcfw.org.cn/index.php?m=content&c=index&a=show&catid=118&id=2522" title="2016年度北京市专利示范单位复审及统计调查工作的通知"><span style="font-weight:bold">&nbsp;·&nbsp;</span>2016年度北京市专利示范单位复审及统计调查工作的通知</a></li>
+                                                <li><a href="http://www.zgcfw.org.cn/index.php?m=content&c=index&a=show&catid=16&id=2303" title="公开征集品牌海外保护现状及策略研究课题承接单位的公告"><span style="font-weight:bold">&nbsp;·&nbsp;</span>公开征集品牌海外保护现状及策略研究课题承接单位的公告</a></li>
+                                                <li><a href="http://www.zgcfw.org.cn/index.php?m=content&c=index&a=show&catid=118&id=1913" title="关于组织征集工业企业知识产权运用标杆企业的通知"><span style="font-weight:bold">&nbsp;·&nbsp;</span>关于组织征集工业企业知识产权运用标杆企业的通知</a></li>
+                                                <li><a href="http://www.zgcfw.org.cn/index.php?m=content&c=index&a=show&catid=118&id=1837" title="工业企业知识产权运用能力培育工程总结的通知"><span style="font-weight:bold">&nbsp;·&nbsp;</span>工业企业知识产权运用能力培育工程总结的通知</a></li>
+                                                <li><a href="http://www.zgcfw.org.cn/index.php?m=content&c=index&a=show&catid=118&id=1836" title="关于开展工业企业知识产权运用标杆示范活动的通知"><span style="font-weight:bold">&nbsp;·&nbsp;</span>关于开展工业企业知识产权运用标杆示范活动的通知</a></li>
+                                                                    </ul>
+</div>
+<div class="rightBot02">
+<h1><span class="center_more"><a href="http://www.zgcfw.org.cn/index.php?m=content&c=index&a=lists&catid=120">更多</a></span>财税顾问</h1>
+                    <ul>
+                                                                      <li><a href="http://www.zgcfw.org.cn/index.php?m=content&c=index&a=show&catid=122&id=2762" title="关于国家大学科技园税收政策的通知"><span style="font-weight:bold">&nbsp;·&nbsp;</span>关于国家大学科技园税收政策的通知</a></li>
+                                                <li><a href="http://www.zgcfw.org.cn/index.php?m=content&c=index&a=show&catid=122&id=2740" title="财政部 国家税务总局关于科技企业孵化器税收政策的通知"><span style="font-weight:bold">&nbsp;·&nbsp;</span>财政部 国家税务总局关于科技企业孵化器税收政策的通知</a></li>
+                                                <li><a href="http://www.zgcfw.org.cn/index.php?m=content&c=index&a=show&catid=122&id=2678" title="营改增试点后中小企业信用担保机构免征增值税有关事项"><span style="font-weight:bold">&nbsp;·&nbsp;</span>营改增试点后中小企业信用担保机构免征增值税有关事项</a></li>
+                                                <li><a href="http://www.zgcfw.org.cn/index.php?m=content&c=index&a=show&catid=122&id=2527" title="关于做好软件企业所得税优惠政策有关工作的通知"><span style="font-weight:bold">&nbsp;·&nbsp;</span>关于做好软件企业所得税优惠政策有关工作的通知</a></li>
+                                                <li><a href="http://www.zgcfw.org.cn/index.php?m=content&c=index&a=show&catid=16&id=2246" title="科技部办公厅关于协助开展科技型小微企业税收政策调研函"><span style="font-weight:bold">&nbsp;·&nbsp;</span>科技部办公厅关于协助开展科技型小微企业税收政策调研函</a></li>
+                                                                    </ul>
+</div>
 
-                <li>
-                    <span class="xl_ic_3">专业</span>
-                    <P>多年企业服务经验，资深专家团队，为企业提供量身定制的政策事务服务方案</P>
-                </li>
-
-                <li>
-                    <span class="xl_ic_4">省心</span>
-                    <P>多年企业服务经验，资深专家团队，为企业提供量身定制的政策事务服务方案</P>
-                </li>
-                <div class="clear"></div>
-            </ul>
-        </div>
-    </div>
-
-    <div class="db_text">
-        <ul>
-            <li class="wm_text">
-                <span>【 我们 】</span>
-                <p class="nr_1">八年专注企业政策研究和咨询服务</p>
-                <p class="nr_2 nr_4">提供一站式政策事务服务：专业诊断-融资方案（含政府基金）-知识产权规划-财税优惠-行政许可及非许可业务-交流培训（含企业政策研究员）</p>
-                <p class="nr_3">解决企业 "只顾埋头拉车，无暇抬头看路"问题</p>
+<div class="clear" description="" id="clear04"></div></div></div><div class="clear" description="" id="clear02"></div></div><div class="" description="" id="south">
+<script language="JavaScript" type="text/JavaScript">
+        <!--
+        function ok(select){//友情链接代码开始
+            if(select.options[select.selectedIndex].value!='$') {
+                window.open(select.options[select.selectedIndex].value,'_blank');
+            }
+        }//友情链接结束
+        //-->
+</script>
+<div class="friendLink">
+<h1>相关链接</h1>
+ <ul>
+            <li style="white-space:nowrap;"><select name="choose" id="choose" onchange="ok(this)">
+                <option value="" selected="selected">国家部委</option>
+                                                <option value="http://www.gov.cn/">中国中央人民政府</option>
+                                <option value="http://www.ndrc.gov.cn/">中华人民共和国国家发展和改革委员会</option>
+                                <option value="http://www.most.gov.cn/">中华人民共和国科学技术部</option>
+                                <option value="http://www.miit.gov.cn/n11293472/index.html">中华人民共和国工业和信息化部</option>
+                                <option value="http://www.mof.gov.cn">中华人民共和国财政部</option>
+                                <option value="http://wzb.mof.gov.cn/">中央文资办</option>
+                                <option value="http://www.drc.gov.cn/">国务院发展研究中心</option>
+                                <option value="http://www.mcprc.gov.cn/">中华人民共和国文化部</option>
+                                <option value="http://www.mofcom.gov.cn/">中华人民共和国商务部</option>
+                                <option value="http://www.saic.gov.cn/">国家工商总局</option>
+                                <option value="http://www.chinatax.gov.cn/">国家税务总局</option>
+                                <option value="http://www.mlr.gov.cn/">中华人民共和国国土资源部</option>
+                                <option value="http://www.mohrss.gov.cn/">中华人民共和国人保部</option>
+                                <option value="http://www.moe.gov.cn/">中华人民共和国教育部</option>
+                                <option value="http://www.audit.gov.cn/n1992130/index.html">中华人民共和国审计署</option>
+                                <option value="http://www.cbrc.gov.cn/">中国银监会</option>
+                                <option value="http://www.csrc.gov.cn/pub/newsite/">中国证监会</option>
+                                <option value="http://www.cac.gov.cn/">中共中央网络安全和信息化领导小组办公室</option>
+                                <option value="http://www.mohrss.gov.cn/">中华人民共和国人力资源和社会保障部</option>
+                                <option value="http://www.moa.gov.cn/">中华我们共和国农业部</option>
+                                <option value="http://www.mohurd.gov.cn/">中华人民共和国住房和城乡建设部</option>
+                                <option value="http://www.sastind.gov.cn/">国家国防科技工业局</option>
+                                <option value="http://sbsq.saic.gov.cn:9080/tmoas/">中国商标网</option>
+                                            </select>
             </li>
-
-            <li><a class="vs_ic"></a></li>
-
-            <li  class="wm_text">
-                <span>【 传统代理 】</span>
-                <p >了解个别或少数企业相关政策及服务</p>
-                <p class="nr_4" >只解决个别或少部分行政事务：工商注册、代理记账、知识产权代理</p>
-                <p >不能满足企业整体评估诊断和规划的要求</p>
+            <li style="white-space:nowrap;"><select name="choose" id="choose" onchange="ok(this)">
+                <option value="" selected="selected">地方委办局</option>
+                                                <option value="http://www.bjpc.gov.cn/">北京市发展和改革委员会</option>
+                                <option value="http://www.bjkw.gov.cn/n8785584/index.html">北京市科学技术委员会</option>
+                                <option value="http://www.bjeit.gov.cn/">北京市经济与信息化委员会</option>
+                                <option value="http://www.bjipo.gov.cn/">北京市知识产权局</option>
+                                <option value="http://www.bjcz.gov.cn/">北京市财政局</option>
+                                <option value="http://www.bjwzb.gov.cn/">北京市国文办</option>
+                                <option value="http://www.bda.gov.cn">北京经济技术开发区</option>
+                                <option value="http://www.chykw.gov.cn">朝阳区科委</option>
+                                <option value="http://www.ftkw.gov.cn/">丰台区科委</option>
+                                <option value="http://hdfgw.bjhd.gov.cn/">海淀区发展和改革委员会</option>
+                                <option value="http://www.zhsp.gov.cn/">海淀园管委会</option>
+                                <option value="http://www.zgc-ft.gov.cn/">丰台科技园</option>
+                                <option value="http://www.zgc-dzc.gov.cn">电子城科技园</option>
+                                <option value="http://haidian.tax861.gov.cn/">北京市海淀地税局</option>
+                                <option value="http://www.bjsat.gov.cn/bjsat/">北京市国家税务局</option>
+                                <option value="http://www.bjrbj.gov.cn/">北京市人力资源和社会保障局</option>
+                                <option value="http://www.bjfzb.gov.cn/fzb/portal/fzb.page">北京人民政府法制办公室</option>
+                                <option value="http://www.bjmbc.gov.cn/">北京市商务委员会</option>
+                                <option value="http://www.beijing.gov.cn/">北京市政务门户网</option>
+                                            </select>
+            </li>
+            <li style="white-space:nowrap;"><select name="choose" id="choose" onchange="ok(this)">
+                <option value="" selected="selected">国内高新园区</option>
+                                                <option value="http://www.zgc.gov.cn/">中关村国家自主创新示范区</option>
+                                <option value="http://xdfwy.beijing.gov.cn/">中关村服务业综合试点项目管理平台</option>
+                                <option value="http://www.zcore.gov.cn/">中关村核心企业综合服务平台</option>
+                                <option value="http://www.sh-hitech.gov.cn/index.html">上海张江国家自主创新示范区</option>
+                                <option value="http://www.thip.gov.cn/">天津滨海高新技术产业开发区</option>
+                                <option value="http://www.jctp.gov.cn/">济南高新技术产业开发区</option>
+                                <option value="http://xdfwy.wehdz.gov.cn/view/viewcom.do">东湖国家自主创新示范区</option>
+                                <option value="http://www.ahcxb.gov.cn/">合芜蚌自主创新综合试验区</option>
+                                <option value="http://www.wnd.gov.cn/xqmh/index.html">无锡高新技术产业开发区</option>
+                                <option value="http://www.whtdz.com.cn/">威海火炬高技术产业开发区</option>
+                                <option value="http://www.sidp.gov.cn/">上海高新技术产业开发区</option>
+                                <option value="http://www.gzmky.cn/index.htm">广州高新技术产业开发区</option>
+                                <option value="http://www.hhtz.gov.cn/hhtz/">杭州高新技术产业开发区</option>
+                                <option value="http://www.snd.gov.cn/snd/">苏州高新技术产业开发区</option>
+                                <option value="http://www.cqgxq.gov.cn/">重庆高新技术产业开发区</option>
+                                <option value="http://gxq.qingdao.gov.cn/">青岛高新技术产业开发区</option>
+                                <option value="http://www.ship.gov.cn/">深圳高新技术产业开发区</option>
+                                <option value="http://www.kaifaqu.com.cn/">哈尔滨高新技术产业开发区</option>
+                                <option value="http://www.njnhz.gov.cn/">南京高新技术产业开发区</option>
+                                <option value="http://www.sy-incubator.com/">沈阳高新技术产业开发区</option>
+                                <option value="http://www.ddport.com/dlhitech2Index.html">大连高新技术产业开发区</option>
+                                <option value="http://www.xmtorch.gov.cn/">厦门高新技术产业开发区</option>
+                                <option value="http://www.cdht.gov.cn/cdht/">成都高新技术产业开发区</option>
+                                <option value="http://www.gkygfgs.com/">海南高新技术产业开发区</option>
+                                <option value="http://www.zhhbi.com/">珠海高新技术产业开发区</option>
+                                <option value="http://www.xdz.com.cn/">西安高新技术产业开发区</option>
+                                <option value="http://www.cshtz.gov.cn/">长沙高新技术产业开发区</option>
+                                <option value="http://www.china-zibo.com/">淄博高新技术产业开发区</option>
+                                            </select>
+            </li>
+            <li style="white-space:nowrap;"><select name="choose" id="choose"onchange="ok(this)">
+                <option value="" selected="selected">项目申报</option>
+                                                <option value="http://xdfwy.beijing.gov.cn/">中关村现代服务业综合试点</option>
+                                <option value="http://122.112.2.213">安防工程企业能力评价系统</option>
+                                <option value="http://211.99.138.10:8080/cgzhSys/Login/Login_Tuihui.action">北京市高新技术成果转化项目专项资金申报系统</option>
+                                <option value="http://www.bjkjfwy.com/2016/login/auth">北京科技服务业促进专项申报管理系统</option>
+                                <option value="http://202.108.121.81:8090/user/loginCgxView.do">中关村高新技术企业证书服务平台</option>
+                                <option value="http://service.most.gov.cn/"> 国家科技管理信息系统公共服务平台</option>
+                                <option value="http://www.chinacc.com.cn/">中国通信咨询网</option>
+                                <option value="http://1000plan.org/">千人计划网</option>
+                                <option value="http://www.ccopyright.com.cn/">中国版权登记门户网</option>
+                                <option value="http://www.zhsp.gov.cn">“1+4”政策体系</option>
+                                <option value="http://www.bjzzcx.com/">北京市新技术新产品（服务）认定管理办法</option>
+                                <option value="http://101.200.232.141">北京市科技服务业专项</option>
+                                <option value="http://www.zgcidsf.org">中关村国家自主创新示范区国际化发展专项资金</option>
+                                <option value="http://www.ccipp.org">文化部国家文化产业项目服务平台</option>
+                                <option value="http://www.bjzzcx.com">新技术新产品认定工作网</option>
+                                <option value="http://gtt.miit.gov.cn/">工业和信息化投资项目管理系统</option>
+                                <option value="http://www.iotcn.org.cn/">中国物联网</option>
+                                <option value="http://www.innofund.gov.cn/">科技型中小企业创新基金管理中心</option>
+                                <option value="http://program.most.gov.cn/">国家科技计划项目申报中心</option>
+                                            </select>
+            </li>
+            <li style="white-space:nowrap;"><select name="choose" id="choose"onchange="ok(this)">
+                <option value="" selected="selected">友情链接</option>
+                                                <option value="http://www.zhtx.org.cn/">中海天行融资服务平台</option>
+                                <option value="http://www.sme.gov.cn/">中国中小企业信息网</option>
+                                <option value="http://www.ecpa.org.cn/">中关村信用促进会</option>
+                                <option value="http://www.bjci.gov.cn/">北京文化创意网</option>
+                                <option value="http://www.8610hr.cn/">北京海外学人网</option>
+                                <option value="http://www.szgkj.cn/">斯庄格科技</option>
+                                <option value="http://www.baidu.com/">百度</option>
+                                <option value="http://www.bjit.org.cn/Html/Main.php">北京信息化协会</option>
+                                <option value="http://www.isccc.gov.cn/">中国信息安全认证中心</option>
+                                <option value="http://www.bast.net.cn/">北京市科学技术协会</option>
+                                <option value="http://www.isccc.gov.cn/">中国信息安全认证中心</option>
+                                <option value="http://www.itsec.gov.cn/">中国信息安全测评中心</option>
+                                <option value="http://www.csi-s.org.cn/miit">信息系统集成及服务资质管理</option>
+                                <option value="http://www.8610hr.cn/">北京海外学人网</option>
+                                <option value="http://www.itss.cn/itss">中国电子工业标准化技术协会</option>
+                                <option value="http://www.bjtzh.gov.cn/">北京·通州</option>
+                                <option value="http://www.smebj.cn">北京市中小企业服务平台</option>
+                                <option value="http://www.bsia.org.cn/">北京软件和信息服务业协会</option>
+                                <option value="http://www.isstec.org.cn/">国家保密科技测评中心</option>
+                                            </select>
             </li>
             <div class="clear"></div>
         </ul>
-    </div>
-    <!--center-->
-</div>
-<div class="clear"></div>
-
-<div id="south" xmlns="http://www.w3.org/1999/html">
-    <div class="footer">
-        <div class="xq_k">
-            <ul>
-                <li>
-                    <div class="phone_ic"></div>
-                    <div class="phone_num">
-                        <p>400-1067-365</p>
-                        <p class="tim_cl">周一至周五 9：00-18：00</p>
-                    </div>
-                    <div class="clear"></div>
-                </li>
-
-                <li class="contect_ic">
-                    <div class="tencent_ic"></div>
-                    <em>2464038517</em>
-                    <div class="clear"></div>
-                </li>
-
-                <li class="contect_ic">
-                    <div class="wechat_all">
-                        <a class="wechat_ic" style="display:none;"></a>
-                    </div>
-                    <em>qyyjy@0458</em>
-                    <div class="clear"></div>
-                </li>
-
-                <li class="contect_ic">
-                    <div class="email_ic"></div>
-                    <em>hihi2547@qq.com</em>
-                    <div class="clear"></div>
-                </li>
-                <div class="clear"></div>
-            </ul>
-
-        </div>
-    </div>
-    <p class="bottom_text">2011©版权所有 北京中海天行投资管理中心　京ICP备11043041号</p>
 </div>
 
-<div class="alertDiv">
-    <div class="dialog">
-        <div class="sect">
-            <div class="land"><h1> 登陆</h1></div>
-            <div class="reg">
-                <p class="p2">没有账号？</p>
-                <a href="#"><p class="p3">点我注册</p></a>
-            </div>
-        </div>
-        <div class="editText">
-            <div class="link">
-                <span style="color: red" id="errMsg"></span>
-                <div class="group">
-                    <input type="text" name="username" id="username" placeholder="请输入邮箱/手机号">
-                </div>
-                <div class="group">
-                    <input type="password" name="password" id="password" placeholder="请输入密码">
-                </div>
-                <span class="forget">忘记密码？</span>
-            </div>
-            <div class="login">
-                <span class="sure" id="btn_login">登陆</span>
-                <span class="cancel">取消</span>
-                <div class="clear"></div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<div class="alertDiv_2">
-    <div class="dialog">
-        <div class="sect">
-            <div class="land"><h1> 注册</h1></div>
-            <div class="reg">
-                <p class="p2">已有账号？</p>
-                <a href="#"><p class="p3">点我登陆</p></a>
-            </div>
-        </div>
-        <div class="editText">
-            <div class="link">
-                <div class="group">
-                    <input type="text"  id="name" placeholder="请输入真实姓名">
-                </div>
-                <div class="group">
-                    <input type="text"  id="phone" class="phone_num" placeholder="请输入手机号"><span>发送验证码</span>
-                    <div class="clear"></div>
-                </div>
-
-                <div class="group">
-                    <input type="text"  placeholder="请输入验证码">
-                </div>
-
-                <div class="group">
-                    <input type="password"  placeholder="输入密码（6-16位）">
-                </div>
-
-                <div class="group">
-                    <input type="password"  placeholder="确认密码">
-                </div>
-
-                <div class="group">
-                    <input type="text"  placeholder="填写您的邮箱（找回密码使用）">
-                </div>
-
-                <div class="group">
-                    <input type="text"  placeholder="您的公司名称">
-                </div>
-
-                <div class="group">
-                    <input type="text"  placeholder="您的职务名称">
-                </div>
-
-            </div>
-            <div class="login">
-                <span class="sure">注册</span>
-                <span class="cancel">取消</span>
-                <div class="clear"></div>
-            </div>
-        </div>
-    </div>
-</div>
-<!--脚本加载-->
-<script type="text/javascript" src="/statics/new/js/jquery-1.js"></script>
-<script type="text/javascript" src="/statics/new/js/jquery.js"></script>
-<script type="text/javascript" src="/statics/new/js/main.js"></script>
+<script type="text/javascript"> 
+$(function(){
+	new slide("#main-slide","cur",310,260,1);//焦点图
+	new SwapTab(".SwapTab","span",".tab-content","ul","fb");//排行TAB
+})
+</script>
+<div class="copyright"><div class="block"><div class="block_body">
+<p>2011-2015&copy;版权所有  <a style="color:#000" href="/index.php?m=content&c=index&a=lists&catid=50">免责声明</a> 京ICP备11043041-5号 <div style="width:300px;margin:0 auto; padding:20px 0;">
+		 		<a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11010802020219" style="display:inline-block;text-decoration:none;height:20px;line-height:20px;"><img src="/statics/images/gongan.png" style="float:left;"/><p style="float:left;height:20px;line-height:20px;margin: 0px 0px 0px 5px; color:#939393;">京公网安备 11010802020219号</p></a>
+		 	</div></p>
+</div></div></div>
+<script type="text/javascript">
+$(function(){
+	$(".picbig").each(function(i){
+		var cur = $(this).find('.img-wrap').eq(0);
+		var w = cur.width();
+		var h = cur.height();
+	   $(this).find('.img-wrap img').LoadImage(true, w, h,'http://www.zgcfw.org.cn/statics/images/msg_img/loading.gif');
+	});
+})
+</script>
 </body>
 </html>

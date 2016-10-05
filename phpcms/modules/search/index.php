@@ -89,7 +89,7 @@ class index {
                     $sql = "`siteid`= '$siteid' AND `typeid` = '$typeid' AND `data` like '%$q%'";
                 }
 
-               echo $sql;
+//               echo $sql;
 
 				$result = $this->db->listinfo($sql, 'searchid DESC', $page, 10);
 			}

@@ -77,7 +77,7 @@ class index {
 			$_groupid = intval($_groupid);
 			if(!$_groupid) {
 				$forward = urlencode(get_url());
-				showmessage(L('login_website'),APP_PATH.'index.php?m=content&c=index&a=lists&catid='.$catid);
+				showmessage(L('login_website'),APP_PATH.'index.php?m=member&c=index&a=login&forward='.$forward);
 			}
 			if(!in_array($_groupid,$groupids_view)) showmessage(L('no_priv'));
 		} else {
@@ -85,7 +85,7 @@ class index {
 			$_priv_data = $this->_category_priv($catid);
 			if($_priv_data=='-1') {
 				$forward = urlencode(get_url());
-				showmessage(L('login_website'),APP_PATH.'index.php?m=content&c=index&a=lists&catid='.$catid);
+				showmessage(L('login_website'),APP_PATH.'index.php?m=member&c=index&a=login&forward='.$forward);
 			} elseif($_priv_data=='-2') {
 				showmessage(L('no_priv'));
 			}
@@ -191,7 +191,7 @@ class index {
 		//上一页
 		$previous_page = $this->db->get_one("`catid` = '$catid' AND `id`<'$id' AND `status`=99",'*','id DESC');
 		//下一页
-		$next_page = $this->db->get_one("`catid`= '$catid' AND `id`>'$id' AND `status`=99",'*','id ASC');
+		$next_page = $this->db->get_one("`catid`= '$catid' AND `id`>'$id' AND `status`=99");
 
 		if(empty($previous_page)) {
 			$previous_page = array('title'=>L('first_page'), 'thumb'=>IMG_PATH.'nopic_small.gif', 'url'=>'javascript:alert(\''.L('first_page').'\');');

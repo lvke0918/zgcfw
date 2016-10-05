@@ -4,7 +4,7 @@ return array(
 'web_path' => '/',
 //Session配置
 'session_storage' => 'mysql',
-'session_ttl' => 1800,
+'session_ttl' => 108000,
 'session_savepath' => CACHE_PATH.'sessions/',
 'session_n' => 0,
 
@@ -36,9 +36,9 @@ return array(
 'uc_ip'=>'',//Ucenter api IP
 'uc_dbhost'=>'localhost',//Ucenter 数据库主机名
 'uc_dbuser'=>'root',//Ucenter 数据库用户名
-'uc_dbpw'=>'root',//Ucenter 数据库密码
+'uc_dbpw'=>'',//Ucenter 数据库密码
 'uc_dbname'=>'zgcfw',//Ucenter 数据库名
-'uc_dbtablepre'=>'\'zgcfw\'.uc_',//Ucenter 数据库表前缀
+'uc_dbtablepre'=>'\'s578337db0\'.uc_',//Ucenter 数据库表前缀
 'uc_dbcharset'=>'utf8',//Ucenter 数据库字符集
 'uc_appid'=>'1',//应用id(APP ID)
 'uc_key'=>'1m0in21wdlq62rni42ibsan64b5o0iy4',//Ucenter 通信密钥
