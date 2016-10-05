@@ -1,0 +1,64 @@
+.top {
+    box-shadow:none;
+}
+
+.pic {
+    padding: 0 0 10px;
+    background: #fff;
+    box-shadow: 2px 2px 5px #ddd;
+}
+
+.bg {
+    width: 95%;
+    margin-left: 2.5%;
+    border-radius: 5px;
+}
+
+.content {
+    padding-right:15px;
+    background:url(/statics/wap/images/arrow-right.png) no-repeat center right;
+    background-size: 10px 13px;
+    margin-right:10px;
+}
+
+#list li {
+    margin-top:13px;
+    background:#fff;
+}
+
+#list a {
+    display:block;
+    border-top:1px solid #d8d8d8;
+    border-bottom:1px solid #d8d8d8;
+}
+
+.content:after {
+    content:".";
+    visibility:hidden;
+    clear:both;
+    display:block;
+    height:0;
+}
+
+.title {
+    float:left;
+    width: 90%;
+    padding:10px 0;
+}
+
+.rline {
+    border-left:3px solid #e73f03;
+}
+
+.p1 {
+    font-size: 15px;
+    margin-left: 10px;
+    color:#333;
+}
+
+.p2 {
+    color: #666;
+    padding-top: 5px;
+    padding-left:15px;
+    font-size:13px;
+}
