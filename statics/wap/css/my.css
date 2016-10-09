@@ -1,0 +1,135 @@
+body {
+    background:#F9F9F9;
+}
+
+#layout {
+    padding-bottom: 30px;
+}
+
+#copyright {
+    text-align: center;
+    position: absolute;
+    width: 100%;
+    color: #ccc;
+    bottom: 20px;
+    text-shadow: 0 -2px 1px #fff;
+    text-transform: uppercase;
+}
+
+.my_top {
+    width: 100%;
+    position: relative;
+    margin-top:30px;
+}
+
+.my_top:after {
+    content:".";
+    display:block;
+    visibility:hidden;
+    clear:both;
+    height:0;
+}
+
+span.user-info {
+    font-size: 16px;
+    color: #333;
+    margin-left: 20px;
+    line-height:32px;
+    float:left;
+}
+
+.user-info img {
+    width:70px;
+    height:70px;
+    border-radius:50px;
+}
+
+.user-info a {
+    border: 2px solid #ccc;
+    display: block;
+    border-radius: 70px;
+    overflow: hidden;
+}
+
+.user-info b {
+    font-weight: normal;
+    margin-left: 10px;
+}
+
+span.signoff {
+    float: right;
+    margin-right: 20px;
+    display: block;
+    height: 32px;
+    width: 80px;
+    text-align: center;
+    border: 1px solid #fc1e1e;
+    color: #fc1e1e;
+    line-height: 32px;
+    border-radius: 3px;
+    font-size: 15px;
+    margin-top: 19px;
+}
+
+.my_nav {
+    background:#FFFFFF;
+    display:block;
+    width:100%;
+    margin-top: 30px;
+    border-top: 1px solid #D4D4D4;
+}
+
+.my_nav>li {
+    display:block;
+    width:100%;
+    border-bottom:1px solid #D4D4D4;
+}
+
+.my_nav a {
+    display: block;
+    width: 100%;
+    height: 3.3em;
+    text-indent: 3.0em;
+    line-height: 3.5em;
+    font-size: 1.4em;
+    color: #333333;
+    background-size: 20px 20px;
+    background-repeat:no-repeat;
+    background-position: 0.7em;
+    position: relative;
+}
+
+.my_n_1 a {
+    background-image: url(/statics/wap/images/7-2.png);
+}
+
+.my_n_2 a {
+    background-image: url(/statics/wap/images/7-3.png);
+}
+
+.my_n_3 a {
+    background-image: url(/statics/wap/images/7-4.png);
+}
+
+.my_n_4 a {
+    background-image: url(/statics/wap/images/7-5.png);
+}
+
+.my_n_5 a {
+    background-image: url(/statics/wap/images/7-7.png);
+}
+
+.my_nav a:after {
+    content:'';
+    background: url(/statics/wap/images/my_op_ico_2.png) no-repeat;
+    display: inline-block;
+    margin-right: 1em;
+    color: #D2D2D2;
+    width: 7px;
+    height: 13px;
+    background-size: 7px 13px;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    margin-top: -7px;
+}

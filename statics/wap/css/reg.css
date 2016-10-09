@@ -1,0 +1,75 @@
+/*注册会员*/
+#center {
+    padding-bottom:30px;
+}
+
+.list {
+    background: none repeat scroll 0 0 #fff;
+    border-bottom:1px solid #ddd;
+    overflow: hidden;
+    padding: 10px 3%;
+}
+
+.list-box .input-box {
+    border: medium none;
+    background:none;
+    border-radius: 0;
+    box-shadow: none;
+    color: #666;
+    font-size: 14px;
+    height: 45px;
+}
+
+.list-box .namewrap input, .list-box .codewrap input, .list-box .addresswrap input, .list-box .zipcodewrap input {
+    width:100%;
+}
+
+.list-box .cellwrap input {
+    width:60%;
+}
+
+.list-box .cellbutton {
+  width: 30%;
+  height: 36px;
+  display: inline-block;
+  line-height: 36px;
+  float: right;
+  background-color: #06C3A6;
+  color: #fff;
+  text-align: center;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+#testcode {
+    opacity:0.5;
+}
+
+.list-box .codewrap {
+    margin-bottom:8px;
+}
+
+.list-box .submitwrap .submin-button {
+    background:#f85a5a;
+    width:94%;
+    height:42px;
+    border:none;
+    color:#FFFFFF;
+    font-size:16px;
+    margin-left: 3%;
+}
+
+.list-box .submitwrap {
+    padding:30px 0;
+}
+
+.goLogin {
+    color:#666;
+    font-size:15px;
+    display:block;
+    width:100%;
+    height:30px;
+    line-height:30px;
+    text-align:center;
+    text-decoration:underline;
+} 

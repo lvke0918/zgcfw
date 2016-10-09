@@ -78,6 +78,9 @@
               </div>
             </div>
         </div>
+         <span id='favorite'>
+		<a href="javascript:;" onclick="add_favorite('{addslashes($title)}');" class="t6">收藏</a>
+	  </span>
     </div>
     <div class="clear">
     </div>
@@ -98,6 +101,7 @@
         </div>
     </div>
 </div>
+
 <div id="preloading" style="display: none;">
 </div>
 <a style="display: none; font-size: 14px;" target="_blank" href="http://p.qiao.baidu.com/cps/chat?siteId=9855912&userId=22228420" data-ignore="true" id="QIAO_ICON_CONTAINER" class="qiao-icon-sector qiao-icon-sector-left">
@@ -106,3 +110,14 @@
 			</span></a>
 </body>
 </html>
+<script>
+    function add_favorite(title) {
+        $.getJSON('{APP_PATH}api.php?op=add_favorite&title='+encodeURIComponent(title)+'&url='+encodeURIComponent(location.href)+'&'+Math.random()+'&callback=?', function(data){
+            if(data.status==1)	{
+                $("#favorite").html('收藏成功');
+            } else {
+                alert('请登录');
+            }
+        });
+    }
+</script>

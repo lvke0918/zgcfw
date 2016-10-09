@@ -144,6 +144,16 @@ function ChannelSlide(Name,Class){
 	});
 }
 new ChannelSlide(".channel-slide","on",311,260);
+
+function add_favorite(title) {
+    $.getJSON('{APP_PATH}api.php?op=add_favorite&title='+encodeURIComponent(title)+'&url='+encodeURIComponent(location.href)+'&'+Math.random()+'&callback=?', function(data){
+        if(data.status==1)	{
+            $("#favorite").html('收藏成功');
+        } else {
+            alert('请登录');
+        }
+    });
+}
 </script>
 
 <script language="JavaScript" src="{APP_PATH}api.php?op=count&id={$id}&modelid={$modelid}"></script>

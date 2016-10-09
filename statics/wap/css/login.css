@@ -1,0 +1,78 @@
+.container {
+    min-height:500px;
+}
+
+.profile-img {
+    display: block;
+    margin: 50px auto 50px;
+    width: 124px;
+}
+
+.form-signin {
+    width:100%;
+    margin:0 auto;
+}
+
+.form-signin .item {
+    background:#FFF;
+    border-top:1px solid #CCC;
+    border-bottom:1px solid #ccc;
+    padding:17px 0;
+    position:relative;
+}
+
+.form-signin .item:first-child {
+    border-bottom:none;
+}
+
+.form-signin .form-control {
+    border: none;
+    margin-left: 6%;
+    font-size: 14px;
+    height: 17px;
+    line-height: 17px;
+    width: 88%;
+}
+
+.form-signin .password {
+    width:90%;
+}
+
+.forget {
+  color: #e0574f;
+  font-size: 13px;
+  margin-top:10px;
+  margin-right:5%;
+  float:right;
+}
+
+.btn {
+    -moz-user-select: none;
+    background-image: none;
+    border:none;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 1.5em;
+    font-weight: normal;
+    line-height: 42px;
+    margin-top: 30px;
+    height: 42px;
+    width:90%;
+    margin-left:5%;
+    text-align: center;
+    vertical-align: middle;
+    white-space: nowrap;
+    background-color: #D5382F;
+    color: #fff;
+}
+
+.goReg {
+    color:#266dc7;
+    font-size:15px;
+    display:block;
+    width:100%;
+    height:30px;
+    line-height:30px;
+    text-align:center;
+    text-decoration:underline;
+} 
