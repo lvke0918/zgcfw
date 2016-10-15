@@ -13,12 +13,9 @@ class wap_jssdk {
 		$url = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
 		$timestamp = time();
 		$nonceStr = $this->createNonceStr();
-
 		// 这里参数的顺序要按照 key 值 ASCII 码升序排序
-		$string = "jsapi_ticket=$jsapiTicket&noncestr=$nonceStr&tamp=$timestamp&url=$url";
-
+		$string = "jsapi_ticket=$jsapiTicket&noncestr=$nonceStr&timestamp=$timestamp&url=$url";
 		$signature = sha1($string);
-
 		$signPackage = array(
 			"appId" => $this->appId,
 			"nonceStr" => $nonceStr,
@@ -86,6 +83,7 @@ class wap_jssdk {
 		curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
 		curl_setopt($curl, CURLOPT_TIMEOUT, 500);
 		curl_setopt($curl, CURLOPT_URL, $url);
+		curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, false);
 
 		$res = curl_exec($curl);
 		curl_close($curl);
