@@ -151,6 +151,12 @@ class index {
     //展示内容页
 	public function show() {
 
+
+		$wap_jssdk = pc_base::load_app_class("wap_jssdk", "wap");
+		$wap_jssdk->__construct("wxfa4e2f447f4bafb6", "97d71b1486606352b7c6d1981952c76b");
+
+		$signPackage = $wap_jssdk->GetSignPackage();
+
 		$_GET['remains']='true';
 		$WAP = $this->wap;
 		$WAP_SETTING = string2array($WAP['setting']);
