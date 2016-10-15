@@ -295,6 +295,7 @@ class index {
 		}
 				
 		$content = content_strip(wml_strip($content));
+		$desc=substr(strip_tags($content),100);
 		$template = $WAP_SETTING['show_template'] ? $WAP_SETTING['show_template'] : 'show';
 		include template('wap','detail');
 	}
