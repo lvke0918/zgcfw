@@ -11,8 +11,8 @@
           rel="icon">
     <link href="http://www.zhtx.org.cn/images/favicon.ico" type="image/x-icon"
           rel="shortcut icon">
-    <meta content="中海天行企业服务平台 专业诊断 融资方案 知识产权 财税规划和行政许可" name="keywords">
-    <meta content="中海天行企业服务平台 提供一站式政策事务服务：专业诊断-融资方案（含政府基金）-知识产权规划-财税优惠-行政许可及非许可业务-交流培训（含企业政策研究员）"
+    <meta content="中关村企业服务网 专业诊断 融资方案 知识产权 财税规划和行政许可" name="keywords">
+    <meta content="中关村企业服务网 提供一站式政策事务服务：专业诊断-融资方案（含政府基金）-知识产权规划-财税优惠-行政许可及非许可业务-交流培训（含企业政策研究员）"
           name="description">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,inital-scale=1.0,maximum-scale=1.0,user-scalable=no">
@@ -55,7 +55,7 @@
         <div class="top">
             <div class="up">
                 <a href="http://www.zhtx.org.cn/m">
-                    <img class="logo" src="/statics/wap/images/logo2.jpg">
+                    <img class="logo" src="/statics/wap/images/logo2.png">
                 </a>
                 <div class="user">
                     <a href="http://www.zhtx.org.cn/m/my">
@@ -114,7 +114,7 @@
 </html>
 <script>
     wx.config({
-        debug: true, // 开启调试模式,调用的所有api的返回值会在客户端alert出来，若要查看传入的参数，可以在pc端打开，参数信息会通过log打出，仅在pc端时才会打印。
+        debug: false, // 开启调试模式,调用的所有api的返回值会在客户端alert出来，若要查看传入的参数，可以在pc端打开，参数信息会通过log打出，仅在pc端时才会打印。
         appId: "{$signPackage['appId']}", // 必填，公众号的唯一标识
         timestamp:"{$signPackage['timestamp']}", // 必填，生成签名的时间戳
         nonceStr: "{$signPackage['nonceStr']}", // 必填，生成签名的随机串
@@ -129,19 +129,35 @@
     });
 
     wx.ready(function(){
+        var title='{$title}';
+        var desc='{$title}';
+        var link='{$signPackage["url"]}';
+        var imgUrl='http://m.zgcfw.org.cn/statics/wap/images/zgc_logo.jpg';
+
         wx.onMenuShareAppMessage({
-            title: '{$title}', // 分享标题
-            desc: '{$title}', // 分享描述
-            link: '{$signPackage["url"]}', // 分享链接
-            imgUrl: 'http://m.zgcfw.org.cn/statics/wap/images/zgc_logo.jpg', // 分享图标
-            type: '', // 分享类型,music、video或link，不填默认为link
-            dataUrl: '', // 如果type是music或video，则要提供数据链接，默认为空
-            success: function () {
-                // 用户确认分享后执行的回调函数
-            },
-            cancel: function () {
-                // 用户取消分享后执行的回调函数
-            }
+            title: title, // 分享标题
+            desc: desc, // 分享描述
+            link: link, // 分享链接
+            imgUrl: imgUrl, // 分享图标
+        });
+
+        wx.onMenuShareTimeline({
+            title: title, // 分享标题
+            link: link, // 分享链接
+            imgUrl: imgUrl, // 分享图标
+        });
+        wx.onMenuShareQQ({
+            title: title, // 分享标题
+            desc: title, // 分享描述
+            link: link, // 分享链接
+            imgUrl: imgUrl, // 分享图标
+        });
+
+        wx.onMenuShareWeibo({
+            title: title, // 分享标题
+            desc: desc, // 分享描述
+            link: link, // 分享链接
+            imgUrl: imgUrl, // 分享图标
         });
 
 
