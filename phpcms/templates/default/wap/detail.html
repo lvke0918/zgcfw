@@ -131,9 +131,9 @@
     wx.ready(function(){
         wx.onMenuShareAppMessage({
             title: '{$title}', // 分享标题
-            desc: 'xxxxxxxxxxxxxxxxx', // 分享描述
-            link: '111111111111111111111111', // 分享链接
-            imgUrl: 'http://demo.open.weixin.qq.com/jssdk/images/p2166127561.jpg', // 分享图标
+            desc: '{$title}', // 分享描述
+            link: '{$signPackage["url"]}', // 分享链接
+            imgUrl: 'http://m.zgcfw.org.cn/statics/wap/images/zgc_logo.jpg', // 分享图标
             type: '', // 分享类型,music、video或link，不填默认为link
             dataUrl: '', // 如果type是music或video，则要提供数据链接，默认为空
             success: function () {
