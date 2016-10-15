@@ -295,11 +295,18 @@ class index {
 		}
 				
 		$content = content_strip(wml_strip($content));
-		$desc=substr(strip_tags($content),100);
+		$desc=strip_tags($content);
+		$desc=$this->trimall($desc);
+		$desc=mb_substr($desc,0,100);
 		$template = $WAP_SETTING['show_template'] ? $WAP_SETTING['show_template'] : 'show';
 		include template('wap','detail');
 	}
-	
+	function trimall($str)//删除空格
+	{
+		$qian=array(" ","　","\t","\n","\r")
+		;$hou=array("","","","","");
+		return str_replace($qian,$hou,$str);
+	}
 	//提交评论
 	function comment() {
 		$WAP = $this->wap;
