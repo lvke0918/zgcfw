@@ -18,8 +18,8 @@ class foreground {
 	 */
 	final public function check_member() {
 		$phpcms_auth = param::get_cookie('auth');
-		if(ROUTE_M =='member' && ROUTE_C =='index' && in_array(ROUTE_A, array('login', 'register', 'mini','send_newmail'))) {
-			if ($phpcms_auth && ROUTE_A != 'mini') {
+		if(ROUTE_M =='member' && ROUTE_C =='index' && in_array(ROUTE_A, array('login', 'register', 'ajaxreg','mini','send_newmail'))) {
+			if ($phpcms_auth && ROUTE_A != 'mini' && ROUTE_A != 'ajaxreg') {
 				showmessage(L('login_success', '', 'member'), 'index.php?m=member&c=index');
 			} else {
 				return true;

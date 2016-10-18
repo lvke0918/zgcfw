@@ -19,7 +19,7 @@ if(isset($_GET['mobile']) && !empty($_GET['mobile'])) {
 $_SESSION['code'] = '';
 if(!isset($_SESSION['csms'])) {
 	$_SESSION['csms'] = 0;
-} elseif($_SESSION['csms'] > 3) {
+} elseif($_SESSION['csms'] > 100) {
 	exit('-1');
 }
 $_SESSION['csms'] += 1;
@@ -30,7 +30,7 @@ if(!preg_match('/^(?:13\d{9}|15[0|1|2|3|5|6|7|8|9]\d{8}|18[0|2|3|5|6|7|8|9]\d{8}
 $posttime = SYS_TIME-86400;
 $where = "`mobile`='$mobile' AND `posttime`>'$posttime'";
 $num = $sms_report_db->count($where);
-if($num > 3) {
+if($num > 100) {
 	exit('-1');//当日发送短信数量超过限制 3 条
 }
 //同一IP 24小时允许请求的最大数

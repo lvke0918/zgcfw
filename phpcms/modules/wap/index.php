@@ -520,9 +520,27 @@ class index {
 			param::set_cookie('cookietime', '');
 			Header("Location: /index.php?&a=login");
 			exit;
+	}
 
-
-
+	/**
+	 * 我的收藏
+	 *
+	 */
+	public function favorite() {
+		$this->favorite_db = pc_base::load_model('favorite_model');
+		$_userid = param::get_cookie('_userid');//当然登录人id
+		$this->member_db = pc_base::load_model('member_model');
+		$this->memberinfo = $this->member_db->get_one(array('userid'=>$_userid));
+		$memberinfo = $this->memberinfo;
+		if(isset($_GET['id']) && trim($_GET['id'])) {
+			$this->favorite_db->delete(array('userid'=>$memberinfo['userid'], 'id'=>intval($_GET['id'])));
+			showmessage(L('operation_success'), HTTP_REFERER);
+		} else {
+			$page = isset($_GET['page']) && trim($_GET['page']) ? intval($_GET['page']) : 1;
+			$favoritelist = $this->favorite_db->listinfo(array('userid'=>$memberinfo['userid']), 'id DESC', $page, 10);
+			$pages = $this->favorite_db->pages;
+			//include template('member', 'favorite_list');
+		}
 	}
 }
 ?>

@@ -45,7 +45,7 @@
             <div class="list-box">
                 <form id="itemForm">
                     <div class="list namewrap">
-                        <input class="input-radius input-box" name="name" placeholder="请输入公司名称" type="text"></div>
+                        <input class="input-radius input-box" name="company" placeholder="请输入公司名称" type="text"></div>
                     <div class="list cellwrap">
                         <input class="input-radius input-box" placeholder="手机号码" name="phone" id="cell" type="tel">
                         <span class="cellbutton input-radius" id="sendcode">发送</span></div>
@@ -54,30 +54,23 @@
                     <div class="list addresswrap">
                         <input class="input-radius input-box" placeholder="密码（6-16位）" name="password" type="password"></div>
                     <div class="list addresswrap">
-                        <input class="input-radius input-box" placeholder="确认密码" name="password2" type="password"></div>
+                        <input class="input-radius input-box" placeholder="确认密码" name="password1" type="password"></div>
                     <div class="list addresswrap">
                         <input class="input-radius input-box" placeholder="输入邮箱，找回密码使用" name="email" type="email"></div>
                     <div class="list addresswrap">
-                        <input class="input-radius input-box" placeholder="您的公司名称" name="company" type="text"></div>
+                        <input class="input-radius input-box" placeholder="联系人名称" name="name" type="text"></div>
                     <div class="list addresswrap">
                         <input class="input-radius input-box" placeholder="您的职务名称" name="post" type="text"></div>
                     <div class="submitwrap">
                         <button class="submin-button input-radius" type="button" name="submitBtn" id="submitBtn">提交</button></div>
-                    <a href="http://www.zhtx.org.cn/m/login" class="goLogin">已有账号，去登录</a></form>
+                    <a href="/index.php?&a=reg" class="goLogin">已有账号，去登录</a></form>
             </div>
         </div>
     </div>
     <div class="clear"></div>
     <div id="southa"></div>
 </div>
-<div id="dialog_overlay" style="visibility: hidden;">
-    <div id="dialog_panel">
-        <div id="dialog_content"></div>
-        <div id="dialog_control">
-            <a href="javascript:void(0)" id="dialog_close" class="button col2" style="display:none;">取消</a>
-            <a href="javascript:void(0)" id="dialog_ok" class="button">确定</a></div>
-    </div>
-</div>
+
 <div id="preloading" style="display: none;"></div>
 </body>
 </html>
