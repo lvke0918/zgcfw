@@ -404,6 +404,10 @@ class index {
 
 
 		if(!$r) showmessage(L('user_not_exist'),'index.php?m=member&c=index&a=login');
+		//密码错误剩余重试次数
+		$this->times_db = pc_base::load_model('times_model');
+		$rtime = $this->times_db->get_one(array('username'=>$username));
+
 
 		//查询帐号
 		$r = $this->member_db->get_one(array('username'=>$username));
