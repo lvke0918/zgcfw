@@ -71,14 +71,31 @@ $(function() {
 			},
 			success: function(data){
 				if(data.errno==1){
-
-
+					error('用户名或密码错误')
 				}else{
-					window.location.href="/index.php?&a=account";
+
+					var obj = {};
+					obj.type = '1';
+					obj.callback = function() {
+						document.location = "/index.php?&a=account";
+					};
+					obj.msg = '登录成功';
+					X.pub('showDialog', obj);
 				}
 			}
 		});
 	});
+
+	function error(msg) {
+		var obj = {};
+		obj.title = "提示";
+		obj.msg = '<p>' + msg + '</p>';
+		obj.noCancel = true;
+		obj.okText = "确定";
+		X.pub('showDialog', obj);
+		submit = false;
+		X.pub("closeLoading");
+	}
 
 })
 
