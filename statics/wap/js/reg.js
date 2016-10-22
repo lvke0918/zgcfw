@@ -285,8 +285,6 @@ X.sub("init", function() {
 
     function checkSubmited() {
         loaded += 1;
-        alert(loaded)
-
         if (loaded === 2) {
             submit = false;
             if ( usuc) {
