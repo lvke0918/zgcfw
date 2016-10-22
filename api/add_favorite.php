@@ -24,9 +24,13 @@ if(empty($_GET['title']) || empty($_GET['url'])) {
 $_GET['callback'] = safe_replace($_GET['callback']);
 //判断是否登录	
 $phpcms_auth = param::get_cookie('auth');
+
 if($phpcms_auth) {
 	$auth_key = md5(pc_base::load_config('system', 'auth_key').$_SERVER['HTTP_USER_AGENT']);
+
 	list($userid, $password) = explode("\t", sys_auth($phpcms_auth, 'DECODE', $auth_key));
+	$userid = param::get_cookie('_userid');//当然登录人id
+
 	if($userid >0) {
 
 	} else {
