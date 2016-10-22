@@ -117,6 +117,7 @@ class index {
 		$MODEL = getcache('model','commons');
 		$modelid = $CAT['modelid'];
 		$tablename = $this->db->table_name = $this->db->db_tablepre.$MODEL[$modelid]['tablename'];
+		print_r($MODEL = getcache('model','commons'));
 		$total = $this->db->count(array('status'=>'99','catid'=>$catid));
 		$page = isset($_GET['page']) && intval($_GET['page']) ? intval($_GET['page']) : 1;
 		$pagesize = $WAP_SETTING['listnum'] ? intval($WAP_SETTING['listnum']) : 20 ;
@@ -146,7 +147,33 @@ class index {
 		
 		$pages = wpa_pages($total, $page, $pagesize);
 		include template('wap', $template);
-	}	
+	}
+
+	public function filelist() {
+
+		$typeid=60;
+		$catid = $this->types[$typeid]['cat'];
+		$siteids = getcache('category_content','commons');
+		$siteid = $siteids[$catid];
+		$CATEGORYS = getcache('category_content_'.$siteid,'commons');
+		if(!isset($CATEGORYS[$catid])) exit(L('parameter_error'));
+		$CAT = $CATEGORYS[$catid];
+		$MODEL = getcache('model','commons');
+		$modelid = $CAT['modelid'];
+		$tablename = $this->db->table_name = $this->db->db_tablepre.$MODEL[$modelid]['tablename'];
+		$catids=array('129');
+		$list = $this->db->select('status=99 and catid in ('.implode(',',$catids).')', '*','','inputtime DESC');
+
+		foreach($list as $k=>$v){
+			$data[$k]['id']=$v['id'];
+			$data[$k]['title']=$v['title'];
+			$data[$k]['status']=$v['id'];
+			$data[$k]['created']=$v['inputtime'].'000';
+			$data[$k]['url']=show_url($v['catid'],$v['id']);
+		}
+
+		include template('wap', 'filelist');
+	}
 	
     //展示内容页
 	public function show() {
@@ -210,46 +237,7 @@ class index {
 		$contentpage = pc_base::load_app_class('contentpage','content');
 		$content = $contentpage->get_data($content,$maxcharperpage);
 		$isshow = 1;
-		if($pictureurls) {
-			$pictureurl = pic_pages($pictureurls);
-			$isshow = 0;			
-			//进行图片分页处理		
-			$PIC_POS = strpos($pictureurl, '[page]');
-			if($PIC_POS !== false) {
-				$this->url = pc_base::load_app_class('wap_url', 'wap');
-				$pictureurls = array_filter(explode('[page]', $pictureurl));
-				$pagenumber = count($pictureurls);
-				if (strpos($pictureurl, '[/page]')!==false && ($CONTENT_POS<7)) {
-					$pagenumber--;
-				}
-				for($i=1; $i<=$pagenumber; $i++) {
-					$pageurls[$i] = $this->url->show($id, $i, $catid, $typeid);
-				}
-				$END_POS = strpos($pictureurl, '[/page]');
-				if($END_POS !== false) {
-					if(preg_match_all("|\[page\](.*)\[/page\]|U", $pictureurl, $m, PREG_PATTERN_ORDER)) {
-						foreach($m[1] as $k=>$v) {
-							$p = $k+1;
-							$titles[$p]['title'] = strip_tags($v);
-							$titles[$p]['url'] = $pageurls[$p][0];
-						}
-					}
-				}
-				
-				//当不存在 [/page]时，则使用下面分页
-				$pages = content_pages($pagenumber,$page, $pageurls, 0);
-				//判断[page]出现的位置是否在第一位 
-				if($CONTENT_POS<7) {
-					$pictureurl = $pictureurls[$page];
-				} else {
-					if ($page==1 && !empty($titles)) {
-						$pictureurl = $title.'[/page]'.$pictureurls[$page-1];
-					} else {
-						$pictureurl = $pictureurls[$page-1];
-					}
-				}		
-			}			
-		}
+
 		
 		//进行自动分页处理		
 		$CONTENT_POS = strpos($content, '[page]');
@@ -299,7 +287,14 @@ class index {
 		$desc=$this->trimall($desc);
 		$desc=mb_substr($desc,0,100);
 		$template = $WAP_SETTING['show_template'] ? $WAP_SETTING['show_template'] : 'show';
-		include template('wap','detail');
+
+		if($typeid==60){
+			include template('wap','picture');
+		}else{
+			include template('wap','detail');
+		}
+
+
 	}
 	function trimall($str)//删除空格
 	{
@@ -534,10 +529,11 @@ class index {
 			showmessage(L('operation_success'), HTTP_REFERER);
 		} else {
 			$page = isset($_GET['page']) && trim($_GET['page']) ? intval($_GET['page']) : 1;
-			$favoritelist = $this->favorite_db->listinfo(array('userid'=>$memberinfo['userid']), 'id DESC', $page, 10);
-			$pages = $this->favorite_db->pages;
+			$favoritelist = $this->favorite_db->listinfo(array('userid'=>$memberinfo['userid']), 'id DESC', $page, 100);
 			//include template('member', 'favorite_list');
 		}
+
+		include template('wap', 'favorite');
 	}
 }
 ?>

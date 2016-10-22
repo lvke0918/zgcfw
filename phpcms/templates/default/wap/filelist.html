@@ -4,14 +4,11 @@
 
 <head>
     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-    <script src="/statics/wap/js/device.js"></script>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,  initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=EDGE">
-    <link href="http://www.zhtx.org.cn/images/favicon.ico" type="image/x-icon" rel="icon">
-    <link href="http://www.zhtx.org.cn/images/favicon.ico" type="image/x-icon" rel="shortcut icon">
-    <meta content="中关村企业服务网 专业诊断 融资方案 知识产权 财税规划和行政许可" name="keywords">
-    <meta content="中关村企业服务网 提供一站式政策事务服务：专业诊断-融资方案（含政府基金）-知识产权规划-财税优惠-行政许可及非许可业务-交流培训（含企业政策研究员）" name="description">
+    <meta content="中海天行企业服务平台 专业诊断 融资方案 知识产权 财税规划和行政许可" name="keywords">
+    <meta content="中海天行企业服务平台 提供一站式政策事务服务：专业诊断-融资方案（含政府基金）-知识产权规划-财税优惠-行政许可及非许可业务-交流培训（含企业政策研究员）" name="description">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,inital-scale=1.0,maximum-scale=1.0,user-scalable=no">
     <meta http-equiv="X-UA-Compatible" content="IE=EDGE">
@@ -25,8 +22,8 @@
     <link rel="stylesheet" href="/statics/wap/css/common.css">
     <link rel="stylesheet" href="/statics/wap/css/editor.css">
     <link rel="stylesheet" href="/statics/wap/css/checkSession.css">
-    <link rel="stylesheet" href="/statics/wap/css/my.css">
-    <title>个人中心</title>
+    <link rel="stylesheet" href="/statics/wap/css/my_vipFile.css">
+    <title>会员文件</title>
     <script charset="utf-8" id="globalMobileBridgeJSLoad" src="/statics/wap/js/qiao.js"></script>
     <link rel="stylesheet" type="text/css" charset="utf-8" href="/statics/wap/css/m-mobile-style.css"></head>
 
@@ -41,38 +38,27 @@
 <script src="/statics/wap/js/m.js"></script>
 <script src="/statics/wap/js/loading.js"></script>
 <script src="/statics/wap/js/moment.js"></script>
-<script src="/statics/wap/js/my.js"></script>
+<script src="/statics/wap/js/my_vipFile.js"></script>
 <div id="layout" style="visibility: visible;">
     <div id="north"></div>
-    <div id="center" style="min-height: 490px;">
-        <div class="my_top">
-          <span class="user-info">
-            <a href="#"><img src="/statics/wap/images/photo.jpg"></a>
-          </span>
-            <span >{$_username}</span>
-            <span class="signoff">注销</span>
+    <div id="center">
+        <div class="container">
+            <ul id="list">
+                {loop $data $pic_k $r}
+                <li>
+                    <a href="{$r[url]}">{$r[title]}</a></li>
+                {/loop}
+            </ul>
         </div>
-        <ul class="my_nav">
-            <li class="my_n_1">
-                <a href="/index.php?&a=filelist">会员文件</a></li>
-            <li class="my_n_2">
-                <a href="">个人资料</a></li>
-            <li class="my_n_3">
-                <a href="">修改密码</a></li>
-            <li class="my_n_4">
-                <a href="/index.php?&a=favorite">我的收藏</a></li>
-            <li class="my_n_5">
-                <a href="">我的报告</a></li>
-        </ul>
-        <p id="copyright">© 中海天行</p></div>
+    </div>
     <div class="clear"></div>
     <div id="southa"></div>
 </div>
-
 <div id="preloading" style="display: none;"></div>
 <a style="display: none; font-size: 14px;" target="_blank" href="http://p.qiao.baidu.com//im/index?ucid=21468555&amp;siteid=9604206&amp;bid=add5a623a11c79dc22346110" data-ignore="true" id="QIAO_ICON_CONTAINER" class="qiao-icon-sector qiao-icon-sector-left">
       <span class="qiao-icon-sector-inner" style="font-size: 14px; background-color: rgb(15, 120, 181);">
         <strong style="color: rgb(255, 255, 255); font-size: 14px;">在线咨询</strong></span>
 </a>
 </body>
+
 </html>

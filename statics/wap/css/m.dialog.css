@@ -1,0 +1,90 @@
+#dialog_overlay {
+    background:rgba(0, 0, 0, 0.6);
+    visibility:hidden;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    z-index: 6000;
+}
+
+#dialog_overlay.disbg {
+    position:static;
+}
+
+#dialog_panel.dialog_modal {
+    background:rgba(0, 0, 0, 0.9);
+    border:none;
+    border-radius:3px;
+    color:#fff;
+    box-shadow:none;
+    padding:5px 10px;
+    position:fixed;
+    width:auto;
+    min-width:60%;
+    z-index: 6000;
+}
+
+#dialog_title {
+    display: none;
+}
+
+#dialog_panel {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    background-color: #fff;
+    padding: 0px;
+    text-align: center;
+    border-radius: 2px;
+    box-shadow: 0 1px 5px #999;
+    width:90%;
+    max-width:100%;
+}
+
+#dialog_content {
+    padding: 22px 5%;
+    /*min-width:60%;*/
+    /*max-width:90%;*/
+    width:90%;
+    font-size:15px;
+    color:#444;
+}
+
+.dialog_modal #dialog_content {
+    color:#fff;
+    padding:15px 5%;
+    margin:0 auto;
+}
+
+#dialog_control {
+    background-color: #eee;
+    border-radius: 0 0 2px 2px;
+    border-top: 1px solid #ddd;
+    text-align: center;
+}
+
+.button {
+    color: #428bca;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: normal;
+    padding: 10px 0;
+    width:100%;
+}
+
+.button.col2 {
+    width:50%;
+}
+
+.button:active {
+    position: relative;
+    top: 1px;
+}
+
+#dialog_close {
+    color:#777;
+}

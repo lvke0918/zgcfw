@@ -1,0 +1,23 @@
+body {
+    background:#f9f9f9;
+}
+
+#list li {
+  padding: 15px 5%;
+  background: #fff;
+  border-top: 1px solid #d6d6d6;
+  border-bottom: 1px solid #d6d6d6;
+  font-size: 14px;
+  margin: 15px 0;
+  color: #333;
+}
+
+#list a {
+  color: #333;
+  display:block;
+}
+
+#list li .date {
+    float:right;
+    color:#666;
+}
