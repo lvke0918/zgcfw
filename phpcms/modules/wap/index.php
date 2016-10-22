@@ -177,7 +177,15 @@ class index {
 	
     //展示内容页
 	public function show() {
-
+		$typeid = $type_tmp = intval($_GET['typeid']);
+		if($typeid==60){
+			$_username = param::get_cookie('_username');//当前登录人用户名
+			$_userid = param::get_cookie('_userid');//当然登录人id
+			if(!$_username){
+				Header("Location: /index.php?&a=login");
+				exit;
+			}
+		}
 
 		$wap_jssdk = pc_base::load_app_class("wap_jssdk", "wap");
 		$wap_jssdk->__construct("wxfa4e2f447f4bafb6", "97d71b1486606352b7c6d1981952c76b");
@@ -189,7 +197,7 @@ class index {
 		$WAP_SETTING = string2array($WAP['setting']);
 		$TYPE = $this->types;
 		$GLOBALS['siteid'] = $siteid = max($this->siteid,1);
-		$typeid = $type_tmp = intval($_GET['typeid']);	
+
 		$catid = $_GET['catid'];
 		$id = intval($_GET['id']);
 		if(!$catid || !$id) exit(L('parameter_error'));
