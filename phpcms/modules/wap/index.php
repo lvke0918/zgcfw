@@ -376,7 +376,7 @@ class index {
 		$desc=mb_substr($desc,0,100);
 		$template = $WAP_SETTING['show_template'] ? $WAP_SETTING['show_template'] : 'show';
 
-		if($typeid==60){
+		if($typeid==60||$typeid==61){
 			include template('wap','picture');
 		}else{
 			include template('wap','detail');
