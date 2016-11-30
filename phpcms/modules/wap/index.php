@@ -241,7 +241,7 @@ class index {
 		$MODEL = getcache('model','commons');
 		$modelid = $CAT['modelid'];
 		$tablename = $this->db->table_name = $this->db->db_tablepre.$MODEL[$modelid]['tablename'];
-		$catids=array('129');
+		$catids=array($catid);
 		$list = $this->db->select('status=99 and catid in ('.implode(',',$catids).')', '*','','inputtime DESC');
 
 		foreach($list as $k=>$v){
