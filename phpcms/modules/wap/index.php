@@ -230,7 +230,7 @@ class index {
 
 	public function filelist() {
 
-		$typeid = isset($_GET['typeid']) && $_GET['typeid'] ? intval($_GET['typeid']) : 60;
+		$typeid =  $_GET['typeid'] ? intval($_GET['typeid']) : 60;
 
 		$catid = $this->types[$typeid]['cat'];
 		$siteids = getcache('category_content','commons');
