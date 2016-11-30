@@ -3,6 +3,85 @@ defined('IN_PHPCMS') or exit('No permission resources.');
 pc_base::load_app_func('global');
 pc_base::load_sys_class('format', '', 0);
 class index {
+
+	const industry =array(
+		'A'=> '农、林、牧、渔业',
+		'B'=> '采矿业',
+		'C'=> '制造业',
+		'D'=> '电力、热力、燃气及水生产和供应业',
+		'E'=> '建筑业',
+		'F'=> '批发和零售业',
+		'G'=> '交通运输、仓储和邮政业',
+		'H'=> '住宿和餐饮业',
+		'I'=> '信息传输、软件和信息技术服务业',
+		'J'=> '金融业',
+		'K'=> '房地产业',
+		'L'=> '租赁和商务服务业',
+		'M'=> '科学研究和技术服务业',
+		'N'=> '水利、环境和公共设施管理业',
+		'O'=> '居民服务、修理和其他服务业',
+		'P'=> '教育',
+		'Q'=> '卫生和社会工作',
+		'R'=> '文化、体育和娱乐业',
+		'S'=> '公共管理、社会保障和社会组织',
+		'T'=> '国际组织',
+	);
+
+	const credit=array(
+		'1'=>'AAA',
+		'2'=>'AA',
+		'3'=>'A',
+		'4'=>'BBB',
+		'5'=>'BB',
+		'6'=>'B',
+		'7'=>'CCC',
+		'8'=>'CC',
+		'9'=>'C',
+
+	);
+
+	const natur=array(
+		'1'=>'国有企业',
+		'2'=>'集体企业',
+		'3'=>'股份合作企业',
+		'4'=>'联营企业',
+		'5'=>'外商投资企业',
+		'6'=>'私营企业',
+		'7'=>'股份有限公司',
+		'8'=>'有限责任公司',
+		'9'=>'中外合资企业（中方控股50%以上）',
+		'10'=>'上市企业（或上市企业控股50%以上）',
+	);
+
+	const qualifications=array(
+		'1'=>'国家高新技术企业',
+		'2'=>'中关村高新企业',
+		'3'=>'信息系统集成及服务',
+		'4'=>'涉密计算机系统集成',
+		'5'=>'ISO9000质量管理体系认证',
+		'6'=>'ISO14000环境管理体系标准认证',
+		'7'=>'其他',
+	);
+
+	const features=array(
+		'1'=>'承担过国家科技计划，并得到经费支持',
+		'2'=>'产学研合作',
+		'3'=>'高校或科研院所办的企业',
+		'4'=>'留学人员办的企业',
+		'5'=>'国家高新区内的企业',
+		'6'=>'国家创业服务中心内的企业',
+		'7'=>'其他',
+	);
+
+	const business_model=array(
+		'1'=>'生产制造（研究、开发、生产、销售）',
+		'2'=>'技术交易（服务、开发、转让）',
+		'3'=>'选项连锁经营',
+		'4'=>'其他',
+	);
+
+
+
 	function __construct() {		
 		$this->db = pc_base::load_model('content_model');
 		$this->siteid = isset($_GET['siteid']) && (intval($_GET['siteid']) > 0) ? intval(trim($_GET['siteid'])) : (param::get_cookie('siteid') ? param::get_cookie('siteid') : 1);
@@ -150,8 +229,7 @@ class index {
 	}
 
 	public function filelist() {
-
-		$typeid=60;
+		$typeid=intval($_GET['typeid']);
 		$catid = $this->types[$typeid]['cat'];
 		$siteids = getcache('category_content','commons');
 		$siteid = $siteids[$catid];
@@ -543,5 +621,90 @@ class index {
 
 		include template('wap', 'favorite');
 	}
+
+	public function time() {
+		$data['time']=time().'000';
+		echo json_encode($data);
+	}
+	public function analysis() {
+
+		$_userid = param::get_cookie('_userid');//当然登录人id
+		$this->member_db = pc_base::load_model('member_model');
+		$this->memberinfo = $this->member_db->get_one(array('userid'=>$_userid));
+		$memberinfo = $this->memberinfo;
+		$industry=self::industry;
+		$credit=self::credit;
+
+		$userid=param::get_cookie('_userid');
+		$company_db = pc_base::load_model('company_model');
+		$one = $company_db->get_one(array('userid'=>$userid));
+		if($one){
+			$company_financial_db = pc_base::load_model('company_financial_model');
+			$financial=$company_financial_db->select(array('company_id'=>$one['id']));
+		}
+
+		include template('wap', 'analysis');
+	}
+
+	public function addanalysis() {
+		$json= file_get_contents("php://input");
+		$jsonArr=json_decode($json,true);
+		$userid=param::get_cookie('_userid');
+
+		$data=array(
+			'userid'=>$userid,//当然登录人id,
+			'enterprise_name'=>$jsonArr['company'],
+			'industry'=>$jsonArr['industry'],
+			'contact_name'=>$jsonArr['username'],
+			'contact_telephone'=>$jsonArr['phone'],
+			'contact_email'=>$jsonArr['email'],
+			'website'=>$jsonArr['url'],
+			'workers_total'=>$jsonArr['totalNum'],
+			'credit_rating'=>$jsonArr['grade'],
+			'research_num'=>$jsonArr['yfNum'],
+			'college_above_num'=>$jsonArr['dzNum'],
+			'enterprise_natur'=>$jsonArr['qyxz'],
+			'qualifications_other'=>$jsonArr['otherQyzz'],
+			'enterprise_qualifications'=>$jsonArr['qyzz'],
+			'features_other'=>$jsonArr['otherQytx'],
+			'features_info'=>$jsonArr['markQytx'],
+			'enterprise_features'=>$jsonArr['qytx'],
+			'business_other'=>$jsonArr['otherSyms'],
+			'business_model'=>$jsonArr['syms'],
+			'IP_invention_patent'=>$jsonArr['patNum'],
+			'IP_trademark'=>$jsonArr['brandNum'],
+			'IP_software_copyright'=>$jsonArr['workNum'],
+			'create_time'=>time(),
+		);
+		$company_db = pc_base::load_model('company_model');
+		$one = $company_db->get_one(array('userid'=>$userid));
+		if($one){
+			$company_db->update($data,$one['id']);
+			$companyid=$one['id'];
+		}else{
+			$companyid=$company_db->insert($data,true);
+		}
+
+		if($companyid>0){
+			$company_financial_db = pc_base::load_model('company_financial_model');
+			$company_financial_db->delete(array('company_id'=>$companyid));
+			$finance=json_decode($jsonArr['finance'],true);
+			foreach($finance as $k=>$v){
+				$data_finance=array(
+					'company_id'=>$companyid,
+					'year'=>$k,
+					'general_assets'=>$v['sum'],
+					'sales_revenue'=>$v['income'],
+					'total_profits'=>$v['profit'],
+					'create_time'=>time(),
+				);
+				$company_financial_db->insert($data_finance);
+			}
+		}
+		$_SERVER['HTTP_X_AJAX']=true;
+		showmessage('提交成功','','','',0,0);
+
+	}
+
 }
 ?>
